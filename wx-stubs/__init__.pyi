@@ -20724,7 +20724,7 @@ usually used for display of tabular data.
 
 
 
-Filters associated with a column. This class supports the following styles: int
+# Filters associated with a column. This class supports the following styles: int
 
 HD_ALLOW_REORDER: int  # If this style is specified (it is by default), the user can reorder the control columns by dragging them.
 
