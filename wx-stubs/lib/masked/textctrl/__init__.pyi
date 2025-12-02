@@ -8,13 +8,13 @@ masks.
 
         Source: https://docs.wxpython.org/wx.lib.masked.textctrl.BaseMaskedTextCtrl.html
     """
-    def __init__(self, parent, id=-1, value = '', pos = wx.DefaultPosition, size = wx.DefaultSize, style = wx.TE_PROCESS_TAB, validator=wx.DefaultValidator, name = 'maskedTextCtrl', setupEventHandling = True, **kwargs) -> None:
+    def __init__(self, parent, id=-1, value = '', pos = wx.DefaultPosition, size = wx.DefaultSize, style = wx.TE_PROCESS_TAB, validator=wx.DefaultValidator, name = 'maskedTextCtrl', setupEventHandling = True, \*\*kwargs) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.masked.textctrl.BaseMaskedTextCtrl.html
         """
 
-    def ChangeValue(self, value: str) -> None:
+    def ChangeValue(self, value) -> None:
         """ Provided to accommodate similar functionality added to base
 control in wxPython 2.7.1.1.
 
@@ -35,7 +35,7 @@ masked control.
             Source: https://docs.wxpython.org/wx.lib.masked.textctrl.BaseMaskedTextCtrl.html
         """
 
-    def IsEmpty(*args, **kw) -> None:
+    def IsEmpty(\*args, \*\*kw) -> None:
         """ IsEmpty() -> bool
 
             Source: https://docs.wxpython.org/wx.lib.masked.textctrl.BaseMaskedTextCtrl.html
@@ -73,7 +73,7 @@ to validate the contents of the masked control as it refreshes.
             Source: https://docs.wxpython.org/wx.lib.masked.textctrl.BaseMaskedTextCtrl.html
         """
 
-    def SetFont(self, *args, **kwargs) -> None:
+    def SetFont(self, \*args, \*\*kwargs) -> None:
         """ Set the font, then recalculate control size, if appropriate.
 
             Source: https://docs.wxpython.org/wx.lib.masked.textctrl.BaseMaskedTextCtrl.html

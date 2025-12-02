@@ -5,7 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/AlexionSoftware/types-wxpython)
 
 # Typing stubs for wxPython
-Version: wxPython 4.2.0
+Version: wxPython 4.2.4
 
 This package contains typing stubs for [wxPython](https://pypi.org/project/wxPython/).
 

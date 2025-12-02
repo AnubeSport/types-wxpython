@@ -17,7 +17,7 @@ applicationsâ specific needs.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def ActivatePane(self, window: 'Window') -> None:
+    def ActivatePane(self, window) -> None:
         """ Activates the pane to which window is associated.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -66,7 +66,7 @@ to draw a âmoving docking rectangleâ on the screen.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def CalculateDockSizerLimits(self, dock: AuiDockInfo) -> None:
+    def CalculateDockSizerLimits(self, dock) -> None:
         """ Calculates the minimum and maximum sizes allowed for the input dock.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -84,7 +84,7 @@ to draw a âmoving docking rectangleâ on the screen.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def CanDockPanel(self, p: AuiPaneInfo) -> None:
+    def CanDockPanel(self, p) -> None:
         """ Returns whether a pane can be docked or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -97,25 +97,25 @@ requires Mark Hammondsâs pywin32 package).
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def CheckMovableSizer(self, part: AuiDockUIPart) -> None:
+    def CheckMovableSizer(self, part) -> None:
         """ Checks if a UI part can be actually resized.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def CheckPaneMove(self, pane: AuiPaneInfo) -> None:
+    def CheckPaneMove(self, pane) -> None:
         """ Checks if a pane has moved by a visible amount.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def ClosePane(self, pane_info: AuiPaneInfo) -> None:
+    def ClosePane(self, pane_info) -> None:
         """ Destroys or hides the pane depending on its flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def CopyTarget(self, target: AuiPaneInfo) -> None:
+    def CopyTarget(self, target) -> None:
         """ Copies all the attributes of the input target into another AuiPaneInfo.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -164,7 +164,7 @@ top of another pane.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def DetachPane(self, window: 'Window') -> None:
+    def DetachPane(self, window) -> None:
         """ Tells the AuiManager to stop managing the pane specified
 by window. The window, if in a floated frame, is reparented to the frame
 managed by AuiManager.
@@ -218,7 +218,7 @@ scenario can be performed, giving precise coordinates for drop hints.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def DoEndResizeAction(self, event: MouseEvent) -> None:
+    def DoEndResizeAction(self, event) -> None:
         """ Ends a resize action, or for live update, resizes the sash.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -290,7 +290,7 @@ rectangle currently shown.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetAttributes(self, pane: AuiPaneInfo) -> None:
+    def GetAttributes(self, pane) -> None:
         """ Returns all the attributes of a AuiPaneInfo.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -308,7 +308,7 @@ rectangle currently shown.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetDockPixelOffset(self, test: AuiPaneInfo) -> None:
+    def GetDockPixelOffset(self, test) -> None:
         """ This is an internal function which returns a dockâs offset in pixels from
 the left side of the window (for horizontal docks) or from the top of the
 window (for vertical docks).
@@ -346,7 +346,7 @@ window (for vertical docks).
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetPane(self, item: 'Window') -> None:
+    def GetPane(self, item) -> None:
         """ Looks up a AuiPaneInfo structure based on the supplied window pointer. Upon failure,
 GetPane returns an empty AuiPaneInfo, a condition which can be checked
 by calling AuiPaneInfo.IsOk().
@@ -354,19 +354,19 @@ by calling AuiPaneInfo.IsOk().
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetPaneByName(self, name: str) -> None:
+    def GetPaneByName(self, name) -> None:
         """ This version of GetPane looks up a pane based on a âpane nameâ.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetPaneByWidget(self, window: 'Window') -> None:
+    def GetPaneByWidget(self, window) -> None:
         """ This version of GetPane looks up a pane based on a âpane windowâ.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetPanePart(self, wnd: 'Window') -> None:
+    def GetPanePart(self, wnd) -> None:
         """ Looks up the pane border UI part of the
 pane specified. This allows the caller to get the exact rectangle
 of the pane in question, including decorations like caption and border.
@@ -374,13 +374,13 @@ of the pane in question, including decorations like caption and border.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetPanePositionsAndSizes(self, dock: AuiDockInfo) -> None:
+    def GetPanePositionsAndSizes(self, dock) -> None:
         """ Returns all the panes positions and sizes in a dock.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetPartnerDock(self, dock: AuiDockInfo) -> None:
+    def GetPartnerDock(self, dock) -> None:
         """ Returns the partner dock for the input dock.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -393,7 +393,7 @@ in the same AuiDockInfo.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetPartSizerRect(self, uiparts: list) -> None:
+    def GetPartSizerRect(self, uiparts) -> None:
         """ Returns the rectangle surrounding the specified UI parts.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -405,7 +405,7 @@ in the same AuiDockInfo.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def GetTotalPixSizeAndProportion(self, dock: AuiDockInfo) -> None:
+    def GetTotalPixSizeAndProportion(self, dock) -> None:
         """ Returns the dimensions and proportion of the input dock.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -433,7 +433,7 @@ into the position specified by pane_info.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def IsPaneButtonVisible(self, part: AuiDockUIPart) -> None:
+    def IsPaneButtonVisible(self, part) -> None:
         """ Returns whether a pane button in the pane caption is visible.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -465,7 +465,7 @@ with SavePaneInfo.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def LoadPerspective(self, layout, update=True, restorecaption=False) -> None:
+    def LoadPerspective(self, layout, update=True, restorecaption=False, restoreminimize=False) -> None:
         """ Loads a layout which was saved with SavePerspective.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -483,19 +483,19 @@ with SavePaneInfo.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnCaptionDoubleClicked(self, pane_window: 'Window') -> None:
+    def OnCaptionDoubleClicked(self, pane_window) -> None:
         """ Handles the mouse double click on the pane caption.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnCaptureLost(self, event: MouseCaptureLostEvent) -> None:
+    def OnCaptureLost(self, event) -> None:
         """ Handles the wx.EVT_MOUSE_CAPTURE_LOST event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnChildFocus(self, event: ChildFocusEvent) -> None:
+    def OnChildFocus(self, event) -> None:
         """ Handles the wx.EVT_CHILD_FOCUS event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -515,19 +515,19 @@ is called.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnEraseBackground(self, event: EraseEvent) -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnFindManager(self, event: AuiManagerEvent) -> None:
+    def OnFindManager(self, event) -> None:
         """ Handles the EVT_AUI_FIND_MANAGER event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnFloatingPaneActivated(self, wnd: 'Window') -> None:
+    def OnFloatingPaneActivated(self, wnd) -> None:
         """ Handles the activation event of a floating pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -557,37 +557,37 @@ is called.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnHintFadeTimer(self, event: TimerEvent) -> None:
+    def OnHintFadeTimer(self, event) -> None:
         """ Handles the wx.EVT_TIMER event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnLeaveWindow(self, event: MouseEvent) -> None:
+    def OnLeaveWindow(self, event) -> None:
         """ Handles the wx.EVT_LEAVE_WINDOW event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnLeftDClick(self, event: MouseEvent) -> None:
+    def OnLeftDClick(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DCLICK event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnLeftDown(self, event: MouseEvent) -> None:
+    def OnLeftDown(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DOWN event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnLeftUp(self, event: MouseEvent) -> None:
+    def OnLeftUp(self, event) -> None:
         """ Handles the wx.EVT_LEFT_UP event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnLeftUp_ClickButton(self, event: MouseEvent) -> None:
+    def OnLeftUp_ClickButton(self, event) -> None:
         """ Sub-handler for the OnLeftUp event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -599,7 +599,7 @@ is called.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnLeftUp_DragMovablePane(self, event: MouseEvent) -> None:
+    def OnLeftUp_DragMovablePane(self, event) -> None:
         """ Sub-handler for the OnLeftUp event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -611,19 +611,19 @@ is called.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnLeftUp_Resize(self, event: MouseEvent) -> None:
+    def OnLeftUp_Resize(self, event) -> None:
         """ Sub-handler for the OnLeftUp event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnMotion(self, event: MouseEvent) -> None:
+    def OnMotion(self, event) -> None:
         """ Handles the wx.EVT_MOTION event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnMotion_ClickCaption(self, event: MouseEvent) -> None:
+    def OnMotion_ClickCaption(self, event) -> None:
         """ Sub-handler for the OnMotion event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -647,68 +647,68 @@ is called.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnMotion_Other(self, event: MouseEvent) -> None:
+    def OnMotion_Other(self, event) -> None:
         """ Sub-handler for the OnMotion event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnMotion_Resize(self, event: MouseEvent) -> None:
+    def OnMotion_Resize(self, event) -> None:
         """ Sub-handler for the OnMotion event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnMove(self, event: MoveEvent) -> None:
+    def OnMove(self, event) -> None:
         """ Handles the wx.EVT_MOVE event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnPaneButton(self, event: AuiManagerEvent) -> None:
+    def OnPaneButton(self, event) -> None:
         """ Handles the EVT_AUI_PANE_BUTTON event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnPaneDocked(self, event: AuiManagerEvent) -> None:
+    def OnPaneDocked(self, event) -> None:
         """ Handles the EVT_AUI_PANE_DOCKED event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnRender(self, event: AuiManagerEvent) -> None:
+    def OnRender(self, event) -> None:
         """ Draws all of the pane captions, sashes, backgrounds, captions, grippers, pane borders and buttons.
 It renders the entire user interface. It binds the EVT_AUI_RENDER event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnRestoreMinimizedPane(self, event: AuiManagerEvent) -> None:
+    def OnRestoreMinimizedPane(self, event) -> None:
         """ Handles the EVT_AUI_PANE_MIN_RESTORE event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnSetCursor(self, event: SetCursorEvent) -> None:
+    def OnSetCursor(self, event) -> None:
         """ Handles the wx.EVT_SET_CURSOR event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def OnSysColourChanged(self, event: SysColourChangedEvent) -> None:
+    def OnSysColourChanged(self, event) -> None:
         """ Handles the wx.EVT_SYS_COLOUR_CHANGED event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -759,13 +759,13 @@ the target info. If the operation was allowed, the function returns True.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def ProcessMgrEvent(self, event: AuiManagerEvent) -> None:
+    def ProcessMgrEvent(self, event) -> None:
         """ Process the AUI events sent to the manager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def RefreshButton(self, part: AuiDockUIPart) -> None:
+    def RefreshButton(self, part) -> None:
         """ Refreshes a pane button in the caption.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -777,20 +777,20 @@ the target info. If the operation was allowed, the function returns True.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def RemoveAutoNBCaption(self, pane: AuiPaneInfo) -> None:
+    def RemoveAutoNBCaption(self, pane) -> None:
         """ Removes the caption on newly created automatic notebooks.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def Render(self, dc: 'DC') -> None:
+    def Render(self, dc) -> None:
         """ Fires a render event, which is normally handled by OnRender. This allows the
 render function to be overridden via the render event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def Repaint(self, dc: Optional[None]=None) -> None:
+    def Repaint(self, dc=None) -> None:
         """ Repaints the entire frame decorations (sashes, borders, buttons and so on).
 It renders the entire user interface.
 
@@ -803,7 +803,7 @@ It renders the entire user interface.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def RequestUserAttention(self, pane_window: 'Window') -> None:
+    def RequestUserAttention(self, pane_window) -> None:
         """ Requests the user attention by intermittently highlighting the pane caption.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -815,13 +815,13 @@ It renders the entire user interface.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def RestoreMinimizedPane(self, paneInfo: AuiPaneInfo) -> None:
+    def RestoreMinimizedPane(self, paneInfo) -> None:
         """ Restores a previously minimized pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def RestorePane(self, pane_info: AuiPaneInfo) -> None:
+    def RestorePane(self, pane_info) -> None:
         """ Restores the input pane from a previous maximized or minimized state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -833,7 +833,7 @@ It renders the entire user interface.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SavePaneInfo(self, pane: AuiPaneInfo) -> None:
+    def SavePaneInfo(self, pane) -> None:
         """ This method is similar to SavePerspective, with the exception
 that it only saves information about a single pane. It is used in
 combination with LoadPaneInfo.
@@ -848,25 +848,25 @@ be stored by the application (probably using Config).
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SavePreviousDockSizes(self, pane_info: AuiPaneInfo) -> None:
+    def SavePreviousDockSizes(self, pane_info) -> None:
         """ Stores the previous dock sizes, to be used in a ârestoreâ action later.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetAGWFlags(self, agwFlags: int) -> None:
+    def SetAGWFlags(self, agwFlags) -> None:
         """ This method is used to specify AuiManager âs settings flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetAnimationStep(self, step: float) -> None:
+    def SetAnimationStep(self, step) -> None:
         """ Sets the animation step speed (a float) to use in AnimateDocking.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetArtProvider(self, art_provider: Any) -> None:
+    def SetArtProvider(self, art_provider) -> None:
         """ Instructs AuiManager to use art provider specified by the parameter
 art_provider for all drawing calls. This allows pluggable look-and-feel
 features.
@@ -880,13 +880,13 @@ features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetAutoNotebookStyle(self, agwStyle: int) -> None:
+    def SetAutoNotebookStyle(self, agwStyle) -> None:
         """ Sets the default AGW-specific window style for automatic notebooks.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetAutoNotebookTabArt(self, art: Any) -> None:
+    def SetAutoNotebookTabArt(self, art) -> None:
         """ Sets the default tab art provider for automatic notebooks.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -900,7 +900,7 @@ large.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetFrame(self, managed_window: 'Window') -> None:
+    def SetFrame(self, managed_window) -> None:
         """ Called to specify the frame or window which is to be managed by AuiManager.
 Frame management is not restricted to just frames. Child windows or custom
 controls are also allowed.
@@ -908,7 +908,7 @@ controls are also allowed.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetManagedWindow(self, managed_window: 'Window') -> None:
+    def SetManagedWindow(self, managed_window) -> None:
         """ Called to specify the frame or window which is to be managed by AuiManager.
 Frame management is not restricted to just frames. Child windows or custom
 controls are also allowed.
@@ -916,7 +916,7 @@ controls are also allowed.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SetMasterManager(self, manager: AuiManager) -> None:
+    def SetMasterManager(self, manager) -> None:
         """ Sets the master manager for an automatic AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -930,7 +930,7 @@ managed_window (using SnapPane).
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def ShowHint(self, rect: 'Rect') -> None:
+    def ShowHint(self, rect) -> None:
         """ Shows the AUI hint window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -942,7 +942,7 @@ managed_window (using SnapPane).
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SlideIn(self, event: TimerEvent) -> None:
+    def SlideIn(self, event) -> None:
         """ Handles the wx.EVT_TIMER event for AuiManager.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -960,7 +960,7 @@ managed_window (using SnapPane).
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SmoothDock(self, paneInfo: AuiPaneInfo) -> None:
+    def SmoothDock(self, paneInfo) -> None:
         """ This method implements a smooth docking effect for floating panes, similar to
 what the PyQT library does with its floating windows.
 
@@ -997,7 +997,7 @@ what the PyQT library does with its floating windows.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def SwitchToolBarOrientation(self, pane: AuiPaneInfo) -> None:
+    def SwitchToolBarOrientation(self, pane) -> None:
         """ Switches the toolbar orientation from vertical to horizontal and vice-versa.
 This is especially useful for vertical docked toolbars once they float.
 
@@ -1024,7 +1024,7 @@ destructor.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
         """
 
-    def UpdateDockingGuides(self, paneInfo: AuiPaneInfo) -> None:
+    def UpdateDockingGuides(self, paneInfo) -> None:
         """ Updates the docking guide windows positions and appearance.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager.html
@@ -1080,81 +1080,81 @@ size, minimum size, caption text among many other parameters.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def BestSize(self, arg1=None, arg2=None) -> None:
+    def BestSize(self, arg1=None, arg2=None) â Sel) -> None:
         """ Sets the ideal size for the pane. The docking manager will attempt to use
 this size as much as possible when docking or floating the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def BestSize1(self, size) -> None:
+    def BestSize1(self, size) â Sel) -> None:
         """ Sets the best size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def BestSize2(self, x, y) -> None:
+    def BestSize2(self, x, y) â Sel) -> None:
         """ Sets the best size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Bottom(self) -> None:
+    def Bottom(self) â Sel) -> None:
         """ Sets the pane dock position to the bottom of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def BottomDockable(self, b: bool=True) -> None:
+    def BottomDockable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be docked at the bottom of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def BottomSnappable(self, b: bool=True) -> None:
+    def BottomSnappable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be snapped at the bottom of the main frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Caption(self, caption: str) -> None:
+    def Caption(self, caption) â Sel) -> None:
         """ Sets the caption of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def CaptionVisible(self, visible=True, left=False) -> None:
+    def CaptionVisible(self, visible=True, left=False) â Sel) -> None:
         """ Indicates that a pane caption should be visible. If visible is False, no pane
 caption is drawn.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Center(self) -> None:
+    def Center(self) â Sel) -> None:
         """ Sets the pane to the center position of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def CenterPane(self) -> None:
+    def CenterPane(self) â Sel) -> None:
         """ Specifies that the pane should adopt the default center pane settings.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Centre(self) -> None:
+    def Centre(self) â Sel) -> None:
         """ Sets the pane to the center position of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def CentrePane(self) -> None:
+    def CentrePane(self) â Sel) -> None:
         """ Specifies that the pane should adopt the default center pane settings.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def CloseButton(self, visible: bool=True) -> None:
+    def CloseButton(self, visible=True) â Sel) -> None:
         """ Indicates that a close button should be drawn for the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
@@ -1166,19 +1166,19 @@ caption is drawn.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def DefaultPane(self) -> None:
+    def DefaultPane(self) â Sel) -> None:
         """ Specifies that the pane should adopt the default pane settings.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def DestroyOnClose(self, b: bool=True) -> None:
+    def DestroyOnClose(self, b=True) â Sel) -> None:
         """ Indicates whether a pane should be destroyed when it is closed.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Direction(self, direction: int) -> None:
+    def Direction(self, direction) â Sel) -> None:
         """ Determines the direction of the docked pane. It is functionally the
 same as calling Left, Right, Top or Bottom,
 except that docking direction may be specified programmatically via the parameter direction.
@@ -1186,7 +1186,7 @@ except that docking direction may be specified programmatically via the paramete
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Dock(self) -> None:
+    def Dock(self) â Sel) -> None:
         """ Indicates that a pane should be docked. It is the opposite of Float.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
@@ -1198,20 +1198,20 @@ except that docking direction may be specified programmatically via the paramete
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def dock_direction_set(self, value: int) -> None:
+    def dock_direction_set(self, value) -> None:
         """ Setter for the dock_direction.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Dockable(self, b: bool=True) -> None:
+    def Dockable(self, b=True) -> None:
         """ Specifies whether a frame can be docked or not. It is the same as specifying
 TopDockable . BottomDockable . LeftDockable . RightDockable .
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def DockFixed(self, b: bool=True) -> None:
+    def DockFixed(self, b=True) â Sel) -> None:
         """ Causes the containing dock to have no resize sash. This is useful
 for creating panes that span the entire width or height of a dock, but should
 not be resizable in the other direction.
@@ -1219,39 +1219,39 @@ not be resizable in the other direction.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Fixed(self) -> None:
+    def Fixed(self) â Sel) -> None:
         """ Forces a pane to be fixed size so that it cannot be resized.
 After calling Fixed, IsFixed will return True.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Float(self) -> None:
+    def Float(self) â Sel) -> None:
         """ Indicates that a pane should be floated. It is the opposite of Dock.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Floatable(self, b: bool=True) -> None:
+    def Floatable(self, b=True) â Sel) -> None:
         """ Sets whether the user will be able to undock a pane and turn it
 into a floating window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def FloatingPosition(self, pos: Union[tuple[int, int], 'Point']) -> None:
+    def FloatingPosition(self, pos) â Sel) -> None:
         """ Sets the position of the floating pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def FloatingSize(self, size: Union[tuple[int, int], 'Size']) -> None:
+    def FloatingSize(self, size) â Sel) -> None:
         """ Sets the size of the floating pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def FlyOut(self, b: bool=True) -> None:
+    def FlyOut(self, b=True) â Sel) -> None:
         """ Indicates whether a pane, when floating, has a âfly-outâ effect
 (i.e., floating panes which only show themselves when moused over).
 
@@ -1264,13 +1264,13 @@ into a floating window.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Gripper(self, visible: bool=True) -> None:
+    def Gripper(self, visible=True) â Sel) -> None:
         """ Indicates that a gripper should be drawn for the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def GripperTop(self, attop: bool=True) -> None:
+    def GripperTop(self, attop=True) â Sel) -> None:
         """ Indicates that a gripper should be drawn at the top of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
@@ -1300,7 +1300,7 @@ into a floating window.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def HasFlag(self, flag: int) -> None:
+    def HasFlag(self, flag) -> None:
         """ Returns True if the the property specified by flag is active for the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
@@ -1342,13 +1342,13 @@ into a floating window.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Hide(self) -> None:
+    def Hide(self) â Sel) -> None:
         """ Indicates that a pane should be hidden.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Icon(self, icon: Icon) -> None:
+    def Icon(self, icon) â Sel) -> None:
         """ Specifies whether an icon is drawn on the left of the caption text when
 the pane is docked. If icon is None or NullIcon, no icon is drawn on
 the caption space.
@@ -1531,79 +1531,79 @@ of the managed frame.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Layer(self, layer: int) -> None:
+    def Layer(self, layer) â Sel) -> None:
         """ Determines the layer of the docked pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Left(self) -> None:
+    def Left(self) â Sel) -> None:
         """ Sets the pane dock position to the left side of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def LeftDockable(self, b: bool=True) -> None:
+    def LeftDockable(self, b=True) -> None:
         """ Indicates whether a pane can be docked on the left of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def LeftSnappable(self, b: bool=True) -> None:
+    def LeftSnappable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be snapped on the left of the main frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Maximize(self) -> None:
+    def Maximize(self) â Sel) -> None:
         """ Makes the pane take up the full area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MaximizeButton(self, visible: bool=True) -> None:
+    def MaximizeButton(self, visible=True) â Sel) -> None:
         """ Indicates that a maximize button should be drawn for the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MaxSize(self, arg1=None, arg2=None) -> None:
+    def MaxSize(self, arg1=None, arg2=None) â Sel) -> None:
         """ Sets the maximum size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MaxSize1(self, size) -> None:
+    def MaxSize1(self, size) â Sel) -> None:
         """ Sets the maximum size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MaxSize2(self, x, y) -> None:
+    def MaxSize2(self, x, y) â Sel) -> None:
         """ Sets the maximum size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Minimize(self) -> None:
+    def Minimize(self) â Sel) -> None:
         """ Makes the pane minimized in a AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MinimizeButton(self, visible: bool=True) -> None:
+    def MinimizeButton(self, visible=True) â Sel) -> None:
         """ Indicates that a minimize button should be drawn for the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MinimizeMode(self, mode: int) -> None:
+    def MinimizeMode(self, mode) â Sel) -> None:
         """ Sets the expected minimized mode if the minimize button is visible.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MinimizeTarget(self, toolbarPane: AuiPaneInfo) -> None:
+    def MinimizeTarget(self, toolbarPane) â Sel) -> None:
         """ Minimizes the panes using a AuiPaneInfo as a target. As AuiPaneInfo properties
 need to be copied back and forth every time the perspective has changed, we
 only store the toobar name.
@@ -1611,68 +1611,68 @@ only store the toobar name.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MinSize(self, arg1=None, arg2=None) -> None:
+    def MinSize(self, arg1=None, arg2=None) â Sel) -> None:
         """ Sets the minimum size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MinSize1(self, size) -> None:
+    def MinSize1(self, size) â Sel) -> None:
         """ Sets the minimum size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def MinSize2(self, x, y) -> None:
+    def MinSize2(self, x, y) â Sel) -> None:
         """ Sets the minimum size of the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Movable(self, b: bool=True) -> None:
+    def Movable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be moved.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Name(self, name: Any) -> None:
+    def Name(self, name) â Sel) -> None:
         """ Sets the name of the pane so it can be referenced in lookup functions.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def NotebookControl(self, id: int) -> None:
+    def NotebookControl(self, id) â Sel) -> None:
         """ Forces a pane to be a notebook control (AuiNotebook).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def NotebookDockable(self, b: bool=True) -> None:
+    def NotebookDockable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be docked in an automatic AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def NotebookPage(self, id, tab_position=1000) -> None:
+    def NotebookPage(self, id, tab_position=1000) â Sel) -> None:
         """ Forces a pane to be a notebook page, so that the pane can be
 docked on top to another to create a AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def PaneBorder(self, visible: bool=True) -> None:
+    def PaneBorder(self, visible=True) â Sel) -> None:
         """ Indicates that a border should be drawn for the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def PinButton(self, visible: bool=True) -> None:
+    def PinButton(self, visible=True) â Sel) -> None:
         """ Indicates that a pin button should be drawn for the pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Position(self, pos: int) -> None:
+    def Position(self, pos) â Sel) -> None:
         """ Determines the position of the docked pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
@@ -1685,106 +1685,106 @@ AuiManager flags.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Resizable(self, resizable: bool=True) -> None:
+    def Resizable(self, resizable=True) â Sel) -> None:
         """ Allows a pane to be resizable if resizable is True, and forces
 it to be a fixed size if resizeable is False.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Restore(self) -> None:
+    def Restore(self) â Sel) -> None:
         """ Is the reverse of Maximize and Minimize.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Right(self) -> None:
+    def Right(self) â Sel) -> None:
         """ Sets the pane dock position to the right side of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def RightDockable(self, b: bool=True) -> None:
+    def RightDockable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be docked on the right of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def RightSnappable(self, b: bool=True) -> None:
+    def RightSnappable(self, b=True) -> None:
         """ Indicates whether a pane can be snapped on the right of the main frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Row(self, row: int) -> None:
+    def Row(self, row) â Sel) -> None:
         """ Determines the row of the docked pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def SetDockPos(self, source: AuiPaneInfo) -> None:
+    def SetDockPos(self, source) â Sel) -> None:
         """ Copies the source pane members that pertain to docking position to self.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def SetFlag(self, flag, option_state) -> None:
+    def SetFlag(self, flag, option_state) â Sel) -> None:
         """ Turns the property given by flag on or off with the option_state
 parameter.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def SetNameFromNotebookId(self) -> None:
+    def SetNameFromNotebookId(self) â Sel) -> None:
         """ Sets the pane name once docked in a AuiNotebook using the notebook id.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Show(self, show: bool=True) -> None:
+    def Show(self, show=True) â Sel) -> None:
         """ Indicates that a pane should be shown.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Snappable(self, b: bool=True) -> None:
+    def Snappable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be snapped on the main frame. This is
 equivalent as calling TopSnappable . BottomSnappable . LeftSnappable . RightSnappable .
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def ToolbarPane(self) -> None:
+    def ToolbarPane(self) â Sel) -> None:
         """ Specifies that the pane should adopt the default toolbar pane settings.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Top(self) -> None:
+    def Top(self) â Sel) -> None:
         """ Sets the pane dock position to the top of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def TopDockable(self, b: bool=True) -> None:
+    def TopDockable(self, b=True) â Sel) -> None:
         """ Indicates whether a pane can be docked at the top of the frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def TopSnappable(self, b: bool=True) -> None:
+    def TopSnappable(self, b=True) -> None:
         """ Indicates whether a pane can be snapped at the top of the main frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Transparent(self, alpha: int) -> None:
+    def Transparent(self, alpha) -> None:
         """ Makes the pane transparent when floating.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
         """
 
-    def Window(self, w: 'Window') -> None:
+    def Window(self, w) â Sel) -> None:
         """ Associate a wx.Window derived window to this pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneInfo.html
@@ -1801,7 +1801,7 @@ and the double-update call.
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager_DCP.html
     """
-    def __init__(self, *args, **keys) -> None:
+    def __init__(self, \*args, \*\*keys) -> None:
         """ See AuiManager.__init__ for the class construction.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManager_DCP.html
@@ -1910,37 +1910,37 @@ class AuiManagerEvent(PyCommandEvent):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManagerEvent.html
         """
 
-    def SetButton(self, b: AuiPaneButton) -> None:
+    def SetButton(self, b) -> None:
         """ Associates a AuiPaneButton instance to this event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManagerEvent.html
         """
 
-    def SetCanVeto(self, can_veto: bool) -> None:
+    def SetCanVeto(self, can_veto) -> None:
         """ Sets whether the event can be vetoed or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManagerEvent.html
         """
 
-    def SetDC(self, pdc: 'DC') -> None:
+    def SetDC(self, pdc) -> None:
         """ Associates a wx.DC device context to this event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManagerEvent.html
         """
 
-    def SetManager(self, mgr: AuiManager) -> None:
+    def SetManager(self, mgr) -> None:
         """ Associates a AuiManager to the current event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManagerEvent.html
         """
 
-    def SetPane(self, p: AuiPaneInfo) -> None:
+    def SetPane(self, p) -> None:
         """ Associates a AuiPaneInfo instance to this event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManagerEvent.html
         """
 
-    def Veto(self, veto: bool=True) -> None:
+    def Veto(self, veto=True) -> None:
         """ Prevents the change announced by this event from happening.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiManagerEvent.html
@@ -1953,7 +1953,7 @@ class AuiPaneButton:
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiPaneButton.html
     """
-    def __init__(self, button_id: int) -> None:
+    def __init__(self, button_id) -> None:
         """ Default class constructor.
 Used internally, do not call it in your code!
 
@@ -1967,14 +1967,14 @@ class AuiCenterDockingGuide(AuiDockingGuide):
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
     """
-    def __init__(self, parent: AuiManager) -> None:
+    def __init__(self, parent) -> None:
         """ Default class constructor.
 Used internally, do not call it in your code!
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
         """
 
-    def AeroMove(self, pos: Union[tuple[int, int], 'Point']) -> None:
+    def AeroMove(self, pos) -> None:
         """ Moves the docking guide window to the new position.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
@@ -1992,25 +1992,25 @@ Used internally, do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
         """
 
-    def OnEraseBackground(self, event: EraseEvent) -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for AuiCenterDockingGuide.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for AuiCenterDockingGuide.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
         """
 
-    def SetGuideShape(self, event: Optional['WindowCreateEvent']=None) -> None:
+    def SetGuideShape(self, event=None) -> None:
         """ Sets the correct shape for the docking guide window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
         """
 
-    def UpdateDockGuide(self, pos: Union[tuple[int, int], 'Point']) -> None:
+    def UpdateDockGuide(self, pos) -> None:
         """ Updates the docking guides images depending on the mouse position, using focused
 images if the mouse is inside the docking guide or unfocused images if it is
 outside.
@@ -2018,7 +2018,7 @@ outside.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiCenterDockingGuide.html
         """
 
-    def ValidateNotebookDocking(self, valid: bool) -> None:
+    def ValidateNotebookDocking(self, valid) -> None:
         """ Sets whether a pane can be docked on top of another to create an automatic
 AuiNotebook.
 
@@ -2032,7 +2032,7 @@ class AuiDockingGuide(Frame):
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuide.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, title="", pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.FRAME_TOOL_WINDOW | wx.STAY_ON_TOP | wx.FRAME_NO_TASKBAR | wx.NO_BORDER, name="AuiDockingGuide") -> None:
+    def __init__(self, parent, id=wx.ID_ANY, title='', pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.FRAME_TOOL_WINDOW | wx.STAY_ON_TOP | wx.FRAME_NO_TASKBAR | wx.NO_BORDER, name='AuiDockingGuide') -> None:
         """ Default class constructor. Used internally, do not call it in your code!
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuide.html
@@ -2044,7 +2044,7 @@ class AuiDockingGuide(Frame):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuide.html
         """
 
-    def ValidateNotebookDocking(self, valid: bool) -> None:
+    def ValidateNotebookDocking(self, valid) -> None:
         """ To be overridden by parent classes.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuide.html
@@ -2063,13 +2063,13 @@ class AuiSingleDockingGuide(AuiDockingGuide):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiSingleDockingGuide.html
         """
 
-    def AeroMove(self, pos: Union[tuple[int, int], 'Point']) -> None:
+    def AeroMove(self, pos) -> None:
         """ Moves the docking window to the new position. Overridden in children classes.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiSingleDockingGuide.html
         """
 
-    def CreateShapesWithStyle(self, useWhidbey: bool) -> None:
+    def CreateShapesWithStyle(self, useWhidbey) -> None:
         """ Creates the docking guide window shape based on which docking bitmaps are used.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiSingleDockingGuide.html
@@ -2087,13 +2087,13 @@ class AuiSingleDockingGuide(AuiDockingGuide):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiSingleDockingGuide.html
         """
 
-    def SetGuideShape(self, event: Optional['WindowCreateEvent']=None) -> None:
+    def SetGuideShape(self, event=None) -> None:
         """ Sets the correct shape for the docking guide window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiSingleDockingGuide.html
         """
 
-    def SetShape(self, region: Region) -> None:
+    def SetShape(self, region) -> None:
         """ If the platform supports it, sets the shape of the window to that depicted by region.
 The system will not display or respond to any mouse event for the pixels that lie
 outside of the region. To reset the window to the normal rectangular shape simply call
@@ -2102,13 +2102,13 @@ SetShape again with an empty region.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiSingleDockingGuide.html
         """
 
-    def SetValid(self, valid: bool) -> None:
+    def SetValid(self, valid) -> None:
         """ Sets the docking direction as valid or invalid.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiSingleDockingGuide.html
         """
 
-    def UpdateDockGuide(self, pos: Union[tuple[int, int], 'Point']) -> None:
+    def UpdateDockGuide(self, pos) -> None:
         """ Updates the docking guide images depending on the mouse position, using focused
 images if the mouse is inside the docking guide or unfocused images if it is
 outside.
@@ -2131,56 +2131,56 @@ class AuiDockingGuideInfo:
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
     """
-    def __init__(self, other: Optional[AuiDockingGuideInfo]=None) -> None:
+    def __init__(self, other=None) -> None:
         """ Default class constructor.
 Used internally, do not call it in your code!
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Assign(self, other: AuiDockingGuideInfo) -> None:
+    def Assign(self, other) -> None:
         """ Assigns the properties of the other AuiDockingGuideInfo to self.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Bottom(self) -> None:
+    def Bottom(self) â Sel) -> None:
         """ Sets the guide window to bottom docking.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Center(self) -> None:
+    def Center(self) â Sel) -> None:
         """ Sets the guide window to center docking.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Centre(self) -> None:
+    def Centre(self) â Sel) -> None:
         """ Sets the guide window to centre docking.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Host(self, h: AuiDockingGuideWindow) -> None:
+    def Host(self, h) â Sel) -> None:
         """ Hosts a docking guide window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Left(self) -> None:
+    def Left(self) â Sel) -> None:
         """ Sets the guide window to left docking.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Right(self) -> None:
+    def Right(self) â Sel) -> None:
         """ Sets the guide window to right docking.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
         """
 
-    def Top(self) -> None:
+    def Top(self) â Sel) -> None:
         """ Sets the guide window to top docking.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideInfo.html
@@ -2199,19 +2199,19 @@ class AuiDockingGuideWindow(Window):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def Draw(self, dc: 'DC') -> None:
+    def Draw(self, dc) -> None:
         """ Draws the whole docking guide window (not used if the docking guide images are ok).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def DrawArrow(self, dc: 'DC') -> None:
+    def DrawArrow(self, dc) -> None:
         """ Draws the docking guide arrow icon (not used if the docking guide images are ok).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def DrawBackground(self, dc: 'DC') -> None:
+    def DrawBackground(self, dc) -> None:
         """ Draws the docking guide background.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
@@ -2223,7 +2223,7 @@ class AuiDockingGuideWindow(Window):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def DrawIcon(self, dc: 'DC') -> None:
+    def DrawIcon(self, dc) -> None:
         """ Draws the docking guide icon (not used if the docking guide images are ok).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
@@ -2235,25 +2235,25 @@ class AuiDockingGuideWindow(Window):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def OnEraseBackground(self, event: EraseEvent) -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for AuiDockingGuideWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for AuiDockingGuideWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def SetValid(self, valid: bool) -> None:
+    def SetValid(self, valid) -> None:
         """ Sets the docking direction as valid or invalid.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingGuideWindow.html
         """
 
-    def UpdateDockGuide(self, pos: Union[tuple[int, int], 'Point']) -> None:
+    def UpdateDockGuide(self, pos) -> None:
         """ Updates the docking guide images depending on the mouse position, using focused
 images if the mouse is inside the docking guide or unfocused images if it is
 outside.
@@ -2283,26 +2283,26 @@ flag set.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingHintWindow.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for AuiDockingHintWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingHintWindow.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AuiDockingHintWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingHintWindow.html
         """
 
-    def SetBlindMode(self, agwFlags: int) -> None:
+    def SetBlindMode(self, agwFlags) -> None:
         """ Sets whether venetian blinds or transparent hints will be shown as docking hint.
 This depends on the AuiManager flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingHintWindow.html
         """
 
-    def SetShape(self, region: Region) -> None:
+    def SetShape(self, region) -> None:
         """ If the platform supports it, sets the shape of the window to that depicted by region.
 The system will not display or respond to any mouse event for the pixels that lie
 outside of the region. To reset the window to the normal rectangular shape simply call
@@ -2311,7 +2311,7 @@ SetShape again with an empty region.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingHintWindow.html
         """
 
-    def Show(self, show: bool=True) -> None:
+    def Show(self, show=True) -> None:
         """ Show the hint window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiDockingHintWindow.html
@@ -2324,13 +2324,13 @@ class AuiFloatingFrame(MiniFrame):
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
     """
-    def __init__(self, parent, owner_mgr, pane=None, id=wx.ID_ANY, title="", style=wx.FRAME_TOOL_WINDOW | wx.FRAME_FLOAT_ON_PARENT | wx.FRAME_NO_TASKBAR | wx.CLIP_CHILDREN) -> None:
+    def __init__(self, parent, owner_mgr, pane=None, id=wx.ID_ANY, title='', style=wx.FRAME_TOOL_WINDOW | wx.FRAME_FLOAT_ON_PARENT | wx.FRAME_NO_TASKBAR | wx.CLIP_CHILDREN) -> None:
         """ Default class constructor. Used internally, do not call it in your code!
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def CopyAttributes(self, pane: AuiPaneInfo) -> None:
+    def CopyAttributes(self, pane) -> None:
         """ Copies all the attributes of the input pane into another AuiPaneInfo.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
@@ -2354,49 +2354,49 @@ class AuiFloatingFrame(MiniFrame):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnActivate(self, event: ActivateEvent) -> None:
+    def OnActivate(self, event) -> None:
         """ Handles the wx.EVT_ACTIVATE event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnCheckFlyTimer(self, event: TimerEvent) -> None:
+    def OnCheckFlyTimer(self, event) -> None:
         """ Handles the wx.EVT_TIMER event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnClose(self, event: CloseEvent) -> None:
+    def OnClose(self, event) -> None:
         """ Handles the wx.EVT_CLOSE event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnFindManager(self, event: AuiManagerEvent) -> None:
+    def OnFindManager(self, event) -> None:
         """ Handles the EVT_AUI_FIND_MANAGER event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnFlyTimer(self, event: TimerEvent) -> None:
+    def OnFlyTimer(self, event) -> None:
         """ Handles the wx.EVT_TIMER event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnIdle(self, event: IdleEvent) -> None:
+    def OnIdle(self, event) -> None:
         """ Handles the wx.EVT_IDLE event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnMove(self, event: MoveEvent) -> None:
+    def OnMove(self, event) -> None:
         """ Handles the wx.EVT_MOVE event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnMoveEvent(self, event: MoveEvent) -> None:
+    def OnMoveEvent(self, event) -> None:
         """ Handles the wx.EVT_MOVE and wx.EVT_MOVING events for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
@@ -2408,7 +2408,7 @@ class AuiFloatingFrame(MiniFrame):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnMoveStart(self, event: MouseEvent) -> None:
+    def OnMoveStart(self, event) -> None:
         """ The user has just started moving the floating pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
@@ -2420,13 +2420,13 @@ class AuiFloatingFrame(MiniFrame):
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AuiFloatingFrame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html
         """
 
-    def SetPaneWindow(self, pane: AuiPaneInfo) -> None:
+    def SetPaneWindow(self, pane) -> None:
         """ Sets all the properties of a pane.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.framemanager.AuiFloatingFrame.html

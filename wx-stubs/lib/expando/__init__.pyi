@@ -12,19 +12,19 @@ the initial or min size of the control.
 
         Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html
     """
-    def __init__(self, parent, id=-1, value="", pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name="expando") -> None:
+    def __init__(self, parent, id=-1, value='', pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name='expando') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html
         """
 
-    def AppendText(self, text: str) -> None:
+    def AppendText(self, text) -> None:
         """ Appends the text to the end of the text control.
 
             Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html
         """
 
-    def GetMaxHeight(self) -> int:
+    def GetMaxHeight(self) -> None:
         """ Returns the maximum height that the control will expand to on its own.
 
             Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html
@@ -42,20 +42,20 @@ the initial or min size of the control.
             Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html
         """
 
-    def SetFont(self, font: 'Font') -> bool:
+    def SetFont(self, font) -> None:
         """ Sets the font for the ExpandoTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html
         """
 
-    def SetMaxHeight(self, h: int) -> None:
+    def SetMaxHeight(self, h) -> None:
         """ Sets the maximum height that the control will expand to on its
 own, and adjusts it down if needed.
 
             Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html
         """
 
-    def WriteText(self, text: str) -> None:
+    def WriteText(self, text) -> None:
         """ Writes the text into the text control at the current insertion position.
 
             Source: https://docs.wxpython.org/wx.lib.expando.ExpandoTextCtrl.html

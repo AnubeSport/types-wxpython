@@ -27,7 +27,7 @@ through different themes to customize the controlâs look and feel.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabmdi.AuiMDIClientWindow.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabmdi.AuiMDIClientWindow.html

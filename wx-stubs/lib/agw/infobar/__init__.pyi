@@ -13,7 +13,7 @@ behaviour depending on the parent size.
             Source: https://docs.wxpython.org/wx.lib.agw.infobar.AutoWrapStaticText.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AutoWrapStaticText.
 
             Source: https://docs.wxpython.org/wx.lib.agw.infobar.AutoWrapStaticText.html
@@ -25,7 +25,7 @@ behaviour depending on the parent size.
             Source: https://docs.wxpython.org/wx.lib.agw.infobar.AutoWrapStaticText.html
         """
 
-    def Wrap(self, width: int) -> None:
+    def Wrap(self, width) -> None:
         """ This functions wraps the controls label so that each of its lines becomes at
 most width pixels wide if possible (the lines are broken at words boundaries
 so it might not be the case if words are too long).

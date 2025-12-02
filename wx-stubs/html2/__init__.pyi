@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import Any, ContextManager, Optional, TypeAlias, Union
 
-from .. import (Control, FSFile, NotifyEvent, Object, VersionInfo,
-                VisualAttributes, _VersionInfo)
+from .. import Control, NotifyEvent, Object
 
 class WebView(Control):
     """ This control may be used to render web (HTML / CSS / javascript)
@@ -10,61 +9,61 @@ documents.
 
         Source: https://docs.wxpython.org/wx.html2.WebView.html
     """
-    def AddScriptMessageHandler(self, name: str) -> bool:
+    def AddScriptMessageHandler(self, name) -> None:
         """ Add a script message handler with the given name.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def AddUserScript(self, javascript, injectionTime=WEBVIEW_INJECT_AT_DOCUMENT_START) -> bool:
+    def AddUserScript(self, javascript, injectionTime=WEBVIEW_INJECT_AT_DOCUMENT_START) -> None:
         """ Injects the specified script into the webpageâs content.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanCopy(self) -> bool:
+    def CanCopy(self) -> None:
         """ Returns True if the current selection can be copied.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanCut(self) -> bool:
+    def CanCut(self) -> None:
         """ Returns True if the current selection can be cut.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanGoBack(self) -> bool:
+    def CanGoBack(self) -> None:
         """ Returns True if it is possible to navigate backward in the history of visited pages.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanGoForward(self) -> bool:
+    def CanGoForward(self) -> None:
         """ Returns True if it is possible to navigate forward in the history of visited pages.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanPaste(self) -> bool:
+    def CanPaste(self) -> None:
         """ Returns True if data can be pasted.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanRedo(self) -> bool:
+    def CanRedo(self) -> None:
         """ Returns True if there is an action to redo.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanSetZoomType(self, type: WebViewZoomType) -> bool:
+    def CanSetZoomType(self, type) -> None:
         """ Retrieve whether the current HTML engine supports a zoom type.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def CanUndo(self) -> bool:
+    def CanUndo(self) -> None:
         """ Returns True if there is an action to undo.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -88,7 +87,7 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def Create(self, parent, id=ID_ANY, url=WebViewDefaultURLStr, pos=DefaultPosition, size=DefaultSize, style=0, name=WebViewNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, url=WebViewDefaultURLStr, pos=DefaultPosition, size=DefaultSize, style=0, name=WebViewNameStr) -> None:
         """ Creation function for two-step creation.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -106,63 +105,63 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def EnableAccessToDevTools(self, enable: bool=True) -> None:
+    def EnableAccessToDevTools(self, enable=True) -> None:
         """ Enable or disable access to dev tools for the user.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def EnableContextMenu(self, enable: bool=True) -> None:
+    def EnableContextMenu(self, enable=True) -> None:
         """ Enable or disable the right click context menu.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def EnableHistory(self, enable: bool=True) -> None:
+    def EnableHistory(self, enable=True) -> None:
         """ Enable or disable the history.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def Find(self, text, flags=WEBVIEW_FIND_DEFAULT) -> int:
+    def Find(self, text, flags=WEBVIEW_FIND_DEFAULT) -> None:
         """ Finds a phrase on the current page and if found, the control will scroll the phrase into view and select it.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
     @staticmethod
-    def GetBackendVersionInfo(backend: str=WebViewBackendDefault) -> 'VersionInfo':
+    def GetBackendVersionInfo(backend=WebViewBackendDefault) -> None:
         """ Retrieve the version information about the backend implementation.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetBackwardHistory(self) -> Any:
+    def GetBackwardHistory(self) -> None:
         """ Returns a list of items in the back history.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetCurrentTitle(self) -> str:
+    def GetCurrentTitle(self) -> None:
         """ Get the title of the current web page, or its URL/path if title is not available.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetCurrentURL(self) -> str:
+    def GetCurrentURL(self) -> None:
         """ Get the URL of the currently displayed document.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetForwardHistory(self) -> Any:
+    def GetForwardHistory(self) -> None:
         """ Returns a list of items in the forward history.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -174,49 +173,49 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetPageSource(self) -> str:
+    def GetPageSource(self) -> None:
         """ Get the HTML source code of the currently displayed document.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetPageText(self) -> str:
+    def GetPageText(self) -> None:
         """ Get the text of the current page.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetSelectedSource(self) -> str:
+    def GetSelectedSource(self) -> None:
         """ Returns the currently selected source, if any.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetSelectedText(self) -> str:
+    def GetSelectedText(self) -> None:
         """ Returns the currently selected text, if any.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetUserAgent(self) -> str:
+    def GetUserAgent(self) -> None:
         """ Returns the current user agent string for the web view.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetZoom(self) -> 'WebViewZoom':
+    def GetZoom(self) -> None:
         """ Get the zoom level of the page.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetZoomFactor(self) -> float:
+    def GetZoomFactor(self) -> None:
         """ Get the zoom factor of the page.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def GetZoomType(self) -> 'WebViewZoomType':
+    def GetZoomType(self) -> None:
         """ Get how the zoom factor is currently interpreted.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -234,65 +233,65 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def HasSelection(self) -> bool:
+    def HasSelection(self) -> None:
         """ Returns True if there is a current selection.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def IsAccessToDevToolsEnabled(self) -> bool:
+    def IsAccessToDevToolsEnabled(self) -> None:
         """ Returns True if dev tools are available to the user.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
     @staticmethod
-    def IsBackendAvailable(backend: str) -> bool:
+    def IsBackendAvailable(backend) -> None:
         """ Allows to check if a specific backend is currently available.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def IsBusy(self) -> bool:
+    def IsBusy(self) -> None:
         """ Returns whether the web control is currently busy (e.g. loading a page).
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def IsContextMenuEnabled(self) -> bool:
+    def IsContextMenuEnabled(self) -> None:
         """ Returns True if a context menu will be shown on right click.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def IsEditable(self) -> bool:
+    def IsEditable(self) -> None:
         """ Returns whether the web control is currently editable.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def LoadURL(self, url: str) -> None:
+    def LoadURL(self, url) -> None:
         """ Load a web page from a URL.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
     @staticmethod
-    def MSWSetEmulationLevel(level: WebViewIE_EmulationLevel=WEBVIEWIE_EMU_IE11) -> bool:
+    def MSWSetEmulationLevel(level=WEBVIEWIE_EMU_IE11) -> None:
         """ Sets emulation level.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
     @staticmethod
-    def MSWSetModernEmulationLevel(modernLevel: bool=True) -> bool:
+    def MSWSetModernEmulationLevel(modernLevel=True) -> None:
         """ Please explicitly specify emulation level with MSWSetEmulationLevel .
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
     @staticmethod
-    def New(*args, **kw) -> 'WebView':
+    def New(*args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -323,13 +322,13 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def RegisterHandler(self, handler: 'html2.WebViewHandler') -> None:
+    def RegisterHandler(self, handler) -> None:
         """ Registers a custom scheme handler.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def Reload(self, flags: WebViewReloadFlags=WEBVIEW_RELOAD_DEFAULT) -> None:
+    def Reload(self, flags=WEBVIEW_RELOAD_DEFAULT) -> None:
         """ Reload the currently displayed URL.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -341,13 +340,13 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def RemoveScriptMessageHandler(self, name: str) -> bool:
+    def RemoveScriptMessageHandler(self, name) -> None:
         """ Remove a script message handler with the given name that was previously added via AddScriptMessageHandler .
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def RunScript(self, javascript: str) -> tuple:
+    def RunScript(self, javascript) -> None:
         """ Runs the given JavaScript code.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -365,7 +364,7 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def SetEditable(self, enable: bool=True) -> None:
+    def SetEditable(self, enable=True) -> None:
         """ Set the editable property of the web control.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -377,25 +376,25 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def SetUserAgent(self, userAgent: str) -> bool:
+    def SetUserAgent(self, userAgent) -> None:
         """ Specify a custom user agent string for the web view.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def SetZoom(self, zoom: WebViewZoom) -> None:
+    def SetZoom(self, zoom) -> None:
         """ Set the zoom level of the page.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def SetZoomFactor(self, zoom: float) -> None:
+    def SetZoomFactor(self, zoom) -> None:
         """ Set the zoom factor of the page.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    def SetZoomType(self, zoomType: WebViewZoomType) -> None:
+    def SetZoomType(self, zoomType) -> None:
         """ Set how to interpret the zoom factor.
 
             Source: https://docs.wxpython.org/wx.html2.WebView.html
@@ -413,19 +412,19 @@ documents.
             Source: https://docs.wxpython.org/wx.html2.WebView.html
         """
 
-    BackwardHistory: Any  # See GetBackwardHistory
-    CurrentTitle: str  # See GetCurrentTitle
-    CurrentURL: str  # See GetCurrentURL
-    ForwardHistory: Any  # See GetForwardHistory
+    BackwardHistory: None  # See GetBackwardHistory
+    CurrentTitle: None  # See GetCurrentTitle
+    CurrentURL: None  # See GetCurrentURL
+    ForwardHistory: None  # See GetForwardHistory
     NativeBackend: None  # See GetNativeBackend
-    PageSource: str  # See GetPageSource
-    PageText: str  # See GetPageText
-    SelectedSource: str  # See GetSelectedSource
-    SelectedText: str  # See GetSelectedText
-    UserAgent: str  # See GetUserAgent and SetUserAgent
-    Zoom: 'WebViewZoom'  # See GetZoom and SetZoom
-    ZoomFactor: float  # See GetZoomFactor and SetZoomFactor
-    ZoomType: 'WebViewZoomType'  # See GetZoomType and SetZoomType
+    PageSource: None  # See GetPageSource
+    PageText: None  # See GetPageText
+    SelectedSource: None  # See GetSelectedSource
+    SelectedText: None  # See GetSelectedText
+    UserAgent: None  # See GetUserAgent and SetUserAgent
+    Zoom: None  # See GetZoom and SetZoom
+    ZoomFactor: None  # See GetZoomFactor and SetZoomFactor
+    ZoomType: None  # See GetZoomType and SetZoomType
 
 
 
@@ -445,7 +444,7 @@ EVT_WEBVIEW_FULLSCREEN_CHANGED: int  # Process a  wxEVT_WEBVIEW_FULLSCREEN_CHANG
 
 EVT_WEBVIEW_SCRIPT_MESSAGE_RECEIVED: int  # Process a  wxEVT_WEBVIEW_SCRIPT_MESSAGE_RECEIVED   event only available in wxWidgets 3.1.5 or later. For usage details see  AddScriptMessageHandler.
 
-wxEVT_WEBVIEW_SCRIPT_RESULT: int  # Process a  wxEVT_WEBVIEW_SCRIPT_RESULT   event only available in wxWidgets 3.1.6 or later. For usage details see  RunScriptAsync. ^^
+wxEVT_WEBVIEW_SCRIPT_RESULT: int  # Process a  wxEVT_WEBVIEW_SCRIPT_RESULT   event only available in wxWidgets 3.1.6 or later. For usage details see  RunScriptAsync.
 
 WEBVIEW_INJECT_AT_DOCUMENT_START: int
 
@@ -461,40 +460,40 @@ WebView objects.
             Source: https://docs.wxpython.org/wx.html2.WebViewEvent.html
         """
 
-    def GetMessageHandler(self) -> str:
+    def GetMessageHandler(self) -> None:
         """ Get the name of the script handler.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewEvent.html
         """
 
-    def GetNavigationAction(self) -> 'WebViewNavigationActionFlags':
+    def GetNavigationAction(self) -> None:
         """ Get the type of navigation action.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewEvent.html
         """
 
-    def GetTarget(self) -> str:
+    def GetTarget(self) -> None:
         """ Get the name of the target frame which the url of this event has been or will be loaded into.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewEvent.html
         """
 
-    def GetURL(self) -> str:
+    def GetURL(self) -> None:
         """ Get the URL being visited.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewEvent.html
         """
 
-    def IsError(self) -> bool:
+    def IsError(self) -> None:
         """ Returns True the script execution failed.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewEvent.html
         """
 
-    MessageHandler: str  # See GetMessageHandler
-    NavigationAction: 'WebViewNavigationActionFlags'  # See GetNavigationAction
-    Target: str  # See GetTarget
-    URL: str  # See GetURL
+    MessageHandler: None  # See GetMessageHandler
+    NavigationAction: None  # See GetNavigationAction
+    Target: None  # See GetTarget
+    URL: None  # See GetURL
 
 
 
@@ -503,25 +502,25 @@ class WebViewFactory(Object):
 
         Source: https://docs.wxpython.org/wx.html2.WebViewFactory.html
     """
-    def Create(self, *args, **kw) -> 'WebView':
+    def Create(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.html2.WebViewFactory.html
         """
 
-    def GetVersionInfo(self) -> 'VersionInfo':
+    def GetVersionInfo(self) -> None:
         """ Retrieve the version information about this backend implementation.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewFactory.html
         """
 
-    def IsAvailable(self) -> bool:
+    def IsAvailable(self) -> None:
         """ Function to check if the backend is available at runtime.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewFactory.html
         """
 
-    VersionInfo: '_VersionInfo'  # See GetVersionInfo
+    VersionInfo: None  # See GetVersionInfo
 
 
 
@@ -531,38 +530,38 @@ to allow virtual file system support.
 
         Source: https://docs.wxpython.org/wx.html2.WebViewHandler.html
     """
-    def __init__(self, scheme: str) -> None:
+    def __init__(self, scheme) -> None:
         """ Constructor.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewHandler.html
         """
 
-    def GetFile(self, uri: str) -> 'FSFile':
-        """ uri (string) â
+    def GetFile(self, uri) -> None:
+        """ uri (string)
 
             Source: https://docs.wxpython.org/wx.html2.WebViewHandler.html
         """
 
-    def GetName(self) -> str:
-        """ string
+    def GetName(self) -> None:
+        """ str
 
             Source: https://docs.wxpython.org/wx.html2.WebViewHandler.html
         """
 
-    def GetSecurityURL(self) -> str:
-        """ string
+    def GetSecurityURL(self) -> None:
+        """ str
 
             Source: https://docs.wxpython.org/wx.html2.WebViewHandler.html
         """
 
-    def SetSecurityURL(self, url: str) -> None:
+    def SetSecurityURL(self, url) -> None:
         """ Sets a custom security URL.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewHandler.html
         """
 
-    Name: str  # See GetName
-    SecurityURL: str  # See GetSecurityURL and SetSecurityURL
+    Name: None  # See GetName
+    SecurityURL: None  # See GetSecurityURL and SetSecurityURL
 
 
 
@@ -573,14 +572,14 @@ to use FileSystem in a similar fashion to its use with Html.
 
         Source: https://docs.wxpython.org/wx.html2.WebViewFSHandler.html
     """
-    def __init__(self, scheme: str) -> None:
+    def __init__(self, scheme) -> None:
         """ Constructor.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewFSHandler.html
         """
 
-    def GetFile(self, uri: str) -> 'FSFile':
-        """ uri (string) â
+    def GetFile(self, uri) -> None:
+        """ uri (string)
 
             Source: https://docs.wxpython.org/wx.html2.WebViewFSHandler.html
         """
@@ -593,14 +592,14 @@ archives.
 
         Source: https://docs.wxpython.org/wx.html2.WebViewArchiveHandler.html
     """
-    def __init__(self, scheme: str) -> None:
+    def __init__(self, scheme) -> None:
         """ Constructor.
 
             Source: https://docs.wxpython.org/wx.html2.WebViewArchiveHandler.html
         """
 
-    def GetFile(self, uri: str) -> 'FSFile':
-        """ uri (string) â
+    def GetFile(self, uri) -> None:
+        """ uri (string)
 
             Source: https://docs.wxpython.org/wx.html2.WebViewArchiveHandler.html
         """

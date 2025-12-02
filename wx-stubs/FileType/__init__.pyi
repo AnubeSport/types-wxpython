@@ -12,26 +12,26 @@ class MessageParameters:
             Source: https://docs.wxpython.org/wx.FileType.MessageParameters.html
         """
 
-    def GetFileName(self) -> str:
+    def GetFileName(self) -> None:
         """ Return the filename.
 
             Source: https://docs.wxpython.org/wx.FileType.MessageParameters.html
         """
 
-    def GetMimeType(self) -> str:
+    def GetMimeType(self) -> None:
         """ Return the MIME type.
 
             Source: https://docs.wxpython.org/wx.FileType.MessageParameters.html
         """
 
-    def GetParamValue(self, name: str) -> str:
+    def GetParamValue(self, name) -> None:
         """ Overridable method for derived classes. Returns empty string by default.
 
             Source: https://docs.wxpython.org/wx.FileType.MessageParameters.html
         """
 
-    FileName: str  # See GetFileName
-    MimeType: str  # See GetMimeType
+    FileName: None  # See GetFileName
+    MimeType: None  # See GetMimeType
 
 
 

@@ -7,13 +7,13 @@ value, and provides bounds support and optional value limiting.
 
         Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
     """
-    def __init__(self, parent, id=-1, value = 0, pos = wx.DefaultPosition, size = wx.DefaultSize, style = 0, validator = wx.DefaultValidator, name = "integer", min=None, max=None, limited = 0, allow_none = 0, allow_long = 0, default_color = wx.NullColour, oob_color = wx.RED) -> None:
+    def __init__(self, parent, id=-1, value=0, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name='integer', min=None, max=None, limited=0, allow_none=0, allow_long=0, default_color=wx.NullColour, oob_color=wx.RED) -> None:
         """ Default constructor
 
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
         """
 
-    def ChangeValue(self, value: int) -> None:
+    def ChangeValue(self, value) -> None:
         """ Change the value without sending an EVT_TEXT event.
 
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
@@ -62,7 +62,7 @@ minimum integer, or None if not specified.
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
         """
 
-    def IsInBounds(self, value: Optional[int]=None) -> None:
+    def IsInBounds(self, value=None) -> None:
         """ Returns True if no value is specified and the current value
 of the control falls within the current bounds.  This function can
 also be called with a value to see if that value would fall within
@@ -126,7 +126,7 @@ recolored accordingly.
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
         """
 
-    def SetLimited(self, limited: bool) -> None:
+    def SetLimited(self, limited) -> None:
         """ If called with a value of True, this function will cause the control
 to limit the value to fall within the bounds currently specified.
 If the controlâs value currently exceeds the bounds, it will then
@@ -135,7 +135,7 @@ be limited accordingly.
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
         """
 
-    def SetLongAllowed(self, allow_long: bool) -> None:
+    def SetLongAllowed(self, allow_long) -> None:
         """ Change the behavior of the validation code, allowing control
 to have a long value or not, as appropriate.  If the value
 of the control is currently long, and allow_long is 0, the
@@ -146,7 +146,7 @@ for positive and negative values, respectively.
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
         """
 
-    def SetMax(self, max: Optional[int]=None) -> None:
+    def SetMax(self, max=None) -> None:
         """ Sets the maximum value of the control. If a value of None
 is provided, then the control will have no explicit maximum value.
 If the value specified is less than the current minimum value, then
@@ -156,7 +156,7 @@ current setting. On success, the function returns 1.
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
         """
 
-    def SetMin(self, min: Optional[int]=None) -> None:
+    def SetMin(self, min=None) -> None:
         """ Sets the minimum value of the control.  If a value of None
 is provided, then the control will have no explicit minimum value.
 If the value specified is greater than the current maximum value,
@@ -166,7 +166,7 @@ its current setting.  On success, the function returns 1.
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntCtrl.html
         """
 
-    def SetNoneAllowed(self, allow_none: bool) -> None:
+    def SetNoneAllowed(self, allow_none) -> None:
         """ Change the behavior of the validation code, allowing control
 to have a value of None or not, as appropriate.  If the value
 of the control is currently None, and allow_none is 0, the
@@ -201,7 +201,7 @@ class IntUpdatedEvent(PyCommandEvent):
 
         Source: https://docs.wxpython.org/wx.lib.intctrl.IntUpdatedEvent.html
     """
-    def __init__(self, id, value = 0, object=None) -> None:
+    def __init__(self, id, value=0, object=None) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.intctrl.IntUpdatedEvent.html
@@ -238,7 +238,7 @@ input prior to changing the value of the underlying TextCtrl.
         """ Validates keystrokes to make sure the resulting value will a legal
 value.  Erasing the value causes it to be set to 0, with the value
 selected, so it can be replaced.  Similarly, replacing the value
-with a â-â sign causes the value to become -1, with the value
+with a â-â sign causes the value to become -1, with the value
 selected.  Leading zeros are removed if introduced by selection,
 and are prevented from being inserted.
 

@@ -1,13 +1,9 @@
 # -*- coding: utf-8 -*-
 from typing import Any, ContextManager, Optional, TypeAlias, Union
 
-from .. import (Bitmap, BitmapButton, BookCtrlBase, Button, Colour, ComboBox,
-                ComboCtrl, CommandEvent, Control, Coord, DateTime, Dialog,
-                Event, EvtHandler, Font, Frame, HelpControllerBase, Image,
-                ItemContainer, ListCtrl, Menu, NotifyEvent, Object,
-                ObjectRefData, Panel, Point, Rect, Size, Sizer,
-                VisualAttributes, WeekDay, Window, _Bitmap, _Font, _ListCtrl,
-                _Rect, _Size)
+from .. import (Button, ComboBox, ComboCtrl, CommandEvent, Control, Dialog,
+                Event, EvtHandler, Frame, HelpControllerBase, ItemContainer,
+                NotifyEvent, Object, ObjectRefData, Panel, Window)
 
 class CommandLinkButton(Button):
     """ Objects of this class are similar in appearance to the normal
@@ -21,44 +17,44 @@ Buttons but are similar to the links in a web page in functionality.
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    def Create(self, parent, id=ID_ANY, mainLabel="", note="", pos=DefaultPosition, size=DefaultSize, style=0, validator=DefaultValidator, name=ButtonNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, mainLabel='', note='', pos=DefaultPosition, size=DefaultSize, style=0, validator=DefaultValidator, name=ButtonNameStr) -> None:
         """ Button creation function for two-step creation.
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    def GetLabel(self) -> str:
+    def GetLabel(self) -> None:
         """ Returns the string label for the button.
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    def GetMainLabel(self) -> str:
+    def GetMainLabel(self) -> None:
         """ Returns the current main label.
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    def GetNote(self) -> str:
+    def GetNote(self) -> None:
         """ Returns the currently used note.
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    def SetLabel(self, label: str) -> None:
+    def SetLabel(self, label) -> None:
         """ Sets the string label and note for the button.
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    def SetMainLabel(self, mainLabel: str) -> None:
+    def SetMainLabel(self, mainLabel) -> None:
         """ Changes the main label.
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
@@ -70,15 +66,15 @@ Buttons but are similar to the links in a web page in functionality.
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    def SetNote(self, note: str) -> None:
+    def SetNote(self, note) -> None:
         """ Changes the note.
 
             Source: https://docs.wxpython.org/wx.adv.CommandLinkButton.html
         """
 
-    Label: str  # See GetLabel and SetLabel
-    MainLabel: str  # See GetMainLabel and SetMainLabel
-    Note: str  # See GetNote and SetNote
+    Label: None  # See GetLabel and SetLabel
+    MainLabel: None  # See GetMainLabel and SetMainLabel
+    Note: None  # See GetNote and SetNote
 
 
 
@@ -96,74 +92,74 @@ enter, delete and reorder a list of strings.
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def Create(self, parent, id=ID_ANY, label="", pos=DefaultPosition, size=DefaultSize, style=EL_DEFAULT_STYLE, name=EditableListBoxNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, label='', pos=DefaultPosition, size=DefaultSize, style=EL_DEFAULT_STYLE, name=EditableListBoxNameStr) -> None:
         """ Creates the editable listbox for two-step construction.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def GetDelButton(self) -> 'BitmapButton':
+    def GetDelButton(self) -> None:
         """ Returns a reference to the delete button used in the EditableListBox.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def GetDownButton(self) -> 'BitmapButton':
+    def GetDownButton(self) -> None:
         """ Returns a reference to the down button used in the EditableListBox.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def GetEditButton(self) -> 'BitmapButton':
+    def GetEditButton(self) -> None:
         """ Returns a reference to the edit button used in the EditableListBox.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def GetListCtrl(self) -> 'ListCtrl':
+    def GetListCtrl(self) -> None:
         """ Returns a reference to the listctrl used in the EditableListBox.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def GetNewButton(self) -> 'BitmapButton':
+    def GetNewButton(self) -> None:
         """ Returns a reference to the new button used in the EditableListBox.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def GetStrings(self) -> list[str]:
+    def GetStrings(self) -> None:
         """ Returns a list of the current contents of the control.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def GetUpButton(self) -> 'BitmapButton':
+    def GetUpButton(self) -> None:
         """ Returns a reference to the up button used in the EditableListBox.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    def SetStrings(self, strings: list[str]) -> None:
+    def SetStrings(self, strings) -> None:
         """ Replaces current contents with given strings.
 
             Source: https://docs.wxpython.org/wx.adv.EditableListBox.html
         """
 
-    DelButton: 'BitmapButton'  # See GetDelButton
-    DownButton: 'BitmapButton'  # See GetDownButton
-    EditButton: 'BitmapButton'  # See GetEditButton
-    ListCtrl: '_ListCtrl'  # See GetListCtrl
-    NewButton: 'BitmapButton'  # See GetNewButton
-    Strings: list[str]  # See GetStrings and SetStrings
-    UpButton: 'BitmapButton'  # See GetUpButton
+    DelButton: None  # See GetDelButton
+    DownButton: None  # See GetDownButton
+    EditButton: None  # See GetEditButton
+    ListCtrl: None  # See GetListCtrl
+    NewButton: None  # See GetNewButton
+    Strings: None  # See GetStrings and SetStrings
+    UpButton: None  # See GetUpButton
 
 
 
@@ -175,7 +171,7 @@ EL_ALLOW_DELETE: int  # Allows the user to delete existing strings.
 
 EL_NO_REORDER: int  # Does not allow the user to reorder the strings.
 
-EL_DEFAULT_STYLE: int  # Default style: EL_ALLOW_NEW|wxEL_ALLOW_EDIT|wxEL_ALLOW_DELETE. ^^
+EL_DEFAULT_STYLE: int  # Default style: EL_ALLOW_NEW|wxEL_ALLOW_EDIT|wxEL_ALLOW_DELETE.
 
 class OwnerDrawnComboBox(ComboCtrl,ItemContainer):
     """ OwnerDrawnComboBox is a combobox with owner-drawn list items.
@@ -188,38 +184,38 @@ class OwnerDrawnComboBox(ComboCtrl,ItemContainer):
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    def Create(self, parent, id=ID_ANY, value="", pos=DefaultPosition, size=DefaultSize, choices=[], style=0, validator=DefaultValidator, name=ComboBoxNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, value='', pos=DefaultPosition, size=DefaultSize, choices=[], style=0, validator=DefaultValidator, name=ComboBoxNameStr) -> None:
         """ Creates the combobox for two-step construction.
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    def GetWidestItem(self) -> int:
+    def GetWidestItem(self) -> None:
         """ Returns index to the widest item in the list.
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    def GetWidestItemWidth(self) -> int:
+    def GetWidestItemWidth(self) -> None:
         """ Returns width of the widest item in the list.
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    def IsListEmpty(self) -> bool:
+    def IsListEmpty(self) -> None:
         """ Returns True if the list of combobox choices is empty.
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    def IsTextEmpty(self) -> bool:
+    def IsTextEmpty(self) -> None:
         """ Returns True if the text of the combobox is empty.
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
@@ -237,28 +233,28 @@ class OwnerDrawnComboBox(ComboCtrl,ItemContainer):
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    def OnMeasureItem(self, item: int) -> 'Coord':
+    def OnMeasureItem(self, item) -> None:
         """ The derived class may implement this method to return the height of the specified item (in pixels).
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    def OnMeasureItemWidth(self, item: int) -> 'Coord':
+    def OnMeasureItemWidth(self, item) -> None:
         """ The derived class may implement this method to return the width of the specified item (in pixels).
 
             Source: https://docs.wxpython.org/wx.adv.OwnerDrawnComboBox.html
         """
 
-    WidestItem: int  # See GetWidestItem
-    WidestItemWidth: int  # See GetWidestItemWidth
+    WidestItem: None  # See GetWidestItem
+    WidestItemWidth: None  # See GetWidestItemWidth
 
 
 
 ODCB_DCLICK_CYCLES: int  # Double-clicking cycles item if wx.CB_READONLY is also used. Synonymous with wx.CC_SPECIAL_DCLICK.
 
-ODCB_STD_CONTROL_PAINT: int  # Control itself is not custom painted using OnDrawItem. Even if this style is not used, writable   wx.adv.OwnerDrawnComboBox  is never custom painted unless SetCustomPaintWidth  is called. ^^
+ODCB_STD_CONTROL_PAINT: int  # Control itself is not custom painted using OnDrawItem. Even if this style is not used, writable   wx.adv.OwnerDrawnComboBox  is never custom painted unless SetCustomPaintWidth  is called.
 
-EVT_COMBOBOX: int  # Process a wxEVT_COMBOBOX event, when an item on the list is selected. Note that calling GetValue  returns the new value of selection. ^^
+EVT_COMBOBOX: int  # Process a wxEVT_COMBOBOX event, when an item on the list is selected. Note that calling GetValue  returns the new value of selection.
 
 CB_READONLY: int
 
@@ -275,13 +271,13 @@ class BitmapComboBox(ComboBox):
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def Append(self, *args, **kw) -> int:
+    def Append(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def Create(self, parent, id=ID_ANY, value="", pos=DefaultPosition, size=DefaultSize, choices=[], style=0, validator=DefaultValidator, name=BitmapComboBoxNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, value='', pos=DefaultPosition, size=DefaultSize, choices=[], style=0, validator=DefaultValidator, name=BitmapComboBoxNameStr) -> None:
         """ Creates the combobox for two-step construction.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
@@ -293,74 +289,74 @@ class BitmapComboBox(ComboBox):
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def FindString(self, string, caseSensitive=False) -> int:
+    def FindString(self, string, caseSensitive=False) -> None:
         """ Finds an item whose label matches the given string.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def GetBitmapSize(self) -> 'Size':
+    def GetBitmapSize(self) -> None:
         """ Returns the size of the bitmaps used in the combo box.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def GetCount(self) -> int:
+    def GetCount(self) -> None:
         """ Returns the number of items in the control.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def GetInsertionPoint(self) -> int:
+    def GetInsertionPoint(self) -> None:
         """ Same as wx.TextEntry.GetInsertionPoint .
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def GetItemBitmap(self, n: int) -> 'Bitmap':
+    def GetItemBitmap(self, n) -> None:
         """ Returns the bitmap of the item with the given index.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def GetSelection(self) -> int:
+    def GetSelection(self) -> None:
         """ Returns the index of the selected item or  NOT_FOUND   if no item is selected.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def GetTextSelection(self) -> tuple:
+    def GetTextSelection(self) -> None:
         """ Gets the current selection span.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def GetString(self, n: int) -> str:
+    def GetString(self, n) -> None:
         """ Returns the label of the item with the given index.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def Insert(self, *args, **kw) -> int:
+    def Insert(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def IsListEmpty(self) -> bool:
+    def IsListEmpty(self) -> None:
         """ Returns True if the list of combobox choices is empty.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def IsTextEmpty(self) -> bool:
+    def IsTextEmpty(self) -> None:
         """ Returns True if the text of the combobox is empty.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
@@ -396,26 +392,26 @@ class BitmapComboBox(ComboBox):
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    def SetValue(self, text: str) -> None:
+    def SetValue(self, text) -> None:
         """ Sets the text for the combobox text field.
 
             Source: https://docs.wxpython.org/wx.adv.BitmapComboBox.html
         """
 
-    BitmapSize: 'Size'  # See GetBitmapSize
-    Count: int  # See GetCount
-    InsertionPoint: int  # See GetInsertionPoint
-    Selection: int  # See GetSelection and SetSelection
+    BitmapSize: None  # See GetBitmapSize
+    Count: None  # See GetCount
+    InsertionPoint: None  # See GetInsertionPoint
+    Selection: None  # See GetSelection and SetSelection
 
 
 
 CB_SORT: int  # Sorts the entries in the list alphabetically.
 
-TE_PROCESS_ENTER: int  # The control will generate the event wxEVT_TEXT_ENTER (otherwise pressing Enter key is either processed internally by the control or used for navigation between dialog controls). Windows only. ^^
+TE_PROCESS_ENTER: int  # The control will generate the event wxEVT_TEXT_ENTER (otherwise pressing Enter key is either processed internally by the control or used for navigation between dialog controls). Windows only.
 
 EVT_TEXT: int  # Process a  wxEVT_TEXT   event, when the combobox text changes.
 
-EVT_TEXT_ENTER: int  # Process a  wxEVT_TEXT_ENTER   event, when RETURN is pressed in the combobox. ^^
+EVT_TEXT_ENTER: int  # Process a  wxEVT_TEXT_ENTER   event, when RETURN is pressed in the combobox.
 
 NOT_FOUND: int
 
@@ -431,7 +427,7 @@ together with DatePickerCtrl.
             Source: https://docs.wxpython.org/wx.adv.DateEvent.html
         """
 
-    def GetDate(self) -> 'DateTime':
+    def GetDate(self) -> None:
         """ Returns the date.
 
             Source: https://docs.wxpython.org/wx.adv.DateEvent.html
@@ -443,13 +439,13 @@ together with DatePickerCtrl.
             Source: https://docs.wxpython.org/wx.adv.DateEvent.html
         """
 
-    def SetDate(self, date: 'DateTime') -> None:
+    def SetDate(self, date) -> None:
         """ Sets the date carried by the event, normally only used by the library internally.
 
             Source: https://docs.wxpython.org/wx.adv.DateEvent.html
         """
 
-    Date: 'DateTime'  # See GetDate and SetDate
+    Date: None  # See GetDate and SetDate
 
 
 
@@ -464,23 +460,23 @@ class HyperlinkEvent(CommandEvent):
             Source: https://docs.wxpython.org/wx.adv.HyperlinkEvent.html
         """
 
-    def GetURL(self) -> str:
+    def GetURL(self) -> None:
         """ Returns the URL of the hyperlink where the user has just clicked.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkEvent.html
         """
 
-    def SetURL(self, url: str) -> None:
+    def SetURL(self, url) -> None:
         """ Sets the URL associated with the event.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkEvent.html
         """
 
-    URL: str  # See GetURL and SetURL
+    URL: None  # See GetURL and SetURL
 
 
 
-EVT_HYPERLINK: int  # User clicked on a hyperlink. ^^
+EVT_HYPERLINK: int  # User clicked on a hyperlink.
 
 class SashEvent(CommandEvent):
     """ A sash event is sent when the sash of a SashWindow has been dragged
@@ -494,51 +490,51 @@ by the user.
             Source: https://docs.wxpython.org/wx.adv.SashEvent.html
         """
 
-    def GetDragRect(self) -> 'Rect':
+    def GetDragRect(self) -> None:
         """ Returns the rectangle representing the new size the window would be if the resize was applied.
 
             Source: https://docs.wxpython.org/wx.adv.SashEvent.html
         """
 
-    def GetDragStatus(self) -> 'SashDragStatus':
+    def GetDragStatus(self) -> None:
         """ Returns the status of the sash: one of wx.adv.SASH_STATUS_OK, wx.adv.SASH_STATUS_OUT_OF_RANGE.
 
             Source: https://docs.wxpython.org/wx.adv.SashEvent.html
         """
 
-    def GetEdge(self) -> 'SashEdgePosition':
+    def GetEdge(self) -> None:
         """ Returns the dragged edge.
 
             Source: https://docs.wxpython.org/wx.adv.SashEvent.html
         """
 
-    def SetDragRect(self, rect: 'Rect') -> None:
-        """ rect (wx.Rect) â
+    def SetDragRect(self, rect) -> None:
+        """ rect (wx.Rect)
 
             Source: https://docs.wxpython.org/wx.adv.SashEvent.html
         """
 
-    def SetDragStatus(self, status: SashDragStatus) -> None:
-        """ status (SashDragStatus) â
+    def SetDragStatus(self, status) -> None:
+        """ status (SashDragStatus)
 
             Source: https://docs.wxpython.org/wx.adv.SashEvent.html
         """
 
-    def SetEdge(self, edge: SashEdgePosition) -> None:
-        """ edge (SashEdgePosition) â
+    def SetEdge(self, edge) -> None:
+        """ edge (SashEdgePosition)
 
             Source: https://docs.wxpython.org/wx.adv.SashEvent.html
         """
 
-    DragRect: 'Rect'  # See GetDragRect and SetDragRect
-    DragStatus: 'SashDragStatus'  # See GetDragStatus and SetDragStatus
-    Edge: 'SashEdgePosition'  # See GetEdge and SetEdge
+    DragRect: None  # See GetDragRect and SetDragRect
+    DragStatus: None  # See GetDragStatus and SetDragStatus
+    Edge: None  # See GetEdge and SetEdge
 
 
 
 EVT_SASH_DRAGGED: int  # Process a  wxEVT_SASH_DRAGGED   event, when the user has finished dragging a sash.
 
-EVT_SASH_DRAGGED_RANGE: int  # Process a  wxEVT_SASH_DRAGGED_RANGE   event, when the user has finished dragging a sash. The event handler is called when windows with ids in the given range have their sashes dragged. ^^
+EVT_SASH_DRAGGED_RANGE: int  # Process a  wxEVT_SASH_DRAGGED_RANGE   event, when the user has finished dragging a sash. The event handler is called when windows with ids in the given range have their sashes dragged.
 
 OK: int
 
@@ -565,20 +561,20 @@ class BannerWindow(Window):
             Source: https://docs.wxpython.org/wx.adv.BannerWindow.html
         """
 
-    def Create(self, parent, winid=ID_ANY, dir=LEFT, pos=DefaultPosition, size=DefaultSize, style=0, name=BannerWindowNameStr) -> bool:
+    def Create(self, parent, winid=ID_ANY, dir=LEFT, pos=DefaultPosition, size=DefaultSize, style=0, name=BannerWindowNameStr) -> None:
         """ Really create the banner window for the objects created using the default constructor.
 
             Source: https://docs.wxpython.org/wx.adv.BannerWindow.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.BannerWindow.html
         """
 
-    def SetBitmap(self, bmp: 'BitmapBundle') -> None:
+    def SetBitmap(self, bmp) -> None:
         """ Provide the bitmap to use as background.
 
             Source: https://docs.wxpython.org/wx.adv.BannerWindow.html
@@ -619,97 +615,97 @@ dragged to resize the window.
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetDefaultBorderSize(self) -> int:
+    def GetDefaultBorderSize(self) -> None:
         """ Gets the default sash border size.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetEdgeMargin(self, edge: SashEdgePosition) -> int:
+    def GetEdgeMargin(self, edge) -> None:
         """ Get border size.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetExtraBorderSize(self) -> int:
+    def GetExtraBorderSize(self) -> None:
         """ Gets the addition border size between child and sash window.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetMaximumSizeX(self) -> int:
+    def GetMaximumSizeX(self) -> None:
         """ Gets the maximum window size in the x direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetMaximumSizeY(self) -> int:
+    def GetMaximumSizeY(self) -> None:
         """ Gets the maximum window size in the y direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetMinimumSizeX(self) -> int:
+    def GetMinimumSizeX(self) -> None:
         """ Gets the minimum window size in the x direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetMinimumSizeY(self) -> int:
+    def GetMinimumSizeY(self) -> None:
         """ Gets the minimum window size in the y direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def GetSashVisible(self, edge: SashEdgePosition) -> bool:
+    def GetSashVisible(self, edge) -> None:
         """ Returns True if a sash is visible on the given edge, False otherwise.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def SashHitTest(self, x, y, tolerance=2) -> 'SashEdgePosition':
+    def SashHitTest(self, x, y, tolerance=2) -> None:
         """ Tests for x, y over sash.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def SetDefaultBorderSize(self, width: int) -> None:
+    def SetDefaultBorderSize(self, width) -> None:
         """ Sets the default sash border size.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def SetExtraBorderSize(self, width: int) -> None:
+    def SetExtraBorderSize(self, width) -> None:
         """ Sets the additional border size between child and sash window.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def SetMaximumSizeX(self, min: int) -> None:
+    def SetMaximumSizeX(self, min) -> None:
         """ Sets the maximum window size in the x direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def SetMaximumSizeY(self, min: int) -> None:
+    def SetMaximumSizeY(self, min) -> None:
         """ Sets the maximum window size in the y direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def SetMinimumSizeX(self, min: int) -> None:
+    def SetMinimumSizeX(self, min) -> None:
         """ Sets the minimum window size in the x direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    def SetMinimumSizeY(self, min: int) -> None:
+    def SetMinimumSizeY(self, min) -> None:
         """ Sets the minimum window size in the y direction.
 
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
@@ -727,12 +723,12 @@ dragged to resize the window.
             Source: https://docs.wxpython.org/wx.adv.SashWindow.html
         """
 
-    DefaultBorderSize: int  # See GetDefaultBorderSize and SetDefaultBorderSize
-    ExtraBorderSize: int  # See GetExtraBorderSize and SetExtraBorderSize
-    MaximumSizeX: int  # See GetMaximumSizeX and SetMaximumSizeX
-    MaximumSizeY: int  # See GetMaximumSizeY and SetMaximumSizeY
-    MinimumSizeX: int  # See GetMinimumSizeX and SetMinimumSizeX
-    MinimumSizeY: int  # See GetMinimumSizeY and SetMinimumSizeY
+    DefaultBorderSize: None  # See GetDefaultBorderSize and SetDefaultBorderSize
+    ExtraBorderSize: None  # See GetExtraBorderSize and SetExtraBorderSize
+    MaximumSizeX: None  # See GetMaximumSizeX and SetMaximumSizeX
+    MaximumSizeY: None  # See GetMaximumSizeY and SetMaximumSizeY
+    MinimumSizeX: None  # See GetMinimumSizeX and SetMinimumSizeX
+    MinimumSizeY: None  # See GetMinimumSizeY and SetMinimumSizeY
 
 
 
@@ -742,7 +738,7 @@ SW_3DSASH: int  # Draws a 3D effect sash.
 
 SW_3DBORDER: int  # Draws a 3D effect border.
 
-SW_BORDER: int  # Draws a thin black border. ^^
+SW_BORDER: int  # Draws a thin black border.
 
 class AnimationCtrl(Control):
     """ This is a static control which displays an animation.
@@ -755,75 +751,75 @@ class AnimationCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def Create(self, parent, id=ID_ANY, anim=NullAnimation, pos=DefaultPosition, size=DefaultSize, style=AC_DEFAULT_STYLE, name=AnimationCtrlNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, anim=NullAnimation, pos=DefaultPosition, size=DefaultSize, style=AC_DEFAULT_STYLE, name=AnimationCtrlNameStr) -> None:
         """ Creates the control with the given anim  animation.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def CreateAnimation(self) -> 'Animation':
+    def CreateAnimation(self) -> None:
         """ Create a new animation object compatible with this control.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
     @staticmethod
-    def CreateCompatibleAnimation() -> 'Animation':
+    def CreateCompatibleAnimation() -> None:
         """ Create a new animation object compatible with this control.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def GetAnimation(self) -> 'Animation':
+    def GetAnimation(self) -> None:
         """ Returns the animation associated with this control.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def GetInactiveBitmap(self) -> 'Bitmap':
+    def GetInactiveBitmap(self) -> None:
         """ Returns the inactive bitmap shown in this control when the; see SetInactiveBitmap   for more info.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def IsPlaying(self) -> bool:
+    def IsPlaying(self) -> None:
         """ Returns True if the animation is being played.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def Load(self, file, animType=ANIMATION_TYPE_ANY) -> bool:
+    def Load(self, file, animType=ANIMATION_TYPE_ANY) -> None:
         """ Loads the animation from the given stream and calls SetAnimation .
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def LoadFile(self, file, animType=ANIMATION_TYPE_ANY) -> bool:
+    def LoadFile(self, file, animType=ANIMATION_TYPE_ANY) -> None:
         """ Loads the animation from the given file and calls SetAnimation .
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def Play(self) -> bool:
+    def Play(self) -> None:
         """ Starts playing the animation.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def SetAnimation(self, anim: 'adv.Animation') -> None:
+    def SetAnimation(self, anim) -> None:
         """ Sets the animation to play in this control.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    def SetInactiveBitmap(self, bmp: 'BitmapBundle') -> None:
+    def SetInactiveBitmap(self, bmp) -> None:
         """ Sets the bitmap to show on the control when itâs not playing an animation.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
@@ -835,14 +831,14 @@ class AnimationCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.AnimationCtrl.html
         """
 
-    Animation: 'Animation'  # See GetAnimation and SetAnimation
-    InactiveBitmap: 'Bitmap'  # See GetInactiveBitmap and SetInactiveBitmap
+    Animation: None  # See GetAnimation and SetAnimation
+    InactiveBitmap: None  # See GetInactiveBitmap and SetInactiveBitmap
 
 
 
 AC_DEFAULT_STYLE: int  # The default style: wx.BORDER_NONE.
 
-AC_NO_AUTORESIZE: int  # By default, the control will adjust its size to exactly fit to the size of the animation when SetAnimation is called. If this style flag is given, the control will not change its size ^^
+AC_NO_AUTORESIZE: int  # By default, the control will adjust its size to exactly fit to the size of the animation when SetAnimation is called. If this style flag is given, the control will not change its size
 
 BORDER_NONE: int
 
@@ -857,86 +853,86 @@ class CalendarCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def Create(self, parent, id=ID_ANY, date=DefaultDateTime, pos=DefaultPosition, size=DefaultSize, style=CAL_SHOW_HOLIDAYS, name=CalendarNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, date=DefaultDateTime, pos=DefaultPosition, size=DefaultSize, style=CAL_SHOW_HOLIDAYS, name=CalendarNameStr) -> None:
         """ Creates the control.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def EnableHolidayDisplay(self, display: bool=True) -> None:
+    def EnableHolidayDisplay(self, display=True) -> None:
         """ This function should be used instead of changing  CAL_SHOW_HOLIDAYS   style bit directly.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def EnableMonthChange(self, enable: bool=True) -> bool:
+    def EnableMonthChange(self, enable=True) -> None:
         """ This function should be used instead of changing  CAL_NO_MONTH_CHANGE   style bit.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetAttr(self, day: int) -> 'CalendarDateAttr':
+    def GetAttr(self, day) -> None:
         """ Returns the attribute for the given date (should be in the range 1â¦31).
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetDate(self) -> 'DateTime':
+    def GetDate(self) -> None:
         """ Gets the currently selected date.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetDateRange(self) -> tuple:
+    def GetDateRange(self) -> None:
         """ Returns the limits currently being used.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetHeaderColourBg(self) -> 'Colour':
+    def GetHeaderColourBg(self) -> None:
         """ Gets the background colour of the header part of the calendar window.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetHeaderColourFg(self) -> 'Colour':
+    def GetHeaderColourFg(self) -> None:
         """ Gets the foreground colour of the header part of the calendar window.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetHighlightColourBg(self) -> 'Colour':
+    def GetHighlightColourBg(self) -> None:
         """ Gets the background highlight colour.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetHighlightColourFg(self) -> 'Colour':
+    def GetHighlightColourFg(self) -> None:
         """ Gets the foreground highlight colour.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetHolidayColourBg(self) -> 'Colour':
+    def GetHolidayColourBg(self) -> None:
         """ Return the background colour currently used for holiday highlighting.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def GetHolidayColourFg(self) -> 'Colour':
+    def GetHolidayColourFg(self) -> None:
         """ Return the foreground colour currently used for holiday highlighting.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def HitTest(self, pos: Union[tuple[int, int], 'Point']) -> tuple:
+    def HitTest(self, pos) -> None:
         """ Returns one of CalendarHitTestResult constants and fills either date  or wd  pointer with the corresponding value depending on the hit test code.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
@@ -954,7 +950,7 @@ class CalendarCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def ResetAttr(self, day: int) -> None:
+    def ResetAttr(self, day) -> None:
         """ Clears any attributes associated with the given day (in the range 1â¦31).
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
@@ -966,13 +962,13 @@ class CalendarCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def SetDate(self, date: 'DateTime') -> bool:
+    def SetDate(self, date) -> None:
         """ Sets the current date.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def SetDateRange(self, lowerdate=DefaultDateTime, upperdate=DefaultDateTime) -> bool:
+    def SetDateRange(self, lowerdate=DefaultDateTime, upperdate=DefaultDateTime) -> None:
         """ Restrict the dates that can be selected in the control to the specified range.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
@@ -990,7 +986,7 @@ class CalendarCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
         """
 
-    def SetHoliday(self, day: int) -> None:
+    def SetHoliday(self, day) -> None:
         """ Marks the specified day as being a holiday in the current month.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarCtrl.html
@@ -1010,14 +1006,14 @@ class CalendarCtrl(Control):
         """ 
         """
 
-    Date: 'DateTime'  # See GetDate and SetDate
-    DateRange: tuple  # See GetDateRange and SetDateRange
-    HeaderColourBg: 'Colour'  # See GetHeaderColourBg
-    HeaderColourFg: 'Colour'  # See GetHeaderColourFg
-    HighlightColourBg: 'Colour'  # See GetHighlightColourBg
-    HighlightColourFg: 'Colour'  # See GetHighlightColourFg
-    HolidayColourBg: 'Colour'  # See GetHolidayColourBg
-    HolidayColourFg: 'Colour'  # See GetHolidayColourFg
+    Date: None  # See GetDate and SetDate
+    DateRange: None  # See GetDateRange and SetDateRange
+    HeaderColourBg: None  # See GetHeaderColourBg
+    HeaderColourFg: None  # See GetHeaderColourFg
+    HighlightColourBg: None  # See GetHighlightColourBg
+    HighlightColourFg: None  # See GetHighlightColourFg
+    HolidayColourBg: None  # See GetHolidayColourBg
+    HolidayColourFg: None  # See GetHolidayColourFg
 
 
 
@@ -1035,7 +1031,7 @@ CAL_SHOW_SURROUNDING_WEEKS: int  # Show the neighbouring weeks in the previous a
 
 CAL_SEQUENTIAL_MONTH_SELECTION: int  # Use alternative, more compact, style for the month and year selection controls. (only generic)
 
-CAL_SHOW_WEEK_NUMBERS: int  # Show week numbers on the left side of the calendar. (not in generic) ^^
+CAL_SHOW_WEEK_NUMBERS: int  # Show week numbers on the left side of the calendar. (not in generic)
 
 EVT_CALENDAR: int  # A day was double clicked in the calendar.
 
@@ -1045,7 +1041,7 @@ EVT_CALENDAR_PAGE_CHANGED: int  # The selected month (and/or year) changed.
 
 EVT_CALENDAR_WEEKDAY_CLICKED: int  # User clicked on the week day header (only generic).
 
-EVT_CALENDAR_WEEK_CLICKED: int  # User clicked on the week of the year number (only generic). ^^
+EVT_CALENDAR_WEEK_CLICKED: int  # User clicked on the week of the year number (only generic).
 
 class DatePickerCtrl(Control):
     """ This control allows the user to select a date.
@@ -1058,32 +1054,32 @@ class DatePickerCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
         """
 
-    def Create(self, parent, id=ID_ANY, dt=DefaultDateTime, pos=DefaultPosition, size=DefaultSize, style=DP_DEFAULT|DP_SHOWCENTURY, validator=DefaultValidator, name="datectrl") -> bool:
+    def Create(self, parent, id=ID_ANY, dt=DefaultDateTime, pos=DefaultPosition, size=DefaultSize, style=DP_DEFAULT | DP_SHOWCENTURY, validator=DefaultValidator, name='datectrl') -> None:
         """ Create the control window.
 
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
         """
 
-    def GetRange(self) -> tuple:
+    def GetRange(self) -> None:
         """ If the control had been previously limited to a range of dates using SetRange , returns the lower and upper bounds of this range.
 
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
         """
 
-    def GetValue(self) -> 'DateTime':
+    def GetValue(self) -> None:
         """ Returns the currently entered date.
 
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
         """
 
-    def SetNullText(self, text: str) -> None:
+    def SetNullText(self, text) -> None:
         """ Set the text to show when there is no valid value.
 
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
@@ -1095,27 +1091,27 @@ class DatePickerCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
         """
 
-    def SetValue(self, dt: 'DateTime') -> None:
+    def SetValue(self, dt) -> None:
         """ Changes the current value of the control.
 
             Source: https://docs.wxpython.org/wx.adv.DatePickerCtrl.html
         """
 
-    Value: 'DateTime'  # See GetValue and SetValue
+    Value: None  # See GetValue and SetValue
 
 
 
 DP_SPIN: int  # Creates a control without a month calendar drop down but with spin-control-like arrows to change individual date components. This style is not supported by the generic version.
 
-DP_DROPDOWN: int  # Creates a control with a month calendar drop-down part from which the user can select a date. This style is not supported in OSX/Cocoa native version.
+DP_DROPDOWN: int  # Creates a control with a month calendar drop-down part from which the user can select a date. In OSX/Cocoa native version this style is supported on macOS 10.15.4 and later.
 
 DP_DEFAULT: int  # Creates a control with the style that is best supported for the current platform (currently wx.adv.DP_SPIN under Windows and OSX/Cocoa and wx.adv.DP_DROPDOWN elsewhere).
 
 DP_ALLOWNONE: int  # With this style, the control allows the user to not enter any valid date at all. Without it - the default - the control always has some valid date. This style is not supported in OSX/Cocoa native version.
 
-DP_SHOWCENTURY: int  # Forces display of the century in the default date format. Without this style the century could be displayed, or not, depending on the default date representation in the system. This style is not supported in OSX/Cocoa native version currently. ^^
+DP_SHOWCENTURY: int  # Forces display of the century in the default date format. Without this style the century could be displayed, or not, depending on the default date representation in the system. This style is not supported in OSX/Cocoa native version currently.
 
-EVT_DATE_CHANGED: int  # Process a wxEVT_DATE_CHANGED event, which fires when the user changes the current selection in the control. ^^
+EVT_DATE_CHANGED: int  # Process a wxEVT_DATE_CHANGED event, which fires when the user changes the current selection in the control.
 
 class HyperlinkCtrl(Control):
     """ This class shows a static text element which links to an URL.
@@ -1128,84 +1124,84 @@ class HyperlinkCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def Create(self, parent, id=ID_ANY, label="", url="", pos=DefaultPosition, size=DefaultSize, style=HL_DEFAULT_STYLE, name=HyperlinkCtrlNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, label='', url='', pos=DefaultPosition, size=DefaultSize, style=HL_DEFAULT_STYLE, name=HyperlinkCtrlNameStr) -> None:
         """ Creates the hyperlink control.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def GetHoverColour(self) -> 'Colour':
+    def GetHoverColour(self) -> None:
         """ Returns the colour used to print the label of the hyperlink when the mouse is over the control.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def GetNormalColour(self) -> 'Colour':
+    def GetNormalColour(self) -> None:
         """ Returns the colour used to print the label when the link has never been clicked before (i.e. the link has not been visited) and the mouse is not over the control.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def GetURL(self) -> str:
+    def GetURL(self) -> None:
         """ Returns the URL associated with the hyperlink.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def GetVisited(self) -> bool:
+    def GetVisited(self) -> None:
         """ Returns True if the hyperlink has already been clicked by the user at least one time.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def GetVisitedColour(self) -> 'Colour':
+    def GetVisitedColour(self) -> None:
         """ Returns the colour used to print the label when the mouse is not over the control and the link has already been clicked before (i.e. the link has been visited).
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def SetHoverColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHoverColour(self, colour) -> None:
         """ Sets the colour used to print the label of the hyperlink when the mouse is over the control.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def SetNormalColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetNormalColour(self, colour) -> None:
         """ Sets the colour used to print the label when the link has never been clicked before (i.e. the link has not been visited) and the mouse is not over the control.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def SetURL(self, url: str) -> None:
+    def SetURL(self, url) -> None:
         """ Sets the URL associated with the hyperlink.
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def SetVisited(self, visited: bool=True) -> None:
+    def SetVisited(self, visited=True) -> None:
         """ Marks the hyperlink as visited (see wx.adv.HyperlinkCtrl.SetVisitedColour ).
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    def SetVisitedColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetVisitedColour(self, colour) -> None:
         """ Sets the colour used to print the label when the mouse is not over the control and the link has already been clicked before (i.e. the link has been visited).
 
             Source: https://docs.wxpython.org/wx.adv.HyperlinkCtrl.html
         """
 
-    HoverColour: 'Colour'  # See GetHoverColour and SetHoverColour
-    NormalColour: 'Colour'  # See GetNormalColour and SetNormalColour
-    URL: str  # See GetURL and SetURL
-    Visited: bool  # See GetVisited and SetVisited
-    VisitedColour: 'Colour'  # See GetVisitedColour and SetVisitedColour
+    HoverColour: None  # See GetHoverColour and SetHoverColour
+    NormalColour: None  # See GetNormalColour and SetNormalColour
+    URL: None  # See GetURL and SetURL
+    Visited: None  # See GetVisited and SetVisited
+    VisitedColour: None  # See GetVisitedColour and SetVisitedColour
 
 
 
@@ -1217,7 +1213,7 @@ HL_ALIGN_CENTRE: int  # Center the text (horizontally). This style is not suppor
 
 HL_CONTEXTMENU: int  # Pop up a context menu when the hyperlink is right-clicked. The context menu contains a âCopy URLâ menu item which is automatically handled by the hyperlink and which just copies in the clipboard the URL (not the label) of the control.
 
-HL_DEFAULT_STYLE: int  # The default style for   wx.adv.HyperlinkCtrl: BORDER_NONE|wxHL_CONTEXTMENU|wxHL_ALIGN_CENTRE. ^^
+HL_DEFAULT_STYLE: int  # The default style for   wx.adv.HyperlinkCtrl: BORDER_NONE|wxHL_CONTEXTMENU|wxHL_ALIGN_CENTRE.
 
 class TimePickerCtrl(Control):
     """ This control allows the user to enter time.
@@ -1230,48 +1226,48 @@ class TimePickerCtrl(Control):
             Source: https://docs.wxpython.org/wx.adv.TimePickerCtrl.html
         """
 
-    def Create(self, parent, id=ID_ANY, dt=DefaultDateTime, pos=DefaultPosition, size=DefaultSize, style=TP_DEFAULT, validator=DefaultValidator, name=TimePickerCtrlNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, dt=DefaultDateTime, pos=DefaultPosition, size=DefaultSize, style=TP_DEFAULT, validator=DefaultValidator, name=TimePickerCtrlNameStr) -> None:
         """ Create the control window.
 
             Source: https://docs.wxpython.org/wx.adv.TimePickerCtrl.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.TimePickerCtrl.html
         """
 
-    def GetTime(self) -> tuple:
+    def GetTime(self) -> None:
         """ Returns the currently entered time as hours, minutes and seconds.
 
             Source: https://docs.wxpython.org/wx.adv.TimePickerCtrl.html
         """
 
-    def GetValue(self) -> 'DateTime':
+    def GetValue(self) -> None:
         """ Returns the currently entered time.
 
             Source: https://docs.wxpython.org/wx.adv.TimePickerCtrl.html
         """
 
-    def SetTime(self, hour, min, sec) -> bool:
+    def SetTime(self, hour, min, sec) -> None:
         """ Changes the current time of the control.
 
             Source: https://docs.wxpython.org/wx.adv.TimePickerCtrl.html
         """
 
-    def SetValue(self, dt: 'DateTime') -> None:
+    def SetValue(self, dt) -> None:
         """ Changes the current value of the control.
 
             Source: https://docs.wxpython.org/wx.adv.TimePickerCtrl.html
         """
 
-    Value: 'DateTime'  # See GetValue and SetValue
+    Value: None  # See GetValue and SetValue
 
 
 
-EVT_TIME_CHANGED: int  # Process a wxEVT_TIME_CHANGED event, which fires when the user changes the current selection in the control. ^^
+EVT_TIME_CHANGED: int  # Process a wxEVT_TIME_CHANGED event, which fires when the user changes the current selection in the control.
 
 class PropertySheetDialog(Dialog):
     """ This class represents a property sheet dialog: a tabbed dialog for
@@ -1285,115 +1281,115 @@ showing settings.
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def AddBookCtrl(self, sizer: 'Sizer') -> None:
+    def AddBookCtrl(self, sizer) -> None:
         """ Override this if you wish to add the book control in a way different from the standard way (for example, using different spacing).
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def Create(self, parent, id=ID_ANY, title="", pos=DefaultPosition, size=DefaultSize, style=DEFAULT_DIALOG_STYLE, name=DialogNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, title='', pos=DefaultPosition, size=DefaultSize, style=DEFAULT_DIALOG_STYLE, name=DialogNameStr) -> None:
         """ Call this from your own Create function, before adding buttons and pages.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def CreateBookCtrl(self) -> 'BookCtrlBase':
+    def CreateBookCtrl(self) -> None:
         """ Override this if you wish to create a different kind of book control; by default, the value passed to SetSheetStyle   is used to determine the control.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def CreateButtons(self, flags: int=OK|CANCEL) -> None:
+    def CreateButtons(self, flags=OK | CANCEL) -> None:
         """ Call this to create the buttons for the dialog.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def GetBookCtrl(self) -> 'BookCtrlBase':
+    def GetBookCtrl(self) -> None:
         """ Returns the book control that will contain your settings pages.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def GetContentWindow(self) -> 'Window':
+    def GetContentWindow(self) -> None:
         """ Override this to return a window containing the main content of the dialog.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def GetInnerSizer(self) -> 'Sizer':
+    def GetInnerSizer(self) -> None:
         """ Returns the inner sizer that contains the book control and button sizer.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def GetSheetInnerBorder(self) -> int:
+    def GetSheetInnerBorder(self) -> None:
         """ Returns the border around the book control only.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def GetSheetOuterBorder(self) -> int:
+    def GetSheetOuterBorder(self) -> None:
         """ Returns the border around the whole dialog.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def GetSheetStyle(self) -> int:
+    def GetSheetStyle(self) -> None:
         """ Returns the sheet style.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def LayoutDialog(self, centreFlags: int=BOTH) -> None:
+    def LayoutDialog(self, centreFlags=BOTH) -> None:
         """ Call this to lay out the dialog.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def SetBookCtrl(self, bookCtrl: 'BookCtrlBase') -> None:
+    def SetBookCtrl(self, bookCtrl) -> None:
         """ Sets the book control used for the dialog.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def SetInnerSizer(self, sizer: 'Sizer') -> None:
+    def SetInnerSizer(self, sizer) -> None:
         """ Set the inner sizer that contains the book control and button sizer.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def SetSheetInnerBorder(self, border: int) -> None:
+    def SetSheetInnerBorder(self, border) -> None:
         """ Set the border around the book control only.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def SetSheetOuterBorder(self, border: int) -> None:
+    def SetSheetOuterBorder(self, border) -> None:
         """ Set the border around the whole dialog.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    def SetSheetStyle(self, style: int) -> None:
+    def SetSheetStyle(self, style) -> None:
         """ You can customize the look and feel of the dialog by setting the sheet style.
 
             Source: https://docs.wxpython.org/wx.adv.PropertySheetDialog.html
         """
 
-    BookCtrl: 'BookCtrlBase'  # See GetBookCtrl and SetBookCtrl
-    ContentWindow: 'Window'  # See GetContentWindow
-    InnerSizer: 'Sizer'  # See GetInnerSizer and SetInnerSizer
-    SheetInnerBorder: int  # See GetSheetInnerBorder and SetSheetInnerBorder
-    SheetOuterBorder: int  # See GetSheetOuterBorder and SetSheetOuterBorder
-    SheetStyle: int  # See GetSheetStyle and SetSheetStyle
+    BookCtrl: None  # See GetBookCtrl and SetBookCtrl
+    ContentWindow: None  # See GetContentWindow
+    InnerSizer: None  # See GetInnerSizer and SetInnerSizer
+    SheetInnerBorder: None  # See GetSheetInnerBorder and SetSheetInnerBorder
+    SheetOuterBorder: None  # See GetSheetOuterBorder and SetSheetOuterBorder
+    SheetStyle: None  # See GetSheetStyle and SetSheetStyle
 
 
 
@@ -1408,140 +1404,140 @@ class Wizard(Dialog):
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def Create(*args, **kwargs) -> bool:
+    def Create(*args, **kwargs) -> None:
         """ Creates the wizard dialog.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def FitToPage(self, firstPage: 'adv.WizardPage') -> None:
+    def FitToPage(self, firstPage) -> None:
         """ This method is obsolete, use GetPageAreaSizer   instead.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def GetBitmap(self) -> 'Bitmap':
+    def GetBitmap(self) -> None:
         """ Returns the bitmap used for the wizard.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def GetBitmapBackgroundColour(self) -> 'Colour':
+    def GetBitmapBackgroundColour(self) -> None:
         """ Returns the colour that should be used to fill the area not taken up by the wizard or page bitmap, if a non-zero bitmap placement flag has been set.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def GetBitmapPlacement(self) -> int:
+    def GetBitmapPlacement(self) -> None:
         """ Returns the flags indicating how the wizard or page bitmap should be expanded and positioned to fit the page height.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def GetCurrentPage(self) -> 'WizardPage':
+    def GetCurrentPage(self) -> None:
         """ Get the current page while the wizard is running.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def GetMinimumBitmapWidth(self) -> int:
+    def GetMinimumBitmapWidth(self) -> None:
         """ Returns the minimum width for the bitmap that will be constructed to contain the actual wizard or page bitmap if a non-zero bitmap placement flag has been set.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def GetPageAreaSizer(self) -> 'Sizer':
+    def GetPageAreaSizer(self) -> None:
         """ Returns pointer to page area sizer.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def GetPageSize(self) -> 'Size':
+    def GetPageSize(self) -> None:
         """ Returns the size available for the pages.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def HasNextPage(self, page: 'adv.WizardPage') -> bool:
+    def HasNextPage(self, page) -> None:
         """ Return True if this page is not the last one in the wizard.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def HasPrevPage(self, page: 'adv.WizardPage') -> bool:
+    def HasPrevPage(self, page) -> None:
         """ Returns True if this page is not the first one in the wizard.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def IsRunning(self) -> bool:
+    def IsRunning(self) -> None:
         """ bool
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def RunWizard(self, firstPage: 'adv.WizardPage') -> bool:
+    def RunWizard(self, firstPage) -> None:
         """ Executes the wizard starting from the given page, returning True if it was successfully finished or False if user cancelled it.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def SetBitmap(self, bitmap: 'BitmapBundle') -> None:
+    def SetBitmap(self, bitmap) -> None:
         """ Sets the bitmap used for the wizard.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def SetBitmapBackgroundColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetBitmapBackgroundColour(self, colour) -> None:
         """ Sets the colour that should be used to fill the area not taken up by the wizard or page bitmap, if a non-zero bitmap placement flag has been set.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def SetBitmapPlacement(self, placement: int) -> None:
+    def SetBitmapPlacement(self, placement) -> None:
         """ Sets the flags indicating how the wizard or page bitmap should be expanded and positioned to fit the page height.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def SetBorder(self, border: int) -> None:
+    def SetBorder(self, border) -> None:
         """ Sets width of border around page area.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def SetMinimumBitmapWidth(self, width: int) -> None:
+    def SetMinimumBitmapWidth(self, width) -> None:
         """ Sets the minimum width for the bitmap that will be constructed to contain the actual wizard or page bitmap if a non-zero bitmap placement flag has been set.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def SetPageSize(self, sizePage: Union[tuple[int, int], 'Size']) -> None:
+    def SetPageSize(self, sizePage) -> None:
         """ Sets the minimal size to be made available for the wizard pages.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    def ShowPage(self, page, goingForward=True) -> bool:
+    def ShowPage(self, page, goingForward=True) -> None:
         """ Show the given wizard page.
 
             Source: https://docs.wxpython.org/wx.adv.Wizard.html
         """
 
-    Bitmap: '_Bitmap'  # See GetBitmap and SetBitmap
-    BitmapBackgroundColour: 'Colour'  # See GetBitmapBackgroundColour and SetBitmapBackgroundColour
-    BitmapPlacement: int  # See GetBitmapPlacement and SetBitmapPlacement
-    CurrentPage: 'WizardPage'  # See GetCurrentPage
-    MinimumBitmapWidth: int  # See GetMinimumBitmapWidth and SetMinimumBitmapWidth
-    PageAreaSizer: 'Sizer'  # See GetPageAreaSizer
-    PageSize: 'Size'  # See GetPageSize and SetPageSize
+    Bitmap: None  # See GetBitmap and SetBitmap
+    BitmapBackgroundColour: None  # See GetBitmapBackgroundColour and SetBitmapBackgroundColour
+    BitmapPlacement: None  # See GetBitmapPlacement and SetBitmapPlacement
+    CurrentPage: None  # See GetCurrentPage
+    MinimumBitmapWidth: None  # See GetMinimumBitmapWidth and SetMinimumBitmapWidth
+    PageAreaSizer: None  # See GetPageAreaSizer
+    PageSize: None  # See GetPageSize and SetPageSize
 
 
 
@@ -1557,7 +1553,7 @@ EVT_WIZARD_CANCEL: int  # The user attempted to cancel the wizard (this event ma
 
 EVT_WIZARD_HELP: int  # The wizard help button was pressed.
 
-EVT_WIZARD_FINISHED: int  # The wizard finished button was pressed. ^^
+EVT_WIZARD_FINISHED: int  # The wizard finished button was pressed.
 
 WIZARD_EX_HELPBUTTON: int
 
@@ -1583,42 +1579,42 @@ remaining client area that the window should occupy.
 
         Source: https://docs.wxpython.org/wx.adv.CalculateLayoutEvent.html
     """
-    def __init__(self, id: int=0) -> None:
+    def __init__(self, id=0) -> None:
         """ Constructor.
 
             Source: https://docs.wxpython.org/wx.adv.CalculateLayoutEvent.html
         """
 
-    def GetFlags(self) -> int:
+    def GetFlags(self) -> None:
         """ Returns the flags associated with this event.
 
             Source: https://docs.wxpython.org/wx.adv.CalculateLayoutEvent.html
         """
 
-    def GetRect(self) -> 'Rect':
+    def GetRect(self) -> None:
         """ Before the event handler is entered, returns the remaining parent client area that the window could occupy.
 
             Source: https://docs.wxpython.org/wx.adv.CalculateLayoutEvent.html
         """
 
-    def SetFlags(self, flags: int) -> None:
+    def SetFlags(self, flags) -> None:
         """ Sets the flags associated with this event.
 
             Source: https://docs.wxpython.org/wx.adv.CalculateLayoutEvent.html
         """
 
-    def SetRect(self, rect: 'Rect') -> None:
+    def SetRect(self, rect) -> None:
         """ Call this to specify the new remaining parent client area, after the space occupied by the window has been subtracted.
 
             Source: https://docs.wxpython.org/wx.adv.CalculateLayoutEvent.html
         """
 
-    Flags: int  # See GetFlags and SetFlags
-    Rect: '_Rect'  # See GetRect and SetRect
+    Flags: None  # See GetFlags and SetFlags
+    Rect: None  # See GetRect and SetRect
 
 
 
-EVT_CALCULATE_LAYOUT: int  # Process a  wxEVT_CALCULATE_LAYOUT   event, which asks the window to take a âbiteâ out of a rectangle provided by the algorithm. ^^
+EVT_CALCULATE_LAYOUT: int  # Process a  wxEVT_CALCULATE_LAYOUT   event, which asks the window to take a âbiteâ out of a rectangle provided by the algorithm.
 
 class QueryLayoutInfoEvent(Event):
     """ This event is sent when LayoutAlgorithm wishes to get the size,
@@ -1626,81 +1622,81 @@ orientation and alignment of a window.
 
         Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
     """
-    def __init__(self, id: int=0) -> None:
+    def __init__(self, id=0) -> None:
         """ Constructor.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def GetAlignment(self) -> int:
+    def GetAlignment(self) -> None:
         """ Specifies the alignment of the window (which side of the remaining parent client area the window sticks to).
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def GetFlags(self) -> int:
+    def GetFlags(self) -> None:
         """ Returns the flags associated with this event.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def GetOrientation(self) -> 'LayoutOrientation':
+    def GetOrientation(self) -> None:
         """ Returns the orientation that the event handler specified to the event object.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def GetRequestedLength(self) -> int:
+    def GetRequestedLength(self) -> None:
         """ Returns the requested length of the window in the direction of the window orientation.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def GetSize(self) -> 'Size':
+    def GetSize(self) -> None:
         """ Returns the size that the event handler specified to the event object as being the requested size of the window.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def SetAlignment(self, alignment: int) -> None:
+    def SetAlignment(self, alignment) -> None:
         """ Call this to specify the alignment of the window (which side of the remaining parent client area the window sticks to).
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def SetFlags(self, flags: int) -> None:
+    def SetFlags(self, flags) -> None:
         """ Sets the flags associated with this event.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def SetOrientation(self, orientation: LayoutOrientation) -> None:
+    def SetOrientation(self, orientation) -> None:
         """ Call this to specify the orientation of the window.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def SetRequestedLength(self, length: int) -> None:
+    def SetRequestedLength(self, length) -> None:
         """ Sets the requested length of the window in the direction of the window orientation.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    def SetSize(self, size: Union[tuple[int, int], 'Size']) -> None:
+    def SetSize(self, size) -> None:
         """ Call this to let the calling code know what the size of the window is.
 
             Source: https://docs.wxpython.org/wx.adv.QueryLayoutInfoEvent.html
         """
 
-    Alignment: int  # See GetAlignment and SetAlignment
-    Flags: int  # See GetFlags and SetFlags
-    Orientation: 'LayoutOrientation'  # See GetOrientation and SetOrientation
-    RequestedLength: int  # See GetRequestedLength and SetRequestedLength
-    Size: '_Size'  # See GetSize and SetSize
+    Alignment: None  # See GetAlignment and SetAlignment
+    Flags: None  # See GetFlags and SetFlags
+    Orientation: None  # See GetOrientation and SetOrientation
+    RequestedLength: None  # See GetRequestedLength and SetRequestedLength
+    Size: None  # See GetSize and SetSize
 
 
 
-EVT_QUERY_LAYOUT_INFO: int  # Process a  wxEVT_QUERY_LAYOUT_INFO   event, to get size, orientation and alignment from a window. ^^
+EVT_QUERY_LAYOUT_INFO: int  # Process a  wxEVT_QUERY_LAYOUT_INFO   event, to get size, orientation and alignment from a window.
 
 LAYOUT_TOP: int
 
@@ -1738,63 +1734,63 @@ class NotificationMessage(EvtHandler):
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def AddAction(self, actionid, label="") -> bool:
+    def AddAction(self, actionid, label='') -> None:
         """ Add an action to the notification.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def Close(self) -> bool:
+    def Close(self) -> None:
         """ Hides the notification.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
     @staticmethod
-    def MSWUseToasts(shortcutPath="", appId="") -> bool:
+    def MSWUseToasts(shortcutPath='', appId='') -> None:
         """ Enables toast notifications available since Windows 8 and suppresses the additional icon in the notification area on Windows 10.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def SetFlags(self, flags: int) -> None:
+    def SetFlags(self, flags) -> None:
         """ This parameter can be currently used to specify the icon to show in the notification.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def SetIcon(self, icon: 'Icon') -> None:
+    def SetIcon(self, icon) -> None:
         """ Specify a custom icon to be displayed in the notification.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def SetMessage(self, message: str) -> None:
+    def SetMessage(self, message) -> None:
         """ Set the main text of the notification.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def SetParent(self, parent: 'Window') -> None:
+    def SetParent(self, parent) -> None:
         """ Set the parent for this notification: the notification will be associated with the top level parent of this window or, if this method is not called, with the main application window by default.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def SetTitle(self, title: str) -> None:
+    def SetTitle(self, title) -> None:
         """ Set the title, it must be a concise string (not more than 64 characters), use SetMessage   to give the user more details.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
-    def Show(self, timeout: int=Timeout_Auto) -> bool:
+    def Show(self, timeout=Timeout_Auto) -> None:
         """ Show the notification to the user and hides it after timeout  seconds are elapsed.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
         """
 
     @staticmethod
-    def UseTaskBarIcon(icon: 'adv.TaskBarIcon') -> 'TaskBarIcon':
+    def UseTaskBarIcon(icon) -> None:
         """ If the application already uses a   wx.adv.TaskBarIcon, it should be connected to notifications by using this method.
 
             Source: https://docs.wxpython.org/wx.adv.NotificationMessage.html
@@ -1806,20 +1802,20 @@ EVT_NOTIFICATION_MESSAGE_CLICK: int  # Process a  wxEVT_NOTIFICATION_MESSAGE_CLI
 
 EVT_NOTIFICATION_MESSAGE_DISMISSED: int  # Process a  wxEVT_NOTIFICATION_MESSAGE_DISMISSED   event, when a notification is dismissed by the user or times out.
 
-EVT_NOTIFICATION_MESSAGE_ACTION: int  # Process a  wxEVT_NOTIFICATION_MESSAGE_ACTION   event, when the user selects on of the actions added by  AddAction  ^^
+EVT_NOTIFICATION_MESSAGE_ACTION: int  # Process a  wxEVT_NOTIFICATION_MESSAGE_ACTION   event, when the user selects on of the actions added by  AddAction
 
 class TaskBarIcon(EvtHandler):
     """ This class represents a taskbar icon.
 
         Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
     """
-    def __init__(self, iconType: TaskBarIconType=TBI_DEFAULT_TYPE) -> None:
+    def __init__(self, iconType=TBI_DEFAULT_TYPE) -> None:
         """ Default constructor.
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def CreatePopupMenu(self) -> 'Menu':
+    def CreatePopupMenu(self) -> None:
         """ Called by the library when the user requests popup menu if GetPopupMenu   is not overridden.
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
@@ -1831,50 +1827,50 @@ class TaskBarIcon(EvtHandler):
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def GetPopupMenu(self) -> 'Menu':
+    def GetPopupMenu(self) -> None:
         """ Called by the library when the user requests popup menu.
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
     @staticmethod
-    def IsAvailable() -> bool:
+    def IsAvailable() -> None:
         """ Returns True if system tray is available in the desktop environment the app runs under.
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def IsIconInstalled(self) -> bool:
+    def IsIconInstalled(self) -> None:
         """ Returns True if SetIcon   was called with no subsequent RemoveIcon .
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def IsOk(self) -> bool:
+    def IsOk(self) -> None:
         """ Returns True if the object initialized successfully.
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def PopupMenu(self, menu: 'Menu') -> bool:
+    def PopupMenu(self, menu) -> None:
         """ Pops up a menu at the current mouse position.
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def RemoveIcon(self) -> bool:
+    def RemoveIcon(self) -> None:
         """ Removes the icon previously set with SetIcon .
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def SetIcon(self, icon, tooltip="") -> bool:
+    def SetIcon(self, icon, tooltip='') -> None:
         """ Sets the icon, and optional tooltip text.
 
             Source: https://docs.wxpython.org/wx.adv.TaskBarIcon.html
         """
 
-    def ShowBalloon(self, title, text, msec=0, flags=0) -> bool:
+    def ShowBalloon(self, title, text, msec=0, flags=0) -> None:
         """ Show a balloon notification (the icon must have been already
 initialized using SetIcon).  Only implemented for Windows.
 
@@ -1897,7 +1893,7 @@ EVT_TASKBAR_LEFT_DCLICK: int  # Process a  wxEVT_TASKBAR_LEFT_DCLICK   event.
 
 EVT_TASKBAR_RIGHT_DCLICK: int  # Process a  wxEVT_TASKBAR_RIGHT_DCLICK   event.
 
-EVT_TASKBAR_CLICK: int  # This is a synonym for either EVT_TASKBAR_RIGHT_DOWN or wx.UP depending on the platform, use this event macro to catch the event which should result in the menu being displayed on the current platform. ^^
+EVT_TASKBAR_CLICK: int  # This is a synonym for either EVT_TASKBAR_RIGHT_DOWN or wx.UP depending on the platform, use this event macro to catch the event which should result in the menu being displayed on the current platform.
 
 UP: int
 
@@ -1907,32 +1903,32 @@ describing your application.
 
         Source: https://docs.wxpython.org/wx.adv.SplashScreen.html
     """
-    def __init__(self, bitmap, splashStyle, milliseconds, parent, id=ID_ANY, pos=DefaultPosition, size=DefaultSize, style=BORDER_SIMPLE|FRAME_NO_TASKBAR|STAY_ON_TOP) -> None:
+    def __init__(self, bitmap, splashStyle, milliseconds, parent, id=ID_ANY, pos=DefaultPosition, size=DefaultSize, style=BORDER_SIMPLE | FRAME_NO_TASKBAR | STAY_ON_TOP) -> None:
         """ Construct the splash screen passing a bitmap, a style, a timeout, a window id, optional position and size, and a window style.
 
             Source: https://docs.wxpython.org/wx.adv.SplashScreen.html
         """
 
-    def GetBitmap(self) -> 'Bitmap':
+    def GetBitmap(self) -> None:
         """ Get the spash screenâs bitmap
 
             Source: https://docs.wxpython.org/wx.adv.SplashScreen.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.SplashScreen.html
         """
 
-    def GetSplashStyle(self) -> int:
+    def GetSplashStyle(self) -> None:
         """ Returns the splash style (see   wx.adv.SplashScreen  for details).
 
             Source: https://docs.wxpython.org/wx.adv.SplashScreen.html
         """
 
-    def GetTimeout(self) -> int:
+    def GetTimeout(self) -> None:
         """ Returns the timeout in milliseconds.
 
             Source: https://docs.wxpython.org/wx.adv.SplashScreen.html
@@ -1944,9 +1940,9 @@ describing your application.
             Source: https://docs.wxpython.org/wx.adv.SplashScreen.html
         """
 
-    Bitmap: '_Bitmap'  # See GetBitmap and SetBitmap
-    SplashStyle: int  # See GetSplashStyle
-    Timeout: int  # See GetTimeout
+    Bitmap: None  # See GetBitmap and SetBitmap
+    SplashStyle: None  # See GetSplashStyle
+    Timeout: None  # See GetTimeout
 
 
 
@@ -1965,55 +1961,55 @@ class ExtHelpController(HelpControllerBase):
 
         Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
     """
-    def __init__(self, parentWindow: Optional['Window']=None) -> None:
-        """ parentWindow (wx.Window) â
+    def __init__(self, parentWindow=None) -> None:
+        """ parentWindow (wx.Window)
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def DisplayBlock(self, blockNo: int) -> bool:
+    def DisplayBlock(self, blockNo) -> None:
         """ Display help for URL (using DisplayHelp) or keyword (using KeywordSearch)
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def DisplayContents(self) -> bool:
+    def DisplayContents(self) -> None:
         """ Display list of all help entries.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def DisplayHelp(self, relativeURL: str) -> bool:
+    def DisplayHelp(self, relativeURL) -> None:
         """ Call the browser using a relative URL.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def DisplaySection(self, *args, **kw) -> bool:
+    def DisplaySection(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def GetFrameParameters(self, size=None, pos=None, newFrameEachTime=None) -> 'Frame':
+    def GetFrameParameters(self, size=None, pos=None, newFrameEachTime=None) -> None:
         """ Obtains the latest settings used by the help frame and the help frame.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def Initialize(self, dir: str) -> bool:
+    def Initialize(self, dir) -> None:
         """ This must be called to tell the controller where to find the documentation.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def KeywordSearch(self, k, mode=HELP_SEARCH_ALL) -> bool:
+    def KeywordSearch(self, k, mode=HELP_SEARCH_ALL) -> None:
         """ Search comment/documentation fields in map file and present a list to chose from.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def LoadFile(self, file: str="") -> bool:
+    def LoadFile(self, file='') -> None:
         """ If file is ââ, reloads file given in Initialize.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
@@ -2025,7 +2021,7 @@ class ExtHelpController(HelpControllerBase):
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def Quit(self) -> bool:
+    def Quit(self) -> None:
         """ Does nothing.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
@@ -2037,13 +2033,13 @@ class ExtHelpController(HelpControllerBase):
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    def SetViewer(self, viewer="", flags=HELP_NETSCAPE) -> None:
+    def SetViewer(self, viewer='', flags=HELP_NETSCAPE) -> None:
         """ Tell it which browser to use.
 
             Source: https://docs.wxpython.org/wx.adv.ExtHelpController.html
         """
 
-    FrameParameters: 'Frame'  # See GetFrameParameters
+    FrameParameters: None  # See GetFrameParameters
 
 
 
@@ -2054,295 +2050,295 @@ class Joystick(Object):
 
         Source: https://docs.wxpython.org/wx.adv.Joystick.html
     """
-    def __init__(self, joystick: int=JOYSTICK1) -> None:
+    def __init__(self, joystick=JOYSTICK1) -> None:
         """ Constructor.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetButtonState(self, *args, **kw) -> int:
+    def GetButtonState(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetManufacturerId(self) -> int:
+    def GetManufacturerId(self) -> None:
         """ Returns the manufacturer id.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetMaxAxes(self) -> int:
+    def GetMaxAxes(self) -> None:
         """ int
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetMaxButtons(self) -> int:
+    def GetMaxButtons(self) -> None:
         """ int
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetMovementThreshold(self) -> int:
+    def GetMovementThreshold(self) -> None:
         """ Returns the movement threshold, the number of steps outside which the joystick is deemed to have moved.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetNumberAxes(self) -> int:
+    def GetNumberAxes(self) -> None:
         """ Returns the number of axes for this joystick.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetNumberButtons(self) -> int:
+    def GetNumberButtons(self) -> None:
         """ Returns the number of buttons for this joystick.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
     @staticmethod
-    def GetNumberJoysticks() -> int:
+    def GetNumberJoysticks() -> None:
         """ Returns the number of joysticks currently attached to the computer.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetPOVCTSPosition(self) -> int:
+    def GetPOVCTSPosition(self) -> None:
         """ Returns the point-of-view position, expressed in continuous, one-hundredth of a degree units.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetPOVPosition(self) -> int:
+    def GetPOVPosition(self) -> None:
         """ Returns the point-of-view position, expressed in continuous, one-hundredth of a degree units, but limited to return 0, 9000, 18000 or 27000.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetPollingMax(self) -> int:
+    def GetPollingMax(self) -> None:
         """ Returns the maximum polling frequency.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetPollingMin(self) -> int:
+    def GetPollingMin(self) -> None:
         """ Returns the minimum polling frequency.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetPosition(self, *args, **kw) -> 'Point':
+    def GetPosition(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetProductId(self) -> int:
+    def GetProductId(self) -> None:
         """ Returns the product id for the joystick.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetProductName(self) -> str:
+    def GetProductName(self) -> None:
         """ Returns the product name for the joystick.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetRudderMax(self) -> int:
+    def GetRudderMax(self) -> None:
         """ Returns the maximum rudder position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetRudderMin(self) -> int:
+    def GetRudderMin(self) -> None:
         """ Returns the minimum rudder position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetRudderPosition(self) -> int:
+    def GetRudderPosition(self) -> None:
         """ Returns the rudder position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetUMax(self) -> int:
+    def GetUMax(self) -> None:
         """ Returns the maximum U position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetUMin(self) -> int:
+    def GetUMin(self) -> None:
         """ Returns the minimum U position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetUPosition(self) -> int:
+    def GetUPosition(self) -> None:
         """ Gets the position of the fifth axis of the joystick, if it exists.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetVMax(self) -> int:
+    def GetVMax(self) -> None:
         """ Returns the maximum V position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetVMin(self) -> int:
+    def GetVMin(self) -> None:
         """ Returns the minimum V position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetVPosition(self) -> int:
+    def GetVPosition(self) -> None:
         """ Gets the position of the sixth axis of the joystick, if it exists.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetXMax(self) -> int:
+    def GetXMax(self) -> None:
         """ Returns the maximum x position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetXMin(self) -> int:
+    def GetXMin(self) -> None:
         """ Returns the minimum x position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetYMax(self) -> int:
+    def GetYMax(self) -> None:
         """ Returns the maximum y position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetYMin(self) -> int:
+    def GetYMin(self) -> None:
         """ Returns the minimum y position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetZMax(self) -> int:
+    def GetZMax(self) -> None:
         """ Returns the maximum z position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetZMin(self) -> int:
+    def GetZMin(self) -> None:
         """ Returns the minimum z position.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def GetZPosition(self) -> int:
+    def GetZPosition(self) -> None:
         """ Returns the z position of the joystick.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def HasPOV(self) -> bool:
+    def HasPOV(self) -> None:
         """ Returns True if the joystick has a point of view control.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def HasPOV4Dir(self) -> bool:
+    def HasPOV4Dir(self) -> None:
         """ Returns True if the joystick point-of-view supports discrete values (centered, forward, backward, left, and right).
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def HasPOVCTS(self) -> bool:
+    def HasPOVCTS(self) -> None:
         """ Returns True if the joystick point-of-view supports continuous degree bearings.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def HasRudder(self) -> bool:
+    def HasRudder(self) -> None:
         """ Returns True if there is a rudder attached to the computer.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def HasU(self) -> bool:
+    def HasU(self) -> None:
         """ Returns True if the joystick has a U axis.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def HasV(self) -> bool:
+    def HasV(self) -> None:
         """ Returns True if the joystick has a V axis.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def HasZ(self) -> bool:
+    def HasZ(self) -> None:
         """ Returns True if the joystick has a Z axis.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def IsOk(self) -> bool:
+    def IsOk(self) -> None:
         """ Returns True if the joystick is functioning.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def ReleaseCapture(self) -> bool:
+    def ReleaseCapture(self) -> None:
         """ Releases the capture set by SetCapture.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def SetCapture(self, win, pollingFreq=0) -> bool:
+    def SetCapture(self, win, pollingFreq=0) -> None:
         """ Sets the capture to direct joystick events to win.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    def SetMovementThreshold(self, threshold: int) -> None:
+    def SetMovementThreshold(self, threshold) -> None:
         """ Sets the movement threshold, the number of steps outside which the joystick is deemed to have moved.
 
             Source: https://docs.wxpython.org/wx.adv.Joystick.html
         """
 
-    ButtonState: int  # See GetButtonState
-    ManufacturerId: int  # See GetManufacturerId
-    MaxAxes: int  # See GetMaxAxes
-    MaxButtons: int  # See GetMaxButtons
-    MovementThreshold: int  # See GetMovementThreshold and SetMovementThreshold
-    NumberAxes: int  # See GetNumberAxes
-    NumberButtons: int  # See GetNumberButtons
-    POVCTSPosition: int  # See GetPOVCTSPosition
-    POVPosition: int  # See GetPOVPosition
-    PollingMax: int  # See GetPollingMax
-    PollingMin: int  # See GetPollingMin
-    Position: 'Point'  # See GetPosition
-    ProductId: int  # See GetProductId
-    ProductName: str  # See GetProductName
-    RudderMax: int  # See GetRudderMax
-    RudderMin: int  # See GetRudderMin
-    RudderPosition: int  # See GetRudderPosition
-    UMax: int  # See GetUMax
-    UMin: int  # See GetUMin
-    UPosition: int  # See GetUPosition
-    VMax: int  # See GetVMax
-    VMin: int  # See GetVMin
-    VPosition: int  # See GetVPosition
-    XMax: int  # See GetXMax
-    XMin: int  # See GetXMin
-    YMax: int  # See GetYMax
-    YMin: int  # See GetYMin
-    ZMax: int  # See GetZMax
-    ZMin: int  # See GetZMin
-    ZPosition: int  # See GetZPosition
+    ButtonState: None  # See GetButtonState
+    ManufacturerId: None  # See GetManufacturerId
+    MaxAxes: None  # See GetMaxAxes
+    MaxButtons: None  # See GetMaxButtons
+    MovementThreshold: None  # See GetMovementThreshold and SetMovementThreshold
+    NumberAxes: None  # See GetNumberAxes
+    NumberButtons: None  # See GetNumberButtons
+    POVCTSPosition: None  # See GetPOVCTSPosition
+    POVPosition: None  # See GetPOVPosition
+    PollingMax: None  # See GetPollingMax
+    PollingMin: None  # See GetPollingMin
+    Position: None  # See GetPosition
+    ProductId: None  # See GetProductId
+    ProductName: None  # See GetProductName
+    RudderMax: None  # See GetRudderMax
+    RudderMin: None  # See GetRudderMin
+    RudderPosition: None  # See GetRudderPosition
+    UMax: None  # See GetUMax
+    UMin: None  # See GetUMin
+    UPosition: None  # See GetUPosition
+    VMax: None  # See GetVMax
+    VMin: None  # See GetVMin
+    VPosition: None  # See GetVPosition
+    XMax: None  # See GetXMax
+    XMin: None  # See GetXMin
+    YMax: None  # See GetYMax
+    YMin: None  # See GetYMin
+    ZMax: None  # See GetZMax
+    ZMin: None  # See GetZMin
+    ZPosition: None  # See GetZPosition
 
 
 
@@ -2363,20 +2359,20 @@ there, goes up the window hierarchy as usual.
             Source: https://docs.wxpython.org/wx.adv.WizardEvent.html
         """
 
-    def GetDirection(self) -> bool:
+    def GetDirection(self) -> None:
         """ Return the direction in which the page is changing: for  EVT_WIZARD_PAGE_CHANGING , return True if weâre going forward or False otherwise and for   EVT_WIZARD_PAGE_CHANGED   return True if we came from the previous page and False if we returned from the next one.
 
             Source: https://docs.wxpython.org/wx.adv.WizardEvent.html
         """
 
-    def GetPage(self) -> 'WizardPage':
+    def GetPage(self) -> None:
         """ Returns the   wx.adv.WizardPage  which was active when this event was generated.
 
             Source: https://docs.wxpython.org/wx.adv.WizardEvent.html
         """
 
-    Direction: bool  # See GetDirection
-    Page: 'WizardPage'  # See GetPage
+    Direction: None  # See GetDirection
+    Page: None  # See GetPage
 
 
 
@@ -2393,7 +2389,7 @@ control and the details of the animation image or data.
         """
 
     @staticmethod
-    def AddHandler(handler: 'adv.AnimationDecoder') -> None:
+    def AddHandler(handler) -> None:
         """ Add a new decoder to the list of animation decoders.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
@@ -2407,25 +2403,25 @@ control and the details of the animation image or data.
         """
 
     @staticmethod
-    def FindHandler(animType: AnimationType) -> 'AnimationDecoder':
+    def FindHandler(animType) -> None:
         """ Search for an animation decoder by type.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def GetDelay(self, frame: int) -> int:
+    def GetDelay(self, frame) -> None:
         """ Returns the delay for the i-th frame in milliseconds.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def GetFrame(self, frame: int) -> 'Image':
+    def GetFrame(self, frame) -> None:
         """ Returns the i-th frame as a   wx.Image.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def GetFrameCount(self) -> int:
+    def GetFrameCount(self) -> None:
         """ Returns the number of frames for this animation.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
@@ -2438,7 +2434,7 @@ control and the details of the animation image or data.
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def GetSize(self) -> 'Size':
+    def GetSize(self) -> None:
         """ Returns the size of the animation.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
@@ -2452,38 +2448,38 @@ control and the details of the animation image or data.
         """
 
     @staticmethod
-    def InsertHandler(handler: 'adv.AnimationDecoder') -> None:
+    def InsertHandler(handler) -> None:
         """ Insert a new decoder to the front of the list of animation decoders.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def IsCompatibleWith(self, ci: 'ClassInfo') -> bool:
+    def IsCompatibleWith(self, ci) -> None:
         """ Returns True if animation can be used with controls of the given type.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def IsOk(self) -> bool:
+    def IsOk(self) -> None:
         """ Returns True if animation data is present.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def Load(self, stream, type=ANIMATION_TYPE_ANY) -> bool:
+    def Load(self, stream, type=ANIMATION_TYPE_ANY) -> None:
         """ Loads an animation from the given stream.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    def LoadFile(self, name, type=ANIMATION_TYPE_ANY) -> bool:
+    def LoadFile(self, name, type=ANIMATION_TYPE_ANY) -> None:
         """ Loads an animation from a file.
 
             Source: https://docs.wxpython.org/wx.adv.Animation.html
         """
 
-    FrameCount: int  # See GetFrameCount
-    Size: '_Size'  # See GetSize
+    FrameCount: None  # See GetFrameCount
+    Size: None  # See GetSize
 
 
 
@@ -2501,19 +2497,19 @@ frames.
             Source: https://docs.wxpython.org/wx.adv.LayoutAlgorithm.html
         """
 
-    def LayoutFrame(self, frame, mainWindow=None) -> bool:
+    def LayoutFrame(self, frame, mainWindow=None) -> None:
         """ Lays out the children of a normal frame.
 
             Source: https://docs.wxpython.org/wx.adv.LayoutAlgorithm.html
         """
 
-    def LayoutMDIFrame(self, frame, rect=None) -> bool:
+    def LayoutMDIFrame(self, frame, rect=None) -> None:
         """ Lays out the children of an MDI parent frame.
 
             Source: https://docs.wxpython.org/wx.adv.LayoutAlgorithm.html
         """
 
-    def LayoutWindow(self, parent, mainWindow=None) -> bool:
+    def LayoutWindow(self, parent, mainWindow=None) -> None:
         """ Lays out the children of a normal frame or other window.
 
             Source: https://docs.wxpython.org/wx.adv.LayoutAlgorithm.html
@@ -2533,32 +2529,32 @@ that can be stored in memory and played.
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
 
-    def Create(self, fileName: str) -> bool:
+    def Create(self, fileName) -> None:
         """ Constructs a wave object from a file or resource.
 
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
 
-    def CreateFromData(self, data) -> bool:
+    def CreateFromData(self, data) -> None:
         """ Create a sound object from data in a memory buffer in WAV format.
 
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
 
-    def IsOk(self) -> bool:
+    def IsOk(self) -> None:
         """ Returns True if the object contains a successfully loaded file or resource, False otherwise.
 
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
 
-    def Play(self, flags: Any=SOUND_ASYNC) -> bool:
+    def Play(self, flags=SOUND_ASYNC) -> None:
         """ Plays the sound file.
 
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
 
     @staticmethod
-    def PlaySound(filename, flags=SOUND_ASYNC) -> bool:
+    def PlaySound(filename, flags=SOUND_ASYNC) -> None:
         """ Plays the sound file.
 
             Source: https://docs.wxpython.org/wx.adv.Sound.html
@@ -2571,14 +2567,14 @@ that can be stored in memory and played.
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
 
-    def __bool__(self) -> int:
-        """ int
+    def __bool__(self) -> None:
+        """ bool
 
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
 
-    def __nonzero__(self) -> int:
-        """ int
+    def __nonzero__(self) -> None:
+        """ bool
 
             Source: https://docs.wxpython.org/wx.adv.Sound.html
         """
@@ -2602,40 +2598,40 @@ first/last page).
             Source: https://docs.wxpython.org/wx.adv.WizardPage.html
         """
 
-    def Create(*args, **kwargs) -> bool:
+    def Create(*args, **kwargs) -> None:
         """ Creates the wizard page.
 
             Source: https://docs.wxpython.org/wx.adv.WizardPage.html
         """
 
-    def GetBitmap(self) -> 'Bitmap':
+    def GetBitmap(self) -> None:
         """ This method is called by   wx.adv.Wizard  to get the bitmap to display alongside the page.
 
             Source: https://docs.wxpython.org/wx.adv.WizardPage.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.WizardPage.html
         """
 
-    def GetNext(self) -> 'WizardPage':
+    def GetNext(self) -> None:
         """ Get the page which should be shown when the user chooses the  "Next"   button: if None is returned, this button will be disabled.
 
             Source: https://docs.wxpython.org/wx.adv.WizardPage.html
         """
 
-    def GetPrev(self) -> 'WizardPage':
+    def GetPrev(self) -> None:
         """ Get the page which should be shown when the user chooses the  "Back"   button: if None is returned, this button will be disabled.
 
             Source: https://docs.wxpython.org/wx.adv.WizardPage.html
         """
 
-    Bitmap: '_Bitmap'  # See GetBitmap
-    Next: 'WizardPage'  # See GetNext
-    Prev: 'WizardPage'  # See GetPrev
+    Bitmap: None  # See GetBitmap
+    Next: None  # See GetNext
+    Prev: None  # See GetPrev
 
 
 
@@ -2656,19 +2652,19 @@ class CalendarEvent(DateEvent):
             Source: https://docs.wxpython.org/wx.adv.CalendarEvent.html
         """
 
-    def GetWeekDay(self) -> 'WeekDay':
+    def GetWeekDay(self) -> None:
         """ Returns the week day on which the user clicked in  EVT_CALENDAR_WEEKDAY_CLICKED   handler.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarEvent.html
         """
 
-    def SetWeekDay(self, day: DateTime.WeekDay) -> None:
+    def SetWeekDay(self, day) -> None:
         """ Sets the week day carried by the event, normally only used by the library internally.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarEvent.html
         """
 
-    WeekDay: 'WeekDay'  # See GetWeekDay and SetWeekDay
+    WeekDay: None  # See GetWeekDay and SetWeekDay
 
 
 
@@ -2690,63 +2686,63 @@ LayoutAlgorithm.
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def Create(self, parent, id=ID_ANY, pos=DefaultPosition, size=DefaultSize, style=CLIP_CHILDREN|SW_3D, name="layoutWindow") -> bool:
+    def Create(self, parent, id=ID_ANY, pos=DefaultPosition, size=DefaultSize, style=CLIP_CHILDREN | SW_3D, name='layoutWindow') -> None:
         """ Initializes a sash layout window, which can be a child of a frame, dialog or any other non-control window.
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def GetAlignment(self) -> int:
+    def GetAlignment(self) -> None:
         """ Returns the alignment of the window: one of wx.adv.LAYOUT_TOP, wx.adv.LAYOUT_LEFT, wx.adv.LAYOUT_RIGHT, wx.adv.LAYOUT_BOTTOM.
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def GetOrientation(self) -> 'LayoutOrientation':
+    def GetOrientation(self) -> None:
         """ Returns the orientation of the window: one of wx.adv.LAYOUT_HORIZONTAL, wx.adv.LAYOUT_VERTICAL.
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def OnCalculateLayout(self, event: 'adv.CalculateLayoutEvent') -> None:
+    def OnCalculateLayout(self, event) -> None:
         """ The default handler for the event that is generated by   wx.adv.LayoutAlgorithm.
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def OnQueryLayoutInfo(self, event: 'adv.QueryLayoutInfoEvent') -> None:
+    def OnQueryLayoutInfo(self, event) -> None:
         """ The default handler for the event that is generated by OnCalculateLayout to get size, alignment and orientation information for the window.
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def SetAlignment(self, alignment: int) -> None:
+    def SetAlignment(self, alignment) -> None:
         """ Sets the alignment of the window (which edge of the available parent client area the window is attached to).
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def SetDefaultSize(self, size: Union[tuple[int, int], 'Size']) -> None:
+    def SetDefaultSize(self, size) -> None:
         """ Sets the default dimensions of the window.
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    def SetOrientation(self, orientation: LayoutOrientation) -> None:
+    def SetOrientation(self, orientation) -> None:
         """ Sets the orientation of the window (the direction the window will stretch in, to fill the available parent client area).
 
             Source: https://docs.wxpython.org/wx.adv.SashLayoutWindow.html
         """
 
-    Alignment: int  # See GetAlignment and SetAlignment
-    Orientation: 'LayoutOrientation'  # See GetOrientation and SetOrientation
+    Alignment: None  # See GetAlignment and SetAlignment
+    Orientation: None  # See GetOrientation and SetOrientation
 
 
 
@@ -2761,99 +2757,99 @@ class GenericAnimationCtrl(AnimationCtrl):
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def Create(self, parent, id=ID_ANY, anim=NullAnimation, pos=DefaultPosition, size=DefaultSize, style=AC_DEFAULT_STYLE, name=AnimationCtrlNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, anim=NullAnimation, pos=DefaultPosition, size=DefaultSize, style=AC_DEFAULT_STYLE, name=AnimationCtrlNameStr) -> None:
         """ Creates the control with the given anim  animation.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def CreateAnimation(self) -> 'Animation':
+    def CreateAnimation(self) -> None:
         """ Create a new animation object compatible with this control.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
     @staticmethod
-    def CreateCompatibleAnimation() -> 'Animation':
+    def CreateCompatibleAnimation() -> None:
         """ Create a new animation object compatible with this control.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def DrawCurrentFrame(self, dc: 'DC') -> None:
+    def DrawCurrentFrame(self, dc) -> None:
         """ Draw the current frame of the animation into given DC.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def GetAnimation(self) -> 'Animation':
+    def GetAnimation(self) -> None:
         """ Returns the animation associated with this control.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def GetBackingStore(self) -> 'Bitmap':
+    def GetBackingStore(self) -> None:
         """ Returns a   wx.Bitmap  with the current frame drawn in it.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def GetInactiveBitmap(self) -> 'Bitmap':
+    def GetInactiveBitmap(self) -> None:
         """ Returns the inactive bitmap shown in this control when the; see SetInactiveBitmap   for more info.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def IsPlaying(self) -> bool:
+    def IsPlaying(self) -> None:
         """ Returns True if the animation is being played.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def IsUsingWindowBackgroundColour(self) -> bool:
+    def IsUsingWindowBackgroundColour(self) -> None:
         """ Returns  true   if the windowâs background colour is being used.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def Load(self, file, animType=ANIMATION_TYPE_ANY) -> bool:
+    def Load(self, file, animType=ANIMATION_TYPE_ANY) -> None:
         """ Loads the animation from the given stream and calls SetAnimation .
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def LoadFile(self, file, animType=ANIMATION_TYPE_ANY) -> bool:
+    def LoadFile(self, file, animType=ANIMATION_TYPE_ANY) -> None:
         """ Loads the animation from the given file and calls SetAnimation .
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def Play(self, *args, **kw) -> bool:
+    def Play(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def SetAnimation(self, anim: 'adv.Animation') -> None:
+    def SetAnimation(self, anim) -> None:
         """ Sets the animation to play in this control.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def SetInactiveBitmap(self, bmp: 'BitmapBundle') -> None:
+    def SetInactiveBitmap(self, bmp) -> None:
         """ Sets the bitmap to show on the control when itâs not playing an animation.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    def SetUseWindowBackgroundColour(self, useWinBackground: bool=True) -> None:
+    def SetUseWindowBackgroundColour(self, useWinBackground=True) -> None:
         """ Specify whether the animationâs background colour is to be shown (the default), or whether the window background should show through.
 
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
@@ -2865,9 +2861,9 @@ class GenericAnimationCtrl(AnimationCtrl):
             Source: https://docs.wxpython.org/wx.adv.GenericAnimationCtrl.html
         """
 
-    Animation: 'Animation'  # See GetAnimation and SetAnimation
-    BackingStore: 'Bitmap'  # See GetBackingStore
-    InactiveBitmap: 'Bitmap'  # See GetInactiveBitmap and SetInactiveBitmap
+    Animation: None  # See GetAnimation and SetAnimation
+    BackingStore: None  # See GetBackingStore
+    InactiveBitmap: None  # See GetInactiveBitmap and SetInactiveBitmap
 
 
 
@@ -2890,145 +2886,129 @@ class CalendarDateAttr:
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def GetBackgroundColour(self) -> 'Colour':
+    def GetBackgroundColour(self) -> None:
         """ Returns the background colour set for the calendar date.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def GetBorder(self) -> 'CalendarDateBorder':
+    def GetBorder(self) -> None:
         """ Returns the border set for the calendar date.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def GetBorderColour(self) -> 'Colour':
+    def GetBorderColour(self) -> None:
         """ Returns the border colour set for the calendar date.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def GetFont(self) -> 'Font':
+    def GetFont(self) -> None:
         """ Returns the font set for the calendar date.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
     @staticmethod
-    def GetMark() -> 'CalendarDateAttr':
+    def GetMark() -> None:
         """ Used (internally) by the generic wx.adv.CalendarCtrl.Mark .
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def GetTextColour(self) -> 'Colour':
+    def GetTextColour(self) -> None:
         """ Returns the text colour set for the calendar date.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def HasBackgroundColour(self) -> bool:
+    def HasBackgroundColour(self) -> None:
         """ Returns True if a non-default text background colour is set.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def HasBorder(self) -> bool:
+    def HasBorder(self) -> None:
         """ Returns True if a non-default (i.e. any) border is set.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def HasBorderColour(self) -> bool:
+    def HasBorderColour(self) -> None:
         """ Returns True if a non-default border colour is set.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def HasFont(self) -> bool:
+    def HasFont(self) -> None:
         """ Returns True if a non-default font is set.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def HasTextColour(self) -> bool:
+    def HasTextColour(self) -> None:
         """ Returns True if a non-default text foreground colour is set.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def IsHoliday(self) -> bool:
+    def IsHoliday(self) -> None:
         """ Returns True if this calendar day is displayed as a holiday.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def SetBackgroundColour(self, colBack: Union[int, str, 'Colour']) -> None:
+    def SetBackgroundColour(self, colBack) -> None:
         """ Sets the text background colour to use.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def SetBorder(self, border: CalendarDateBorder) -> None:
+    def SetBorder(self, border) -> None:
         """ Sets the border to use.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def SetBorderColour(self, col: Union[int, str, 'Colour']) -> None:
+    def SetBorderColour(self, col) -> None:
         """ Sets the border colour to use.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the font to use.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def SetHoliday(self, holiday: bool) -> None:
+    def SetHoliday(self, holiday) -> None:
         """ If holiday  is True, this calendar day will be displayed as a holiday.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
     @staticmethod
-    def SetMark(m: 'adv.CalendarDateAttr') -> None:
+    def SetMark(m) -> None:
         """ Set the attributes that will be used to Mark() days on the generic   wx.adv.CalendarCtrl.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    def SetTextColour(self, colText: Union[int, str, 'Colour']) -> None:
+    def SetTextColour(self, colText) -> None:
         """ Sets the text (foreground) colour to use.
 
             Source: https://docs.wxpython.org/wx.adv.CalendarDateAttr.html
         """
 
-    BackgroundColour: 'Colour'  # See GetBackgroundColour and SetBackgroundColour
-    Border: 'CalendarDateBorder'  # See GetBorder and SetBorder
-    BorderColour: 'Colour'  # See GetBorderColour and SetBorderColour
-    Font: '_Font'  # See GetFont and SetFont
-    TextColour: 'Colour'  # See GetTextColour and SetTextColour
+    BackgroundColour: None  # See GetBackgroundColour and SetBackgroundColour
+    Border: None  # See GetBorder and SetBorder
+    BorderColour: None  # See GetBorderColour and SetBorderColour
+    Font: None  # See GetFont and SetFont
+    TextColour: None  # See GetTextColour and SetTextColour
 
 
-
-CalendarHitTestResult: TypeAlias = int  # Enumeration
-
-CAL_HITTEST_NOWHERE: int
-
-CAL_HITTEST_HEADER: int
-
-CAL_HITTEST_DAY: int
-
-CAL_HITTEST_INCMONTH: int
-
-CAL_HITTEST_DECMONTH: int
-
-CAL_HITTEST_SURROUNDING_WEEK: int
-
-CAL_HITTEST_WEEK: int
 
 PropertySheetDialogFlags: TypeAlias = int  # Enumeration
 
@@ -3069,99 +3049,99 @@ information for the animation from the animation image file.
         Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
     """
     def __init__(self) -> None:
-        """ 
+        """ None
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def CanRead(self, stream: 'InputStream') -> bool:
+    def CanRead(self, stream) -> None:
         """ Returns True if this decoder supports loading from the given stream.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def Clone(self) -> 'AnimationDecoder':
+    def Clone(self) -> None:
         """ Create a copy of this decoder.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def ConvertToImage(self, frame, image) -> bool:
+    def ConvertToImage(self, frame, image) -> None:
         """ Convert given frame to    wx.Image.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def DoCanRead(self, stream: 'InputStream') -> bool:
+    def DoCanRead(self, stream) -> None:
         """ Checks the signature of the data in the given stream and returns True if it appears to be a valid animation format recognized by the animation decoder; this function should modify the stream current position without taking care of restoring it since  CanRead   will do it.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetAnimationSize(self) -> 'Size':
+    def GetAnimationSize(self) -> None:
         """ Size
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetBackgroundColour(self) -> 'Colour':
+    def GetBackgroundColour(self) -> None:
         """ Colour
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetDelay(self, frame: int) -> int:
+    def GetDelay(self, frame) -> None:
         """ Return the number of milliseconds this frame should be displayed.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetDisposalMethod(self, frame: int) -> 'AnimationDisposal':
+    def GetDisposalMethod(self, frame) -> None:
         """ What should be done after displaying this frame.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetFrameCount(self) -> int:
+    def GetFrameCount(self) -> None:
         """ int
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetFramePosition(self, frame: int) -> 'Point':
-        """ frame (int) â
+    def GetFramePosition(self, frame) -> None:
+        """ frame (int)
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetFrameSize(self, frame: int) -> 'Size':
-        """ frame (int) â
+    def GetFrameSize(self, frame) -> None:
+        """ frame (int)
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetTransparentColour(self, frame: int) -> 'Colour':
+    def GetTransparentColour(self, frame) -> None:
         """ The transparent colour for this frame, if any, or  NullColour .
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def GetType(self) -> 'AnimationType':
+    def GetType(self) -> None:
         """ Return the animation type this decoder implements.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    def Load(self, stream: 'InputStream') -> bool:
+    def Load(self, stream) -> None:
         """ Load the animation image frames from the given stream.
 
             Source: https://docs.wxpython.org/wx.adv.AnimationDecoder.html
         """
 
-    AnimationSize: 'Size'  # See GetAnimationSize
-    BackgroundColour: 'Colour'  # See GetBackgroundColour
-    FrameCount: int  # See GetFrameCount
-    Type: 'AnimationType'  # See GetType
+    AnimationSize: None  # See GetAnimationSize
+    BackgroundColour: None  # See GetBackgroundColour
+    FrameCount: None  # See GetFrameCount
+    Type: None  # See GetType
 
 
 
@@ -3178,32 +3158,32 @@ from WizardPage.GetNext() and WizardPage.GetPrev() functions.
             Source: https://docs.wxpython.org/wx.adv.WizardPageSimple.html
         """
 
-    def Chain(self, *args, **kw) -> 'WizardPageSimple':
+    def Chain(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.adv.WizardPageSimple.html
         """
 
-    def Create(*args, **kwargs) -> bool:
+    def Create(*args, **kwargs) -> None:
         """ Creates the wizard page.
 
             Source: https://docs.wxpython.org/wx.adv.WizardPageSimple.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.adv.WizardPageSimple.html
         """
 
-    def SetNext(self, next: 'adv.WizardPage') -> None:
+    def SetNext(self, next) -> None:
         """ Sets the next page.
 
             Source: https://docs.wxpython.org/wx.adv.WizardPageSimple.html
         """
 
-    def SetPrev(self, prev: 'adv.WizardPage') -> None:
+    def SetPrev(self, prev) -> None:
         """ Sets the previous page.
 
             Source: https://docs.wxpython.org/wx.adv.WizardPageSimple.html
@@ -3225,72 +3205,72 @@ class ANIDecoder(AnimationDecoder):
         Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
     """
     def __init__(self) -> None:
-        """ 
+        """ None
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def Clone(self) -> 'AnimationDecoder':
+    def Clone(self) -> None:
         """ Create a copy of this decoder.
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def ConvertToImage(self, frame, image) -> bool:
+    def ConvertToImage(self, frame, image) -> None:
         """ Convert given frame to    wx.Image.
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def DoCanRead(self, stream: 'InputStream') -> bool:
+    def DoCanRead(self, stream) -> None:
         """ Checks the signature of the data in the given stream and returns True if it appears to be a valid animation format recognized by the animation decoder; this function should modify the stream current position without taking care of restoring it since  CanRead   will do it.
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def GetDelay(self, frame: int) -> int:
+    def GetDelay(self, frame) -> None:
         """ Return the number of milliseconds this frame should be displayed.
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def GetDisposalMethod(self, frame: int) -> 'AnimationDisposal':
+    def GetDisposalMethod(self, frame) -> None:
         """ What should be done after displaying this frame.
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def GetFramePosition(self, frame: int) -> 'Point':
-        """ frame (int) â
+    def GetFramePosition(self, frame) -> None:
+        """ frame (int)
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def GetFrameSize(self, frame: int) -> 'Size':
-        """ frame (int) â
+    def GetFrameSize(self, frame) -> None:
+        """ frame (int)
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def GetTransparentColour(self, frame: int) -> 'Colour':
+    def GetTransparentColour(self, frame) -> None:
         """ The transparent colour for this frame, if any, or  NullColour .
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def GetType(self) -> 'AnimationType':
+    def GetType(self) -> None:
         """ Return the animation type this decoder implements.
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    def Load(self, stream: 'InputStream') -> bool:
+    def Load(self, stream) -> None:
         """ Load the animation image frames from the given stream.
 
             Source: https://docs.wxpython.org/wx.adv.ANIDecoder.html
         """
 
-    Type: 'AnimationType'  # See GetType
+    Type: None  # See GetType
 
 
 
@@ -3300,72 +3280,72 @@ class GIFDecoder(AnimationDecoder):
         Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
     """
     def __init__(self) -> None:
-        """ 
+        """ None
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def Clone(self) -> 'AnimationDecoder':
+    def Clone(self) -> None:
         """ Create a copy of this decoder.
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def ConvertToImage(self, frame, image) -> bool:
+    def ConvertToImage(self, frame, image) -> None:
         """ Convert given frame to    wx.Image.
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def DoCanRead(self, stream: 'InputStream') -> bool:
+    def DoCanRead(self, stream) -> None:
         """ Checks the signature of the data in the given stream and returns True if it appears to be a valid animation format recognized by the animation decoder; this function should modify the stream current position without taking care of restoring it since  CanRead   will do it.
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def GetDelay(self, frame: int) -> int:
+    def GetDelay(self, frame) -> None:
         """ Return the number of milliseconds this frame should be displayed.
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def GetDisposalMethod(self, frame: int) -> 'AnimationDisposal':
+    def GetDisposalMethod(self, frame) -> None:
         """ What should be done after displaying this frame.
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def GetFramePosition(self, frame: int) -> 'Point':
-        """ frame (int) â
+    def GetFramePosition(self, frame) -> None:
+        """ frame (int)
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def GetFrameSize(self, frame: int) -> 'Size':
-        """ frame (int) â
+    def GetFrameSize(self, frame) -> None:
+        """ frame (int)
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def GetTransparentColour(self, frame: int) -> 'Colour':
+    def GetTransparentColour(self, frame) -> None:
         """ The transparent colour for this frame, if any, or  NullColour .
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def GetType(self) -> 'AnimationType':
+    def GetType(self) -> None:
         """ Return the animation type this decoder implements.
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    def Load(self, stream: 'InputStream') -> bool:
+    def Load(self, stream) -> None:
         """ Load the animation image frames from the given stream.
 
             Source: https://docs.wxpython.org/wx.adv.GIFDecoder.html
         """
 
-    Type: 'AnimationType'  # See GetType
+    Type: None  # See GetType
 
 
 

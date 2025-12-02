@@ -8,7 +8,7 @@ It forms the basis for all of the lib.masked controls.
 
         Source: https://docs.wxpython.org/wx.lib.masked.maskededit.MaskedEditMixin.html
     """
-    def __init__(self, name = 'MaskedEdit', **kwargs) -> None:
+    def __init__(self, name = 'MaskedEdit', \*\*kwargs) -> None:
         """ This is the âconstructorâ for setting up the mixin variable parameters for the composite class.
 
             Source: https://docs.wxpython.org/wx.lib.masked.maskededit.MaskedEditMixin.html
@@ -79,7 +79,7 @@ if not specified) is considered valid.
             Source: https://docs.wxpython.org/wx.lib.masked.maskededit.MaskedEditMixin.html
         """
 
-    def SetCtrlParameters(self, **kwargs) -> None:
+    def SetCtrlParameters(self, \*\*kwargs) -> None:
         """ This public function can be used to set individual or multiple masked edit
 parameters after construction.  (See maskededit module overview for the list
 of valid parameters.)
@@ -87,7 +87,7 @@ of valid parameters.)
             Source: https://docs.wxpython.org/wx.lib.masked.maskededit.MaskedEditMixin.html
         """
 
-    def SetFieldParameters(self, field_index, **kwargs) -> None:
+    def SetFieldParameters(self, field_index, \*\*kwargs) -> None:
         """ Routine provided to modify the parameters of a given field.
 Because changes to fields can affect the overall control,
 direct access to the fields is prevented, and the control
@@ -104,7 +104,7 @@ parameters.)
             Source: https://docs.wxpython.org/wx.lib.masked.maskededit.MaskedEditMixin.html
         """
 
-    def SetMaskParameters(self, **kwargs) -> None:
+    def SetMaskParameters(self, \*\*kwargs) -> None:
         """ old name for the SetCtrlParameters function  (DEPRECATED)
 
             Source: https://docs.wxpython.org/wx.lib.masked.maskededit.MaskedEditMixin.html

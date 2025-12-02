@@ -8,13 +8,13 @@ rounding specifiable precision, grouping and decimal place characters, etc.
 
         Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
     """
-    def __init__(self, parent, id=-1, value = 0, pos = wx.DefaultPosition, size = wx.DefaultSize, style = wx.TE_PROCESS_TAB, validator = wx.DefaultValidator, name = "masked.num", **kwargs) -> None:
+    def __init__(self, parent, id=-1, value = 0, pos = wx.DefaultPosition, size = wx.DefaultSize, style = wx.TE_PROCESS_TAB, validator = wx.DefaultValidator, name = "masked.num", \*\*kwargs) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def ChangeValue(self, value: int) -> None:
+    def ChangeValue(self, value) -> None:
         """ Sets the value of the control to the value specified.
 The resulting actual value of the control may be altered to
 conform with the bounds set on the control if limited,
@@ -132,7 +132,7 @@ None if not specified.
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def IsInBounds(self, value: Optional[Any]=None) -> None:
+    def IsInBounds(self, value=None) -> None:
         """ Returns True if no value is specified and the current value
 of the control falls within the current bounds.  This function can
 also be called with a value to see if that value would fall within
@@ -180,7 +180,7 @@ has changed, and issue EVT_NUM event.
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetAllowNone(self, allow_none: bool) -> None:
+    def SetAllowNone(self, allow_none) -> None:
         """ Change the behavior of the validation code, allowing control
 to have a value of None or not, as appropriate.  If the value
 of the control is currently None, and allow_none is False, the
@@ -210,7 +210,7 @@ if setting the minimum bound is successful, and returns True only if both operat
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetFractionWidth(self, value: int) -> None:
+    def SetFractionWidth(self, value) -> None:
         """ Set the fraction width of the control
 
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
@@ -228,13 +228,13 @@ if setting the minimum bound is successful, and returns True only if both operat
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetIntegerWidth(self, value: int) -> None:
+    def SetIntegerWidth(self, value) -> None:
         """ Set the integer width of the control
 
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetLimited(self, limited: bool) -> None:
+    def SetLimited(self, limited) -> None:
         """ If called with a value of True, this function will cause the control
 to limit the value to fall within the bounds currently specified.
 If the controlâs value currently exceeds the bounds, it will then
@@ -243,7 +243,7 @@ be limited accordingly.
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetLimitOnFieldChange(self, limit: bool) -> None:
+    def SetLimitOnFieldChange(self, limit) -> None:
         """ If called with a value of True, this function will cause the control
 to prevent navigation out of the current field if its value is out-of-bounds,
 and limit the value to fall within the bounds currently specified if the
@@ -252,7 +252,7 @@ control loses focus.
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetMax(self, max: Optional[int]=None) -> None:
+    def SetMax(self, max=None) -> None:
         """ Sets the maximum value of the control. If a value of None
 is provided, then the control will have no explicit maximum value.
 If the value specified is less than the current minimum value, then
@@ -262,7 +262,7 @@ current setting. On success, the function returns True.
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetMin(self, min: Optional[int]=None) -> None:
+    def SetMin(self, min=None) -> None:
         """ Sets the minimum value of the control.  If a value of None
 is provided, then the control will have no explicit minimum value.
 If the value specified is greater than the current maximum value,
@@ -272,7 +272,7 @@ its current setting.  On success, the function returns True.
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetParameters(self, **kwargs) -> None:
+    def SetParameters(self, \*\*kwargs) -> None:
         """ This function is used to initialize and reconfigure the control.
 See TimeCtrl module overview for available
 parameters.
@@ -286,7 +286,7 @@ parameters.
             Source: https://docs.wxpython.org/wx.lib.masked.numctrl.NumCtrl.html
         """
 
-    def SetValue(self, value: int) -> None:
+    def SetValue(self, value) -> None:
         """ Sets the value of the control to the value specified.
 The resulting actual value of the control may be altered to
 conform with the bounds set on the control if limited,

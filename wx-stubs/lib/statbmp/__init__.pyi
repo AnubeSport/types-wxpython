@@ -6,7 +6,7 @@ class GenStaticBitmap(Control):
 
         Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html
     """
-    def __init__(self, parent, ID, bitmap, pos = wx.DefaultPosition, size = wx.DefaultSize, style = 0, name = "genstatbmp") -> None:
+    def __init__(self, parent, ID, bitmap, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, name='genstatbmp') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html
@@ -25,7 +25,7 @@ the control based on the label size and the current font.
             Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html
         """
 
-    def GetBitmap(self) -> 'Bitmap':
+    def GetBitmap(self) -> None:
         """ Returns the bitmap currently used in the control.
 
             Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html
@@ -38,19 +38,19 @@ the same font/colour attributes as the native StaticBitmap.
             Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html
         """
 
-    def OnEraseBackground(self, event: 'EraseEvent') -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for GenStaticBitmap.
 
             Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html
         """
 
-    def OnPaint(self, event: 'PaintEvent') -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT for GenStaticBitmap.
 
             Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html
         """
 
-    def SetBitmap(self, bitmap: 'Bitmap') -> None:
+    def SetBitmap(self, bitmap) -> None:
         """ Sets the bitmap label.
 
             Source: https://docs.wxpython.org/wx.lib.statbmp.GenStaticBitmap.html

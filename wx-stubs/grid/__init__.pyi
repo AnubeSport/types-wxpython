@@ -1,15 +1,8 @@
 # -*- coding: utf-8 -*-
 from typing import Any, ContextManager, Optional, TypeAlias, Union
 
-from .. import (ClientDataContainer, Colour, CommandEvent, Control,
-                EllipsizeMode, Font, HeaderCtrl, KeyEvent, MouseEvent,
-                NotifyEvent, Object, Pen, Point, Rect, RefCounter, Scrolled,
-                SharedClientDataContainer, Size, VisualAttributes, Window,
-                _Control, _EllipsizeMode, _Font, _KeyEvent, _MouseEvent,
-                _Window)
-from .Grid import CellSpan
-from .GridActivationSource import Origin
-from .GridBlocks import iterator
+from .. import (ClientDataContainer, CommandEvent, NotifyEvent, Object,
+                RefCounter, Scrolled, SharedClientDataContainer)
 
 GridTableRequest: TypeAlias = int  # Enumeration
 
@@ -37,25 +30,25 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AppendCols(self, numCols=1, updateLabels=True) -> bool:
+    def AppendCols(self, numCols=1, updateLabels=True) -> None:
         """ Appends one or more new columns to the right of the grid.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AppendRows(self, numRows=1, updateLabels=True) -> bool:
+    def AppendRows(self, numRows=1, updateLabels=True) -> None:
         """ Appends one or more new rows to the bottom of the grid.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AreHorzGridLinesClipped(self) -> bool:
+    def AreHorzGridLinesClipped(self) -> None:
         """ Return True if the horizontal grid lines stop at the last column boundary or False if they continue to the end of the window.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AreVertGridLinesClipped(self) -> bool:
+    def AreVertGridLinesClipped(self) -> None:
         """ Return True if the vertical grid lines stop at the last row boundary or False if they continue to the end of the window.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -73,7 +66,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AutoSizeColLabelSize(self, col: int) -> None:
+    def AutoSizeColLabelSize(self, col) -> None:
         """ Automatically adjusts width of the column to fit its label.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -85,7 +78,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AutoSizeColumns(self, setAsMin: bool=True) -> None:
+    def AutoSizeColumns(self, setAsMin=True) -> None:
         """ Automatically sizes all columns to fit their contents.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -97,13 +90,13 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AutoSizeRowLabelSize(self, col: int) -> None:
+    def AutoSizeRowLabelSize(self, col) -> None:
         """ Automatically adjusts height of the row to fit its label.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def AutoSizeRows(self, setAsMin: bool=True) -> None:
+    def AutoSizeRows(self, setAsMin=True) -> None:
         """ Automatically sizes all rows to fit their contents.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -115,20 +108,20 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def BlockToDeviceRect(self, topLeft, bottomRight, gridWindow=None) -> 'Rect':
+    def BlockToDeviceRect(self, topLeft, bottomRight, gridWindow=None) -> None:
         """ Convert grid cell coordinates to grid window pixel coordinates.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CalcCellsExposed(self, reg, gridWindow=None) -> 'GridCellCoordsArray':
-        """ Appends one or more new columns to the right of the grid.
+    def CalcCellsExposed(self, reg, gridWindow=None) -> None:
+        """ Returns an array of (visible) cells within the given region.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CalcColLabelsExposed(self, reg, gridWindow=None) -> int:
-        """ Appends one or more new columns to the right of the grid.
+    def CalcColLabelsExposed(self, reg, gridWindow=None) -> None:
+        """ Returns an array of column labels within the given region.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
@@ -145,85 +138,85 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CalcRowLabelsExposed(self, reg, gridWindow=None) -> int:
-        """ Appends one or more new columns to the right of the grid.
+    def CalcRowLabelsExposed(self, reg, gridWindow=None) -> None:
+        """ Returns an array of row labels within the given region.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragCell(self) -> bool:
+    def CanDragCell(self) -> None:
         """ Return True if the dragging of cells is enabled or False otherwise.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragColMove(self) -> bool:
+    def CanDragColMove(self) -> None:
         """ Returns True if columns can be moved by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragColSize(self, col: int) -> bool:
+    def CanDragColSize(self, col) -> None:
         """ Returns True if the given column can be resized by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragGridColEdges(self) -> bool:
+    def CanDragGridColEdges(self) -> None:
         """ Return True if column edges inside the grid can be dragged to resize the rows.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragGridRowEdges(self) -> bool:
+    def CanDragGridRowEdges(self) -> None:
         """ Return True if row edges inside the grid can be dragged to resize the rows.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragGridSize(self) -> bool:
+    def CanDragGridSize(self) -> None:
         """ Return True if the dragging of grid lines to resize rows and columns is enabled or False otherwise.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragRowMove(self) -> bool:
+    def CanDragRowMove(self) -> None:
         """ Returns True if rows can be moved by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanDragRowSize(self, row: int) -> bool:
+    def CanDragRowSize(self, row) -> None:
         """ Returns True if the given row can be resized by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanEnableCellControl(self) -> bool:
+    def CanEnableCellControl(self) -> None:
         """ Returns True if the in-place edit control for the current grid cell can be used and False otherwise.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanHaveAttributes(self) -> bool:
+    def CanHaveAttributes(self) -> None:
         """ Returns True if this grid has support for cell attributes.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CanHideColumns(self) -> bool:
+    def CanHideColumns(self) -> None:
         """ Returns True if columns can be hidden from the popup menu of the native header.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CellToGridWindow(self, *args, **kw) -> 'GridWindow':
+    def CellToGridWindow(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CellToRect(self, *args, **kw) -> 'Rect':
+    def CellToRect(self, *args, **kw) -> None:
         """ Return the rectangle corresponding to the grid cellâs size and position in logical coordinates.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -241,37 +234,37 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def ClipHorzGridLines(self, clip: bool) -> None:
+    def ClipHorzGridLines(self, clip) -> None:
         """ Change whether the horizontal grid lines are clipped by the end of the last column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def ClipVertGridLines(self, clip: bool) -> None:
+    def ClipVertGridLines(self, clip) -> None:
         """ Change whether the vertical grid lines are clipped by the end of the last row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def Create(self, parent, id=ID_ANY, pos=DefaultPosition, size=DefaultSize, style=WANTS_CHARS, name=GridNameStr) -> bool:
+    def Create(self, parent, id=ID_ANY, pos=DefaultPosition, size=DefaultSize, style=WANTS_CHARS, name=GridNameStr) -> None:
         """ Creates the grid window for an object initialized using the default constructor.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def CreateGrid(self, numRows, numCols, selmode=GridSelectCells) -> bool:
+    def CreateGrid(self, numRows, numCols, selmode=GridSelectCells) -> None:
         """ Creates a grid with the specified initial number of rows and columns.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DeleteCols(self, pos=0, numCols=1, updateLabels=True) -> bool:
+    def DeleteCols(self, pos=0, numCols=1, updateLabels=True) -> None:
         """ Deletes one or more columns from a grid starting at the specified position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DeleteRows(self, pos=0, numRows=1, updateLabels=True) -> bool:
+    def DeleteRows(self, pos=0, numRows=1, updateLabels=True) -> None:
         """ Deletes one or more rows from a grid starting at the specified position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -283,19 +276,19 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DeselectCol(self, col: int) -> None:
+    def DeselectCol(self, col) -> None:
         """ Deselects a column of cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DeselectRow(self, row: int) -> None:
+    def DeselectRow(self, row) -> None:
         """ Deselects a row of cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DevicePosToGridWindow(self, *args, **kw) -> 'GridWindow':
+    def DevicePosToGridWindow(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -307,7 +300,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DisableColResize(self, col: int) -> None:
+    def DisableColResize(self, col) -> None:
         """ Disable interactive resizing of the specified column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -349,44 +342,44 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DisableRowResize(self, row: int) -> None:
+    def DisableRowResize(self, row) -> None:
         """ Disable interactive resizing of the specified row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
     def DrawCellHighlight(self, dc, attr) -> None:
-        """ dc (wx.DC) â
+        """ dc (wx.DC)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
     def DrawColLabel(self, dc, col) -> None:
-        """ dc (wx.DC) â
+        """ dc (wx.DC)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
     def DrawColLabels(self, dc, cols) -> None:
-        """ dc (wx.DC) â
+        """ dc (wx.DC)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def DrawCornerLabel(self, dc: 'DC') -> None:
-        """ dc (wx.DC) â
+    def DrawCornerLabel(self, dc) -> None:
+        """ dc (wx.DC)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
     def DrawRowLabel(self, dc, row) -> None:
-        """ dc (wx.DC) â
+        """ dc (wx.DC)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
     def DrawRowLabels(self, dc, rows) -> None:
-        """ dc (wx.DC) â
+        """ dc (wx.DC)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
@@ -397,61 +390,61 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableCellEditControl(self, enable: bool=True) -> None:
+    def EnableCellEditControl(self, enable=True) -> None:
         """ Enables or disables in-place editing of grid cell data.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableDragCell(self, enable: bool=True) -> None:
+    def EnableDragCell(self, enable=True) -> None:
         """ Enables or disables cell dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableDragColMove(self, enable: bool=True) -> bool:
+    def EnableDragColMove(self, enable=True) -> None:
         """ Enables or disables column moving by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableDragColSize(self, enable: bool=True) -> None:
+    def EnableDragColSize(self, enable=True) -> None:
         """ Enables or disables column sizing by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableDragGridSize(self, enable: bool=True) -> None:
+    def EnableDragGridSize(self, enable=True) -> None:
         """ Enables or disables row and column resizing by dragging gridlines with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableDragRowMove(self, enable: bool=True) -> bool:
+    def EnableDragRowMove(self, enable=True) -> None:
         """ Enables or disables row moving by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableDragRowSize(self, enable: bool=True) -> None:
+    def EnableDragRowSize(self, enable=True) -> None:
         """ Enables or disables row sizing by dragging with the mouse.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableEditing(self, edit: bool) -> None:
+    def EnableEditing(self, edit) -> None:
         """ Makes the grid globally editable or read-only.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableGridLines(self, enable: bool=True) -> None:
+    def EnableGridLines(self, enable=True) -> None:
         """ Turns the drawing of grid lines on or off.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def EnableHidingColumns(self, enable: bool=True) -> bool:
+    def EnableHidingColumns(self, enable=True) -> None:
         """ Enables or disables column hiding from the header popup menu.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -475,176 +468,176 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def FreezeTo(self, *args, **kw) -> bool:
+    def FreezeTo(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetBatchCount(self) -> int:
+    def GetBatchCount(self) -> None:
         """ Returns the number of times that BeginBatch   has been called without (yet) matching calls to EndBatch .
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellAlignment(self, row, col) -> tuple:
+    def GetCellAlignment(self, row, col) -> None:
         """ Sets the arguments to the horizontal and vertical text alignment values for the grid cell at the specified location.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellBackgroundColour(self, row, col) -> 'Colour':
+    def GetCellBackgroundColour(self, row, col) -> None:
         """ Returns the background colour of the cell at the specified location.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellEditor(self, row, col) -> 'GridCellEditor':
+    def GetCellEditor(self, row, col) -> None:
         """ Returns a pointer to the editor for the cell at the specified location.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellFitMode(self, row, col) -> 'GridFitMode':
+    def GetCellFitMode(self, row, col) -> None:
         """ Returns the cell fitting mode.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellFont(self, row, col) -> 'Font':
+    def GetCellFont(self, row, col) -> None:
         """ Returns the font for text in the grid cell at the specified location.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellHighlightColour(self) -> 'Colour':
+    def GetCellHighlightColour(self) -> None:
         """ Colour
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellHighlightPenWidth(self) -> int:
+    def GetCellHighlightPenWidth(self) -> None:
         """ int
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellHighlightROPenWidth(self) -> int:
+    def GetCellHighlightROPenWidth(self) -> None:
         """ int
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellOverflow(self, row, col) -> bool:
+    def GetCellOverflow(self, row, col) -> None:
         """ Returns True if the cell value can overflow.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellRenderer(self, row, col) -> 'GridCellRenderer':
+    def GetCellRenderer(self, row, col) -> None:
         """ Returns a pointer to the renderer for the grid cell at the specified location.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellSize(self, *args, **kw) -> 'CellSpan':
+    def GetCellSize(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellTextColour(self, row, col) -> 'Colour':
+    def GetCellTextColour(self, row, col) -> None:
         """ Returns the text colour for the grid cell at the specified location.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCellValue(self, *args, **kw) -> str:
+    def GetCellValue(self, *args, **kw) -> None:
         """ Returns the string contained in the cell at the specified location.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
     @staticmethod
-    def GetClassDefaultAttributes(variant: int=WINDOW_VARIANT_NORMAL) -> 'VisualAttributes':
-        """ variant (WindowVariant) â
+    def GetClassDefaultAttributes(variant=WINDOW_VARIANT_NORMAL) -> None:
+        """ variant (WindowVariant)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColAt(self, colPos: int) -> int:
+    def GetColAt(self, colPos) -> None:
         """ Returns the column ID of the specified column position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColGridLinePen(self, col: int) -> 'Pen':
+    def GetColGridLinePen(self, col) -> None:
         """ Returns the pen used for vertical grid lines.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColLabelAlignment(self) -> tuple:
+    def GetColLabelAlignment(self) -> None:
         """ Sets the arguments to the current column label alignment values.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColLabelSize(self) -> int:
+    def GetColLabelSize(self) -> None:
         """ Returns the current height of the column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColLabelTextOrientation(self) -> int:
+    def GetColLabelTextOrientation(self) -> None:
         """ Returns the orientation of the column labels (either  HORIZONTAL   or   VERTICAL ).
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColLabelValue(self, col: int) -> str:
+    def GetColLabelValue(self, col) -> None:
         """ Returns the specified column label.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColLeft(self, col: int) -> int:
+    def GetColLeft(self, col) -> None:
         """ Returns the coordinate of the left border specified column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColMinimalAcceptableWidth(self) -> int:
+    def GetColMinimalAcceptableWidth(self) -> None:
         """ Returns the minimal width to which a column may be resized.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColMinimalWidth(self, col: int) -> int:
+    def GetColMinimalWidth(self, col) -> None:
         """ Get the minimal width of the given column/row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColPos(self, colID: int) -> int:
+    def GetColPos(self, colID) -> None:
         """ Returns the position of the specified column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColRight(self, col: int) -> int:
+    def GetColRight(self, col) -> None:
         """ Returns the coordinate of the right border specified column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColSize(self, col: int) -> int:
+    def GetColSize(self, col) -> None:
         """ Returns the width of the specified column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetColSizes(self) -> 'GridSizesInfo':
+    def GetColSizes(self) -> None:
         """ Get size information for all columns at once.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -656,409 +649,409 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCornerLabelTextOrientation(self) -> int:
+    def GetCornerLabelTextOrientation(self) -> None:
         """ Returns the orientation of the corner label (either  HORIZONTAL   or   VERTICAL ).
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetCornerLabelValue(self) -> str:
+    def GetCornerLabelValue(self) -> None:
         """ Returns the (top-left) corner label.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultCellAlignment(self) -> tuple:
+    def GetDefaultCellAlignment(self) -> None:
         """ Returns the default cell alignment.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultCellBackgroundColour(self) -> 'Colour':
+    def GetDefaultCellBackgroundColour(self) -> None:
         """ Returns the current default background colour for grid cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultCellFitMode(self) -> 'GridFitMode':
+    def GetDefaultCellFitMode(self) -> None:
         """ Returns the default cell fitting mode.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultCellFont(self) -> 'Font':
+    def GetDefaultCellFont(self) -> None:
         """ Returns the current default font for grid cell text.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultCellOverflow(self) -> bool:
+    def GetDefaultCellOverflow(self) -> None:
         """ Returns True if the cells can overflow by default.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultCellTextColour(self) -> 'Colour':
+    def GetDefaultCellTextColour(self) -> None:
         """ Returns the current default colour for grid cell text.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultColLabelSize(self) -> int:
+    def GetDefaultColLabelSize(self) -> None:
         """ Returns the default height for column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultColSize(self) -> int:
+    def GetDefaultColSize(self) -> None:
         """ Returns the current default width for grid columns.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultEditor(self) -> 'GridCellEditor':
+    def GetDefaultEditor(self) -> None:
         """ Returns a pointer to the current default grid cell editor.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultEditorForCell(self, *args, **kw) -> 'GridCellEditor':
+    def GetDefaultEditorForCell(self, *args, **kw) -> None:
         """ Returns the default editor for the specified cell.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultEditorForType(self, typeName: str) -> 'GridCellEditor':
+    def GetDefaultEditorForType(self, typeName) -> None:
         """ Returns the default editor for the cells containing values of the given type.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultGridLinePen(self) -> 'Pen':
+    def GetDefaultGridLinePen(self) -> None:
         """ Returns the pen used for grid lines.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultRenderer(self) -> 'GridCellRenderer':
+    def GetDefaultRenderer(self) -> None:
         """ Returns a pointer to the current default grid cell renderer.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultRendererForCell(self, row, col) -> 'GridCellRenderer':
+    def GetDefaultRendererForCell(self, row, col) -> None:
         """ Returns the default renderer for the given cell.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultRendererForType(self, typeName: str) -> 'GridCellRenderer':
+    def GetDefaultRendererForType(self, typeName) -> None:
         """ Returns the default renderer for the cell containing values of the given type.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultRowLabelSize(self) -> int:
+    def GetDefaultRowLabelSize(self) -> None:
         """ Returns the default width for the row labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetDefaultRowSize(self) -> int:
+    def GetDefaultRowSize(self) -> None:
         """ Returns the current default height for grid rows.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetFirstFullyVisibleColumn(self) -> int:
+    def GetFirstFullyVisibleColumn(self) -> None:
         """ Returns the leftmost column of the current visible area.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetFirstFullyVisibleRow(self) -> int:
+    def GetFirstFullyVisibleRow(self) -> None:
         """ Returns the topmost row of the current visible area.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetFrozenColGridWindow(self) -> 'Window':
+    def GetFrozenColGridWindow(self) -> None:
         """ Return the columns grid window containing column frozen cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetFrozenCornerGridWindow(self) -> 'Window':
+    def GetFrozenCornerGridWindow(self) -> None:
         """ Return the corner grid window containing frozen cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetFrozenRowGridWindow(self) -> 'Window':
+    def GetFrozenRowGridWindow(self) -> None:
         """ Return the rows grid window containing row frozen cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridColHeader(self) -> 'HeaderCtrl':
+    def GetGridColHeader(self) -> None:
         """ Return the header control used for column labels display.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridColLabelWindow(self) -> 'Window':
+    def GetGridColLabelWindow(self) -> None:
         """ Return the column labels window.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridCornerLabelWindow(self) -> 'Window':
+    def GetGridCornerLabelWindow(self) -> None:
         """ Return the window in the top left grid corner.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridCursorCol(self) -> int:
+    def GetGridCursorCol(self) -> None:
         """ Returns the current grid cell column position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridCursorCoords(self) -> 'GridCellCoords':
+    def GetGridCursorCoords(self) -> None:
         """ Returns the current grid cursor position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridCursorRow(self) -> int:
+    def GetGridCursorRow(self) -> None:
         """ Returns the current grid cell row position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridLineColour(self) -> 'Colour':
+    def GetGridLineColour(self) -> None:
         """ Returns the colour used for grid lines.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridRowLabelWindow(self) -> 'Window':
+    def GetGridRowLabelWindow(self) -> None:
         """ Return the row labels window.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridWindow(self) -> 'Window':
+    def GetGridWindow(self) -> None:
         """ Return the main grid window containing the grid cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetGridWindowOffset(self, gridWindow: 'grid.GridWindow') -> 'Point':
+    def GetGridWindowOffset(self, gridWindow) -> None:
         """ This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetLabelBackgroundColour(self) -> 'Colour':
+    def GetLabelBackgroundColour(self) -> None:
         """ Returns the colour used for the background of row and column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetLabelFont(self) -> 'Font':
+    def GetLabelFont(self) -> None:
         """ Returns the font used for row and column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetLabelTextColour(self) -> 'Colour':
+    def GetLabelTextColour(self) -> None:
         """ Returns the colour used for row and column label text.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetNumberCols(self) -> int:
+    def GetNumberCols(self) -> None:
         """ Returns the total number of grid columns.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetNumberFrozenCols(self) -> int:
+    def GetNumberFrozenCols(self) -> None:
         """ Returns the number of frozen grid columns.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetNumberFrozenRows(self) -> int:
+    def GetNumberFrozenRows(self) -> None:
         """ Returns the number of frozen grid rows.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetNumberRows(self) -> int:
+    def GetNumberRows(self) -> None:
         """ Returns the total number of grid rows.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetOrCreateCellAttr(self, row, col) -> 'GridCellAttr':
+    def GetOrCreateCellAttr(self, row, col) -> None:
         """ Returns the attribute for the given cell creating one if necessary.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetOrCreateCellAttrPtr(self, row, col) -> 'GridCellAttrPtr':
+    def GetOrCreateCellAttrPtr(self, row, col) -> None:
         """ Returns the attribute for the given cell creating one if necessary.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowAt(self, rowPos: int) -> int:
+    def GetRowAt(self, rowPos) -> None:
         """ Returns the row ID of the specified row position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowGridLinePen(self, row: int) -> 'Pen':
+    def GetRowGridLinePen(self, row) -> None:
         """ Returns the pen used for horizontal grid lines.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowLabelAlignment(self) -> tuple:
+    def GetRowLabelAlignment(self) -> None:
         """ Returns the alignment used for row labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowLabelSize(self) -> int:
+    def GetRowLabelSize(self) -> None:
         """ Returns the current width of the row labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowLabelValue(self, row: int) -> str:
+    def GetRowLabelValue(self, row) -> None:
         """ Returns the specified row label.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowMinimalAcceptableHeight(self) -> int:
+    def GetRowMinimalAcceptableHeight(self) -> None:
         """ Returns the minimal size to which rows can be resized.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowMinimalHeight(self, col: int) -> int:
+    def GetRowMinimalHeight(self, col) -> None:
         """ Returns the minimal size for the given column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowPos(self, rowID: int) -> int:
+    def GetRowPos(self, rowID) -> None:
         """ Returns the position of the specified row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowSize(self, row: int) -> int:
+    def GetRowSize(self, row) -> None:
         """ Returns the height of the specified row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetRowSizes(self) -> 'GridSizesInfo':
+    def GetRowSizes(self) -> None:
         """ Get size information for all row at once.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetScrollLineX(self) -> int:
+    def GetScrollLineX(self) -> None:
         """ Returns the number of pixels per horizontal scroll increment.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetScrollLineY(self) -> int:
+    def GetScrollLineY(self) -> None:
         """ Returns the number of pixels per vertical scroll increment.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectedBlocks(self) -> 'GridBlocks':
+    def GetSelectedBlocks(self) -> None:
         """ Returns a range of grid selection blocks.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectedCells(self) -> 'GridCellCoordsArray':
+    def GetSelectedCells(self) -> None:
         """ Returns an array of individually selected cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectedColBlocks(self) -> Any:
+    def GetSelectedColBlocks(self) -> None:
         """ Returns an ordered range of non-overlapping selected columns.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectedCols(self) -> int:
+    def GetSelectedCols(self) -> None:
         """ Returns an array of selected columns.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectedRowBlocks(self) -> Any:
+    def GetSelectedRowBlocks(self) -> None:
         """ Returns an ordered range of non-overlapping selected rows.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectedRows(self) -> int:
+    def GetSelectedRows(self) -> None:
         """ Returns an array of selected rows.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectionBackground(self) -> 'Colour':
+    def GetSelectionBackground(self) -> None:
         """ Returns the colour used for drawing the selection background.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectionBlockBottomRight(self) -> 'GridCellCoordsArray':
+    def GetSelectionBlockBottomRight(self) -> None:
         """ Returns an array of the bottom right corners of blocks of selected cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectionBlockTopLeft(self) -> 'GridCellCoordsArray':
+    def GetSelectionBlockTopLeft(self) -> None:
         """ Returns an array of the top left corners of blocks of selected cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectionForeground(self) -> 'Colour':
+    def GetSelectionForeground(self) -> None:
         """ Returns the colour used for drawing the selection foreground.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSelectionMode(self) -> 'GridSelectionModes':
+    def GetSelectionMode(self) -> None:
         """ Returns the current selection mode.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetSortingColumn(self) -> int:
+    def GetSortingColumn(self) -> None:
         """ Return the column in which the sorting indicator is currently displayed.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GetTable(self) -> 'GridTableBase':
+    def GetTable(self) -> None:
         """ Returns a base pointer to the current table object.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1070,7 +1063,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def GridLinesEnabled(self) -> bool:
+    def GridLinesEnabled(self) -> None:
         """ Returns True if drawing of grid lines is turned on, False otherwise.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1082,7 +1075,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def HideCol(self, col: int) -> None:
+    def HideCol(self, col) -> None:
         """ Hides the specified column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1094,7 +1087,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def HideRow(self, col: int) -> None:
+    def HideRow(self, col) -> None:
         """ Hides the specified row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1106,91 +1099,91 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def InsertCols(self, pos=0, numCols=1, updateLabels=True) -> bool:
+    def InsertCols(self, pos=0, numCols=1, updateLabels=True) -> None:
         """ Inserts one or more new columns into a grid with the first new column at the specified position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def InsertRows(self, pos=0, numRows=1, updateLabels=True) -> bool:
+    def InsertRows(self, pos=0, numRows=1, updateLabels=True) -> None:
         """ Inserts one or more new rows into a grid with the first new row at the specified position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsCellEditControlEnabled(self) -> bool:
+    def IsCellEditControlEnabled(self) -> None:
         """ Returns True if the in-place edit control is currently enabled.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsCellEditControlShown(self) -> bool:
+    def IsCellEditControlShown(self) -> None:
         """ Returns True if the in-place edit control is currently shown.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsColShown(self, col: int) -> bool:
+    def IsColShown(self, col) -> None:
         """ Returns True if the specified column is not currently hidden.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsCurrentCellReadOnly(self) -> bool:
+    def IsCurrentCellReadOnly(self) -> None:
         """ Returns True if the current cell is read-only.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsEditable(self) -> bool:
+    def IsEditable(self) -> None:
         """ Returns False if the whole grid has been set as read-only or True otherwise.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsInSelection(self, *args, **kw) -> bool:
+    def IsInSelection(self, *args, **kw) -> None:
         """ Returns True if the given cell is selected.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsReadOnly(self, row, col) -> bool:
+    def IsReadOnly(self, row, col) -> None:
         """ Returns True if the cell at the specified location canât be edited.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsRowShown(self, row: int) -> bool:
+    def IsRowShown(self, row) -> None:
         """ Returns True if the specified row is not currently hidden.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsSelection(self) -> bool:
+    def IsSelection(self) -> None:
         """ Returns True if there are currently any selected cells, rows, columns or blocks.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsSortOrderAscending(self) -> bool:
+    def IsSortOrderAscending(self) -> None:
         """ Return True if the current sorting order is ascending or False if it is descending.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsSortingBy(self, col: int) -> bool:
+    def IsSortingBy(self, col) -> None:
         """ Return True if this column is currently used for sorting.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsUsingNativeHeader(self) -> bool:
+    def IsUsingNativeHeader(self) -> None:
         """ Return True if native header control is currently being used.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def IsVisible(self, *args, **kw) -> bool:
+    def IsVisible(self, *args, **kw) -> None:
         """ Returns True if a cell is either entirely or at least partially visible in the grid window.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1202,67 +1195,67 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorDown(self, expandSelection: bool) -> bool:
+    def MoveCursorDown(self, expandSelection) -> None:
         """ Moves the grid cursor down by one row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorDownBlock(self, expandSelection: bool) -> bool:
+    def MoveCursorDownBlock(self, expandSelection) -> None:
         """ Moves the grid cursor down in the current column such that it skips to the beginning or end of a block of non-empty cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorLeft(self, expandSelection: bool) -> bool:
+    def MoveCursorLeft(self, expandSelection) -> None:
         """ Moves the grid cursor left by one column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorLeftBlock(self, expandSelection: bool) -> bool:
+    def MoveCursorLeftBlock(self, expandSelection) -> None:
         """ Moves the grid cursor left in the current row such that it skips to the beginning or end of a block of non-empty cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorRight(self, expandSelection: bool) -> bool:
+    def MoveCursorRight(self, expandSelection) -> None:
         """ Moves the grid cursor right by one column.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorRightBlock(self, expandSelection: bool) -> bool:
+    def MoveCursorRightBlock(self, expandSelection) -> None:
         """ Moves the grid cursor right in the current row such that it skips to the beginning or end of a block of non-empty cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorUp(self, expandSelection: bool) -> bool:
+    def MoveCursorUp(self, expandSelection) -> None:
         """ Moves the grid cursor up by one row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MoveCursorUpBlock(self, expandSelection: bool) -> bool:
+    def MoveCursorUpBlock(self, expandSelection) -> None:
         """ Moves the grid cursor up in the current column such that it skips to the beginning or end of a block of non-empty cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MovePageDown(self) -> bool:
+    def MovePageDown(self) -> None:
         """ Moves the grid cursor down by some number of rows so that the previous bottom visible row becomes the top visible row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def MovePageUp(self) -> bool:
+    def MovePageUp(self) -> None:
         """ Moves the grid cursor up by some number of rows so that the previous top visible row becomes the bottom visible row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def ProcessTableMessage(self, msg: 'grid.GridTableMessage') -> bool:
+    def ProcessTableMessage(self, msg) -> None:
         """ Receive and handle a message from the table.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1371,19 +1364,19 @@ tabular data.
         """
 
     def SetCellHighlightColour(self) -> None:
-        """ `` (wx.Colour) â
+        """ `` (wx.Colour)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetCellHighlightPenWidth(self, width: int) -> None:
-        """ width (int) â
+    def SetCellHighlightPenWidth(self, width) -> None:
+        """ width (int)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetCellHighlightROPenWidth(self, width: int) -> None:
-        """ width (int) â
+    def SetCellHighlightROPenWidth(self, width) -> None:
+        """ width (int)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
@@ -1424,7 +1417,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColFormatBool(self, col: int) -> None:
+    def SetColFormatBool(self, col) -> None:
         """ Sets the specified column to display boolean values.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1436,7 +1429,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColFormatDate(self, col, format="") -> None:
+    def SetColFormatDate(self, col, format='') -> None:
         """ Sets the specified column to display date values.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1448,7 +1441,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColFormatNumber(self, col: int) -> None:
+    def SetColFormatNumber(self, col) -> None:
         """ Sets the specified column to display integer values.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1460,13 +1453,13 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColLabelSize(self, height: int) -> None:
+    def SetColLabelSize(self, height) -> None:
         """ Sets the height of the column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColLabelTextOrientation(self, textOrientation: int) -> None:
+    def SetColLabelTextOrientation(self, textOrientation) -> None:
         """ Sets the orientation of the column labels (either  HORIZONTAL   or   VERTICAL ).
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1478,7 +1471,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColMinimalAcceptableWidth(self, width: int) -> None:
+    def SetColMinimalAcceptableWidth(self, width) -> None:
         """ Sets the minimal width  to which the user can resize columns.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1502,13 +1495,13 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColSizes(self, sizeInfo: 'grid.GridSizesInfo') -> None:
+    def SetColSizes(self, sizeInfo) -> None:
         """ Restore all columns sizes.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetColumnsOrder(self, order: int) -> None:
+    def SetColumnsOrder(self, order) -> None:
         """ Sets the positions of all columns at once.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1520,7 +1513,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetCornerLabelTextOrientation(self, textOrientation: int) -> None:
+    def SetCornerLabelTextOrientation(self, textOrientation) -> None:
         """ Sets the orientation of the (top-left) corner label (either  HORIZONTAL   or   VERTICAL ).
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1538,31 +1531,31 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetDefaultCellBackgroundColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetDefaultCellBackgroundColour(self, colour) -> None:
         """ Sets the default background colour for grid cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetDefaultCellFitMode(self, fitMode: 'grid.GridFitMode') -> None:
+    def SetDefaultCellFitMode(self, fitMode) -> None:
         """ Specifies the default behaviour of the cell contents if it doesnât fit into the available space.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetDefaultCellFont(self, font: 'Font') -> None:
+    def SetDefaultCellFont(self, font) -> None:
         """ Sets the default font to be used for grid cell text.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetDefaultCellOverflow(self, allow: bool) -> None:
+    def SetDefaultCellOverflow(self, allow) -> None:
         """ Sets the default overflow permission of the cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetDefaultCellTextColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetDefaultCellTextColour(self, colour) -> None:
         """ Sets the current default colour for grid cell text.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1574,13 +1567,13 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetDefaultEditor(self, editor: 'grid.GridCellEditor') -> None:
+    def SetDefaultEditor(self, editor) -> None:
         """ Sets the default editor for grid cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetDefaultRenderer(self, renderer: 'grid.GridCellRenderer') -> None:
+    def SetDefaultRenderer(self, renderer) -> None:
         """ Sets the default renderer for grid cells.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1599,36 +1592,36 @@ tabular data.
         """
 
     def SetGridFrozenBorderColour(self) -> None:
-        """ `` (wx.Colour) â
+        """ `` (wx.Colour)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetGridFrozenBorderPenWidth(self, width: int) -> None:
-        """ width (int) â
+    def SetGridFrozenBorderPenWidth(self, width) -> None:
+        """ width (int)
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetGridLineColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetGridLineColour(self, colour) -> None:
         """ Sets the colour used to draw grid lines.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetLabelBackgroundColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetLabelBackgroundColour(self, colour) -> None:
         """ Sets the background colour for row and column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetLabelFont(self, font: 'Font') -> None:
+    def SetLabelFont(self, font) -> None:
         """ Sets the font for row and column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetLabelTextColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetLabelTextColour(self, colour) -> None:
         """ Sets the colour for row and column label text.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1658,7 +1651,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetRowLabelSize(self, width: int) -> None:
+    def SetRowLabelSize(self, width) -> None:
         """ Sets the width of the row labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1670,7 +1663,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetRowMinimalAcceptableHeight(self, height: int) -> None:
+    def SetRowMinimalAcceptableHeight(self, height) -> None:
         """ Sets the minimal row height  used by default.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1694,43 +1687,43 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetRowSizes(self, sizeInfo: 'grid.GridSizesInfo') -> None:
+    def SetRowSizes(self, sizeInfo) -> None:
         """ Restore all rows sizes.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetRowsOrder(self, order: int) -> None:
+    def SetRowsOrder(self, order) -> None:
         """ Sets the positions of all rows at once.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetScrollLineX(self, x: int) -> None:
+    def SetScrollLineX(self, x) -> None:
         """ Sets the number of pixels per horizontal scroll increment.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetScrollLineY(self, y: int) -> None:
+    def SetScrollLineY(self, y) -> None:
         """ Sets the number of pixels per vertical scroll increment.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetSelectionBackground(self, c: Union[int, str, 'Colour']) -> None:
+    def SetSelectionBackground(self, c) -> None:
         """ Set the colour to be used for drawing the selection background.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetSelectionForeground(self, c: Union[int, str, 'Colour']) -> None:
+    def SetSelectionForeground(self, c) -> None:
         """ Set the colour to be used for drawing the selection foreground.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetSelectionMode(self, selmode: GridSelectionModes) -> None:
+    def SetSelectionMode(self, selmode) -> None:
         """ Set the selection behaviour of the grid.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1742,13 +1735,13 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetTabBehaviour(self, behaviour: TabBehaviour) -> None:
+    def SetTabBehaviour(self, behaviour) -> None:
         """ Set the gridâs behaviour when the user presses the TAB key.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def _SetTable(self, table, takeOwnership=False, selmode=GridSelectCells) -> bool:
+    def _SetTable(self, table, takeOwnership=False, selmode=GridSelectCells) -> None:
         """ Passes a pointer to a custom grid table to be used by the grid.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1760,7 +1753,7 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def SetUseNativeColLabels(self, native: bool=True) -> None:
+    def SetUseNativeColLabels(self, native=True) -> None:
         """ Call this in order to make the column labels use a native look by using wx.RendererNative.DrawHeaderButton   internally.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1772,13 +1765,13 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def ShowCol(self, col: int) -> None:
+    def ShowCol(self, col) -> None:
         """ Shows the previously hidden column by resizing it to non-0 size.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def ShowRow(self, col: int) -> None:
+    def ShowRow(self, col) -> None:
         """ Shows the previously hidden row.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
@@ -1790,103 +1783,103 @@ tabular data.
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def UseNativeColHeader(self, native: bool=True) -> bool:
+    def UseNativeColHeader(self, native=True) -> None:
         """ Enable the use of native header window for column labels.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def XToCol(self, x, clipToMinMax=False, gridWindow=None) -> int:
+    def XToCol(self, x, clipToMinMax=False, gridWindow=None) -> None:
         """ Returns the column at the given pixel position depending on the window.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def XToEdgeOfCol(self, x: int) -> int:
+    def XToEdgeOfCol(self, x) -> None:
         """ Returns the column whose right hand edge is close to the given logical x  position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def XYToCell(self, *args, **kw) -> 'GridCellCoords':
+    def XYToCell(self, *args, **kw) -> None:
         """ Overloaded Implementations:
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def YToEdgeOfRow(self, y: int) -> int:
+    def YToEdgeOfRow(self, y) -> None:
         """ Returns the row whose bottom edge is close to the given logical y  position.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    def YToRow(self, y, clipToMinMax=False, gridWindow=None) -> int:
+    def YToRow(self, y, clipToMinMax=False, gridWindow=None) -> None:
         """ Returns the grid row that corresponds to the logical y  coordinate.
 
             Source: https://docs.wxpython.org/wx.grid.Grid.html
         """
 
-    BatchCount: int  # See GetBatchCount
-    CellHighlightColour: 'Colour'  # See GetCellHighlightColour and SetCellHighlightColour
-    CellHighlightPenWidth: int  # See GetCellHighlightPenWidth and SetCellHighlightPenWidth
-    CellHighlightROPenWidth: int  # See GetCellHighlightROPenWidth and SetCellHighlightROPenWidth
-    ColLabelSize: int  # See GetColLabelSize and SetColLabelSize
-    ColLabelTextOrientation: int  # See GetColLabelTextOrientation and SetColLabelTextOrientation
-    ColMinimalAcceptableWidth: int  # See GetColMinimalAcceptableWidth and SetColMinimalAcceptableWidth
-    ColSizes: 'GridSizesInfo'  # See GetColSizes and SetColSizes
-    CornerLabelTextOrientation: int  # See GetCornerLabelTextOrientation and SetCornerLabelTextOrientation
-    CornerLabelValue: str  # See GetCornerLabelValue and SetCornerLabelValue
-    DefaultCellBackgroundColour: 'Colour'  # See GetDefaultCellBackgroundColour and SetDefaultCellBackgroundColour
-    DefaultCellFitMode: 'GridFitMode'  # See GetDefaultCellFitMode and SetDefaultCellFitMode
-    DefaultCellFont: 'Font'  # See GetDefaultCellFont and SetDefaultCellFont
-    DefaultCellOverflow: bool  # See GetDefaultCellOverflow and SetDefaultCellOverflow
-    DefaultCellTextColour: 'Colour'  # See GetDefaultCellTextColour and SetDefaultCellTextColour
-    DefaultColLabelSize: int  # See GetDefaultColLabelSize
-    DefaultColSize: int  # See GetDefaultColSize and SetDefaultColSize
-    DefaultEditor: 'GridCellEditor'  # See GetDefaultEditor and SetDefaultEditor
-    DefaultGridLinePen: 'Pen'  # See GetDefaultGridLinePen
-    DefaultRenderer: 'GridCellRenderer'  # See GetDefaultRenderer and SetDefaultRenderer
-    DefaultRowLabelSize: int  # See GetDefaultRowLabelSize
-    DefaultRowSize: int  # See GetDefaultRowSize and SetDefaultRowSize
-    FirstFullyVisibleColumn: int  # See GetFirstFullyVisibleColumn
-    FirstFullyVisibleRow: int  # See GetFirstFullyVisibleRow
-    FrozenColGridWindow: 'Window'  # See GetFrozenColGridWindow
-    FrozenCornerGridWindow: 'Window'  # See GetFrozenCornerGridWindow
-    FrozenRowGridWindow: 'Window'  # See GetFrozenRowGridWindow
-    GridColHeader: 'HeaderCtrl'  # See GetGridColHeader
-    GridColLabelWindow: 'Window'  # See GetGridColLabelWindow
-    GridCornerLabelWindow: 'Window'  # See GetGridCornerLabelWindow
-    GridCursorCol: int  # See GetGridCursorCol
-    GridCursorCoords: 'GridCellCoords'  # See GetGridCursorCoords
-    GridCursorRow: int  # See GetGridCursorRow
-    GridLineColour: 'Colour'  # See GetGridLineColour and SetGridLineColour
-    GridRowLabelWindow: 'Window'  # See GetGridRowLabelWindow
-    GridWindow: 'Window'  # See GetGridWindow
-    LabelBackgroundColour: 'Colour'  # See GetLabelBackgroundColour and SetLabelBackgroundColour
-    LabelFont: 'Font'  # See GetLabelFont and SetLabelFont
-    LabelTextColour: 'Colour'  # See GetLabelTextColour and SetLabelTextColour
-    NumberCols: int  # See GetNumberCols
-    NumberFrozenCols: int  # See GetNumberFrozenCols
-    NumberFrozenRows: int  # See GetNumberFrozenRows
-    NumberRows: int  # See GetNumberRows
-    RowLabelSize: int  # See GetRowLabelSize and SetRowLabelSize
-    RowMinimalAcceptableHeight: int  # See GetRowMinimalAcceptableHeight and SetRowMinimalAcceptableHeight
-    RowSizes: 'GridSizesInfo'  # See GetRowSizes and SetRowSizes
-    ScrollLineX: int  # See GetScrollLineX and SetScrollLineX
-    ScrollLineY: int  # See GetScrollLineY and SetScrollLineY
-    SelectedBlocks: 'GridBlocks'  # See GetSelectedBlocks
-    SelectedCells: 'GridCellCoordsArray'  # See GetSelectedCells
-    SelectedColBlocks: Any  # See GetSelectedColBlocks
-    SelectedCols: int  # See GetSelectedCols
-    SelectedRowBlocks: Any  # See GetSelectedRowBlocks
-    SelectedRows: int  # See GetSelectedRows
-    SelectionBackground: 'Colour'  # See GetSelectionBackground and SetSelectionBackground
-    SelectionBlockBottomRight: 'GridCellCoordsArray'  # See GetSelectionBlockBottomRight
-    SelectionBlockTopLeft: 'GridCellCoordsArray'  # See GetSelectionBlockTopLeft
-    SelectionForeground: 'Colour'  # See GetSelectionForeground and SetSelectionForeground
-    SelectionMode: 'GridSelectionModes'  # See GetSelectionMode and SetSelectionMode
-    SortingColumn: int  # See GetSortingColumn and SetSortingColumn
-    Table: 'GridTableBase'  # See GetTable and SetTable
+    BatchCount: None  # See GetBatchCount
+    CellHighlightColour: None  # See GetCellHighlightColour and SetCellHighlightColour
+    CellHighlightPenWidth: None  # See GetCellHighlightPenWidth and SetCellHighlightPenWidth
+    CellHighlightROPenWidth: None  # See GetCellHighlightROPenWidth and SetCellHighlightROPenWidth
+    ColLabelSize: None  # See GetColLabelSize and SetColLabelSize
+    ColLabelTextOrientation: None  # See GetColLabelTextOrientation and SetColLabelTextOrientation
+    ColMinimalAcceptableWidth: None  # See GetColMinimalAcceptableWidth and SetColMinimalAcceptableWidth
+    ColSizes: None  # See GetColSizes and SetColSizes
+    CornerLabelTextOrientation: None  # See GetCornerLabelTextOrientation and SetCornerLabelTextOrientation
+    CornerLabelValue: None  # See GetCornerLabelValue and SetCornerLabelValue
+    DefaultCellBackgroundColour: None  # See GetDefaultCellBackgroundColour and SetDefaultCellBackgroundColour
+    DefaultCellFitMode: None  # See GetDefaultCellFitMode and SetDefaultCellFitMode
+    DefaultCellFont: None  # See GetDefaultCellFont and SetDefaultCellFont
+    DefaultCellOverflow: None  # See GetDefaultCellOverflow and SetDefaultCellOverflow
+    DefaultCellTextColour: None  # See GetDefaultCellTextColour and SetDefaultCellTextColour
+    DefaultColLabelSize: None  # See GetDefaultColLabelSize
+    DefaultColSize: None  # See GetDefaultColSize and SetDefaultColSize
+    DefaultEditor: None  # See GetDefaultEditor and SetDefaultEditor
+    DefaultGridLinePen: None  # See GetDefaultGridLinePen
+    DefaultRenderer: None  # See GetDefaultRenderer and SetDefaultRenderer
+    DefaultRowLabelSize: None  # See GetDefaultRowLabelSize
+    DefaultRowSize: None  # See GetDefaultRowSize and SetDefaultRowSize
+    FirstFullyVisibleColumn: None  # See GetFirstFullyVisibleColumn
+    FirstFullyVisibleRow: None  # See GetFirstFullyVisibleRow
+    FrozenColGridWindow: None  # See GetFrozenColGridWindow
+    FrozenCornerGridWindow: None  # See GetFrozenCornerGridWindow
+    FrozenRowGridWindow: None  # See GetFrozenRowGridWindow
+    GridColHeader: None  # See GetGridColHeader
+    GridColLabelWindow: None  # See GetGridColLabelWindow
+    GridCornerLabelWindow: None  # See GetGridCornerLabelWindow
+    GridCursorCol: None  # See GetGridCursorCol
+    GridCursorCoords: None  # See GetGridCursorCoords
+    GridCursorRow: None  # See GetGridCursorRow
+    GridLineColour: None  # See GetGridLineColour and SetGridLineColour
+    GridRowLabelWindow: None  # See GetGridRowLabelWindow
+    GridWindow: None  # See GetGridWindow
+    LabelBackgroundColour: None  # See GetLabelBackgroundColour and SetLabelBackgroundColour
+    LabelFont: None  # See GetLabelFont and SetLabelFont
+    LabelTextColour: None  # See GetLabelTextColour and SetLabelTextColour
+    NumberCols: None  # See GetNumberCols
+    NumberFrozenCols: None  # See GetNumberFrozenCols
+    NumberFrozenRows: None  # See GetNumberFrozenRows
+    NumberRows: None  # See GetNumberRows
+    RowLabelSize: None  # See GetRowLabelSize and SetRowLabelSize
+    RowMinimalAcceptableHeight: None  # See GetRowMinimalAcceptableHeight and SetRowMinimalAcceptableHeight
+    RowSizes: None  # See GetRowSizes and SetRowSizes
+    ScrollLineX: None  # See GetScrollLineX and SetScrollLineX
+    ScrollLineY: None  # See GetScrollLineY and SetScrollLineY
+    SelectedBlocks: None  # See GetSelectedBlocks
+    SelectedCells: None  # See GetSelectedCells
+    SelectedColBlocks: None  # See GetSelectedColBlocks
+    SelectedCols: None  # See GetSelectedCols
+    SelectedRowBlocks: None  # See GetSelectedRowBlocks
+    SelectedRows: None  # See GetSelectedRows
+    SelectionBackground: None  # See GetSelectionBackground and SetSelectionBackground
+    SelectionBlockBottomRight: None  # See GetSelectionBlockBottomRight
+    SelectionBlockTopLeft: None  # See GetSelectionBlockTopLeft
+    SelectionForeground: None  # See GetSelectionForeground and SetSelectionForeground
+    SelectionMode: None  # See GetSelectionMode and SetSelectionMode
+    SortingColumn: None  # See GetSortingColumn and SetSortingColumn
+    Table: None  # See GetTable and SetTable
 
 
 
@@ -1901,31 +1894,31 @@ class GridCellAttrProvider(ClientDataContainer):
             Source: https://docs.wxpython.org/wx.grid.GridCellAttrProvider.html
         """
 
-    def GetAttr(self, row, col, kind) -> 'GridCellAttr':
+    def GetAttr(self, row, col, kind) -> None:
         """ Get the attribute to use for the specified cell.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttrProvider.html
         """
 
-    def GetAttrPtr(self, row, col, kind) -> 'GridCellAttrPtr':
+    def GetAttrPtr(self, row, col, kind) -> None:
         """ Get the attribute to use for the specified cell.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttrProvider.html
         """
 
-    def GetColumnHeaderRenderer(self, col: int) -> 'GridColumnHeaderRenderer':
+    def GetColumnHeaderRenderer(self, col) -> None:
         """ Return the renderer used for drawing column headers.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttrProvider.html
         """
 
-    def GetCornerRenderer(self) -> 'GridCornerHeaderRenderer':
+    def GetCornerRenderer(self) -> None:
         """ Return the renderer used for drawing the corner window.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttrProvider.html
         """
 
-    def GetRowHeaderRenderer(self, row: int) -> 'GridRowHeaderRenderer':
+    def GetRowHeaderRenderer(self, row) -> None:
         """ Return the renderer used for drawing row headers.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttrProvider.html
@@ -1949,12 +1942,12 @@ class GridCellAttrProvider(ClientDataContainer):
             Source: https://docs.wxpython.org/wx.grid.GridCellAttrProvider.html
         """
 
-    CornerRenderer: 'GridCornerHeaderRenderer'  # See GetCornerRenderer
+    CornerRenderer: None  # See GetCornerRenderer
 
 
 
 class GridEditorCreatedEvent(CommandEvent):
-    """ ^^
+    """  Overloaded Implementations:
 
         Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
     """
@@ -1964,64 +1957,64 @@ class GridEditorCreatedEvent(CommandEvent):
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def GetCol(self) -> int:
+    def GetCol(self) -> None:
         """ Returns the column at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def GetControl(self) -> 'Control':
+    def GetControl(self) -> None:
         """ Returns the edit control.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def GetRow(self) -> int:
+    def GetRow(self) -> None:
         """ Returns the row at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def GetWindow(self) -> 'Window':
+    def GetWindow(self) -> None:
         """ Returns the edit window.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def SetCol(self, col: int) -> None:
+    def SetCol(self, col) -> None:
         """ Sets the column at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def SetControl(self, ctrl: 'Control') -> None:
+    def SetControl(self, ctrl) -> None:
         """ Sets the edit control.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def SetRow(self, row: int) -> None:
+    def SetRow(self, row) -> None:
         """ Sets the row at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    def SetWindow(self, window: 'Window') -> None:
+    def SetWindow(self, window) -> None:
         """ Sets the edit window.
 
             Source: https://docs.wxpython.org/wx.grid.GridEditorCreatedEvent.html
         """
 
-    Col: int  # See GetCol and SetCol
-    Control: '_Control'  # See GetControl and SetControl
-    Row: int  # See GetRow and SetRow
-    Window: '_Window'  # See GetWindow and SetWindow
+    Col: None  # See GetCol and SetCol
+    Control: None  # See GetControl and SetControl
+    Row: None  # See GetRow and SetRow
+    Window: None  # See GetWindow and SetWindow
 
 
 
 EVT_GRID_EDITOR_CREATED: int  # The editor for a cell was created. Processes a  wxEVT_GRID_EDITOR_CREATED   event type.
 
-EVT_GRID_CMD_EDITOR_CREATED: int  # The editor for a cell was created; variant taking a window identifier. Processes a  wxEVT_GRID_EDITOR_CREATED   event type. ^^
+EVT_GRID_CMD_EDITOR_CREATED: int  # The editor for a cell was created; variant taking a window identifier. Processes a  wxEVT_GRID_EDITOR_CREATED   event type.
 
 class GridTableBase(Object):
     """ The almost abstract base class for grid tables.
@@ -2034,37 +2027,37 @@ class GridTableBase(Object):
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def AppendCols(self, numCols: int=1) -> bool:
+    def AppendCols(self, numCols=1) -> None:
         """ Exactly the same as AppendRows   but for columns.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def AppendRows(self, numRows: int=1) -> bool:
+    def AppendRows(self, numRows=1) -> None:
         """ Append additional rows at the end of the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def CanGetValueAs(self, row, col, typeName) -> bool:
+    def CanGetValueAs(self, row, col, typeName) -> None:
         """ Returns True if the value of the given cell can be accessed as if it were of the specified type.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def CanHaveAttributes(self) -> bool:
+    def CanHaveAttributes(self) -> None:
         """ Returns True if this table supports attributes or False otherwise.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def CanMeasureColUsingSameAttr(self, col: int) -> bool:
+    def CanMeasureColUsingSameAttr(self, col) -> None:
         """ Override to return True if the same attribute can be used for measuring all cells in the given column.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def CanSetValueAs(self, row, col, typeName) -> bool:
+    def CanSetValueAs(self, row, col, typeName) -> None:
         """ Returns True if the value of the given cell can be set as if it were of the specified type.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
@@ -2076,133 +2069,133 @@ class GridTableBase(Object):
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def DeleteCols(self, pos=0, numCols=1) -> bool:
+    def DeleteCols(self, pos=0, numCols=1) -> None:
         """ Exactly the same as DeleteRows   but for columns.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def DeleteRows(self, pos=0, numRows=1) -> bool:
+    def DeleteRows(self, pos=0, numRows=1) -> None:
         """ Delete rows from the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetAttr(self, row, col, kind) -> 'GridCellAttr':
+    def GetAttr(self, row, col, kind) -> None:
         """ Return the attribute for the given cell.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetAttrProvider(self) -> 'GridCellAttrProvider':
+    def GetAttrProvider(self) -> None:
         """ Returns the attribute provider currently being used.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetAttrPtr(self, row, col, kind) -> 'GridCellAttrPtr':
+    def GetAttrPtr(self, row, col, kind) -> None:
         """ Return the attribute for the given cell.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetColLabelValue(self, col: int) -> str:
+    def GetColLabelValue(self, col) -> None:
         """ Return the label of the specified column.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetColsCount(self) -> int:
+    def GetColsCount(self) -> None:
         """ Return the number of columns in the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetCornerLabelValue(self) -> str:
+    def GetCornerLabelValue(self) -> None:
         """ Return the label of the gridâs corner.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetNumberCols(self) -> int:
+    def GetNumberCols(self) -> None:
         """ Must be overridden to return the number of columns in the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetNumberRows(self) -> int:
+    def GetNumberRows(self) -> None:
         """ Must be overridden to return the number of rows in the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetRowLabelValue(self, row: int) -> str:
+    def GetRowLabelValue(self, row) -> None:
         """ Return the label of the specified row.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetRowsCount(self) -> int:
+    def GetRowsCount(self) -> None:
         """ Return the number of rows in the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetTypeName(self, row, col) -> str:
+    def GetTypeName(self, row, col) -> None:
         """ Returns the type of the value in the given cell.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetValue(self, row, col) -> Any:
+    def GetValue(self, row, col) -> None:
         """ Must be overridden to implement accessing the table values as text.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetValueAsBool(self, row, col) -> bool:
+    def GetValueAsBool(self, row, col) -> None:
         """ Returns the value of the given cell as a boolean.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetValueAsDouble(self, row, col) -> float:
+    def GetValueAsDouble(self, row, col) -> None:
         """ Returns the value of the given cell as a double.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetValueAsLong(self, row, col) -> int:
+    def GetValueAsLong(self, row, col) -> None:
         """ Returns the value of the given cell as a long.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def GetView(self) -> 'Grid':
+    def GetView(self) -> None:
         """ Returns the last grid passed to SetView .
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def InsertCols(self, pos=0, numCols=1) -> bool:
+    def InsertCols(self, pos=0, numCols=1) -> None:
         """ Exactly the same as InsertRows   but for columns.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def InsertRows(self, pos=0, numRows=1) -> bool:
+    def InsertRows(self, pos=0, numRows=1) -> None:
         """ Insert additional rows into the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def IsEmpty(self, coords: 'grid.GridCellCoords') -> bool:
+    def IsEmpty(self, coords) -> None:
         """ Same as IsEmptyCell   but taking   wx.grid.GridCellCoords.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def IsEmptyCell(self, row, col) -> bool:
+    def IsEmptyCell(self, row, col) -> None:
         """ May be overridden to implement testing for empty cells.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
@@ -2214,7 +2207,7 @@ class GridTableBase(Object):
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def SetAttrProvider(self, attrProvider: 'grid.GridCellAttrProvider') -> None:
+    def SetAttrProvider(self, attrProvider) -> None:
         """ Associate this attributes provider with the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
@@ -2274,19 +2267,19 @@ class GridTableBase(Object):
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    def SetView(self, grid: 'grid.Grid') -> None:
+    def SetView(self, grid) -> None:
         """ Called by the grid when the table is associated with it.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableBase.html
         """
 
-    AttrProvider: 'GridCellAttrProvider'  # See GetAttrProvider and SetAttrProvider
-    ColsCount: int  # See GetColsCount
-    CornerLabelValue: str  # See GetCornerLabelValue and SetCornerLabelValue
-    NumberCols: int  # See GetNumberCols
-    NumberRows: int  # See GetNumberRows
-    RowsCount: int  # See GetRowsCount
-    View: 'Grid'  # See GetView and SetView
+    AttrProvider: None  # See GetAttrProvider and SetAttrProvider
+    ColsCount: None  # See GetColsCount
+    CornerLabelValue: None  # See GetCornerLabelValue and SetCornerLabelValue
+    NumberCols: None  # See GetNumberCols
+    NumberRows: None  # See GetNumberRows
+    RowsCount: None  # See GetRowsCount
+    View: None  # See GetView and SetView
 
 
 
@@ -2302,13 +2295,13 @@ that are stored in memory.
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def AppendCols(self, numCols: int=1) -> bool:
+    def AppendCols(self, numCols=1) -> None:
         """ Exactly the same as AppendRows   but for columns.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def AppendRows(self, numRows: int=1) -> bool:
+    def AppendRows(self, numRows=1) -> None:
         """ Append additional rows at the end of the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
@@ -2320,61 +2313,61 @@ that are stored in memory.
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def DeleteCols(self, pos=0, numCols=1) -> bool:
+    def DeleteCols(self, pos=0, numCols=1) -> None:
         """ Exactly the same as DeleteRows   but for columns.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def DeleteRows(self, pos=0, numRows=1) -> bool:
+    def DeleteRows(self, pos=0, numRows=1) -> None:
         """ Delete rows from the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def GetColLabelValue(self, col: int) -> str:
+    def GetColLabelValue(self, col) -> None:
         """ Return the label of the specified column.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def GetCornerLabelValue(self) -> str:
+    def GetCornerLabelValue(self) -> None:
         """ Return the label of the gridâs corner.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def GetNumberCols(self) -> int:
+    def GetNumberCols(self) -> None:
         """ Must be overridden to return the number of columns in the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def GetNumberRows(self) -> int:
+    def GetNumberRows(self) -> None:
         """ Must be overridden to return the number of rows in the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def GetRowLabelValue(self, row: int) -> str:
+    def GetRowLabelValue(self, row) -> None:
         """ Return the label of the specified row.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def GetValue(self, row, col) -> str:
+    def GetValue(self, row, col) -> None:
         """ Must be overridden to implement accessing the table values as text.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def InsertCols(self, pos=0, numCols=1) -> bool:
+    def InsertCols(self, pos=0, numCols=1) -> None:
         """ Exactly the same as InsertRows   but for columns.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    def InsertRows(self, pos=0, numRows=1) -> bool:
+    def InsertRows(self, pos=0, numRows=1) -> None:
         """ Insert additional rows into the table.
 
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
@@ -2404,9 +2397,9 @@ that are stored in memory.
             Source: https://docs.wxpython.org/wx.grid.GridStringTable.html
         """
 
-    CornerLabelValue: str  # See GetCornerLabelValue and SetCornerLabelValue
-    NumberCols: int  # See GetNumberCols
-    NumberRows: int  # See GetNumberRows
+    CornerLabelValue: None  # See GetCornerLabelValue and SetCornerLabelValue
+    NumberCols: None  # See GetNumberCols
+    NumberRows: None  # See GetNumberRows
 
 
 
@@ -2416,12 +2409,12 @@ class GridCellRenderer(SharedClientDataContainer,RefCounter):
         Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
     """
     def __init__(self) -> None:
-        """ 
+        """ None
 
             Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
         """
 
-    def Clone(self) -> 'GridCellRenderer':
+    def Clone(self) -> None:
         """ This function must be implemented in derived classes to return a copy of itself.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
@@ -2433,25 +2426,25 @@ class GridCellRenderer(SharedClientDataContainer,RefCounter):
             Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
         """
 
-    def GetBestHeight(self, grid, attr, dc, row, col, width) -> int:
+    def GetBestHeight(self, grid, attr, dc, row, col, width) -> None:
         """ Get the preferred height of the cell at the given width.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
         """
 
-    def GetBestSize(self, grid, attr, dc, row, col) -> 'Size':
+    def GetBestSize(self, grid, attr, dc, row, col) -> None:
         """ Get the preferred size of the cell for its contents.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
         """
 
-    def GetBestWidth(self, grid, attr, dc, row, col, height) -> int:
+    def GetBestWidth(self, grid, attr, dc, row, col, height) -> None:
         """ Get the preferred width of the cell at the given height.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
         """
 
-    def GetMaxBestSize(self, grid, attr, dc) -> 'Size':
+    def GetMaxBestSize(self, grid, attr, dc) -> None:
         """ Get the maximum possible size for a cell using this renderer, if possible.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellRenderer.html
@@ -2483,51 +2476,51 @@ class GridCellFloatRenderer(GridCellStringRenderer):
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    def GetFormat(self) -> int:
+    def GetFormat(self) -> None:
         """ Returns the specifier used to format the data to string.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    def GetPrecision(self) -> int:
+    def GetPrecision(self) -> None:
         """ Returns the precision.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    def GetWidth(self) -> int:
+    def GetWidth(self) -> None:
         """ Returns the width.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    def SetFormat(self, format: int) -> None:
+    def SetFormat(self, format) -> None:
         """ Set the format to use for display the number.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    def SetParameters(self, params: str) -> None:
+    def SetParameters(self, params) -> None:
         """ The parameters string format is âwidth[,precision[,format]]â where  format   should be chosen between f|e|g|E|G (f is used by default)
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    def SetPrecision(self, precision: int) -> None:
+    def SetPrecision(self, precision) -> None:
         """ Sets the precision.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    def SetWidth(self, width: int) -> None:
+    def SetWidth(self, width) -> None:
         """ Sets the width.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatRenderer.html
         """
 
-    Format: int  # See GetFormat and SetFormat
-    Precision: int  # See GetPrecision and SetPrecision
-    Width: int  # See GetWidth and SetWidth
+    Format: None  # See GetFormat and SetFormat
+    Precision: None  # See GetPrecision and SetPrecision
+    Width: None  # See GetWidth and SetWidth
 
 
 
@@ -2563,13 +2556,13 @@ class GridCellDateRenderer(GridCellStringRenderer):
 
         Source: https://docs.wxpython.org/wx.grid.GridCellDateRenderer.html
     """
-    def __init__(self, outformat: str="") -> None:
+    def __init__(self, outformat='') -> None:
         """ Date renderer constructor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellDateRenderer.html
         """
 
-    def SetParameters(self, params: str) -> None:
+    def SetParameters(self, params) -> None:
         """ Sets the strftime()-like format string which will be used to render the date.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellDateRenderer.html
@@ -2602,13 +2595,13 @@ changing their attributes from the defaults.
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def CanOverflow(self) -> bool:
+    def CanOverflow(self) -> None:
         """ Returns True if the cell will draw an overflowed text into the neighbouring cells.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def Clone(self) -> 'GridCellAttr':
+    def Clone(self) -> None:
         """ Creates a new copy of this object.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
@@ -2620,19 +2613,19 @@ changing their attributes from the defaults.
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetAlignment(self) -> tuple:
+    def GetAlignment(self) -> None:
         """ Get the alignment to use for the cell with the given attribute.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetBackgroundColour(self) -> 'Colour':
+    def GetBackgroundColour(self) -> None:
         """ Returns the background colour.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetEditor(self, grid, row, col) -> 'GridCellEditor':
+    def GetEditor(self, grid, row, col) -> None:
         """ Returns the cell editor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
@@ -2644,103 +2637,103 @@ changing their attributes from the defaults.
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetFitMode(self) -> 'GridFitMode':
+    def GetFitMode(self) -> None:
         """ Returns the fitting mode for the cells using this attribute.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetFont(self) -> 'Font':
+    def GetFont(self) -> None:
         """ Returns the font.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetKind(self) -> 'AttrKind':
+    def GetKind(self) -> None:
         """ wx.grid.GridCellAttr.AttrKind
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetNonDefaultAlignment(self) -> tuple:
+    def GetNonDefaultAlignment(self) -> None:
         """ Get the alignment defined by this attribute.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetOverflow(self) -> bool:
+    def GetOverflow(self) -> None:
         """ Returns True if the cells using this attribute overflow into the neighbouring cells.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetRenderer(self, grid, row, col) -> 'GridCellRenderer':
+    def GetRenderer(self, grid, row, col) -> None:
         """ Returns the cell renderer.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetSize(self) -> tuple:
-        """ tuple
+    def GetSize(self) -> None:
+        """ Tuple[int, int]
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def GetTextColour(self) -> 'Colour':
+    def GetTextColour(self) -> None:
         """ Returns the text colour.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasAlignment(self) -> bool:
+    def HasAlignment(self) -> None:
         """ Returns True if this attribute has a valid alignment set.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasBackgroundColour(self) -> bool:
+    def HasBackgroundColour(self) -> None:
         """ Returns True if this attribute has a valid background colour set.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasEditor(self) -> bool:
+    def HasEditor(self) -> None:
         """ Returns True if this attribute has a valid cell editor set.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasFont(self) -> bool:
+    def HasFont(self) -> None:
         """ Returns True if this attribute has a valid font set.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasOverflowMode(self) -> bool:
+    def HasOverflowMode(self) -> None:
         """ bool
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasReadWriteMode(self) -> bool:
+    def HasReadWriteMode(self) -> None:
         """ bool
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasRenderer(self) -> bool:
+    def HasRenderer(self) -> None:
         """ Returns True if this attribute has a valid cell renderer set.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasSize(self) -> bool:
+    def HasSize(self) -> None:
         """ bool
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def HasTextColour(self) -> bool:
+    def HasTextColour(self) -> None:
         """ Returns True if this attribute has a valid text colour set.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
@@ -2752,14 +2745,14 @@ changing their attributes from the defaults.
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def IsReadOnly(self) -> bool:
+    def IsReadOnly(self) -> None:
         """ Returns True if this cell is set as read-only.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def MergeWith(self, mergefrom: 'grid.GridCellAttr') -> None:
-        """ mergefrom (wx.grid.GridCellAttr) â
+    def MergeWith(self, mergefrom) -> None:
+        """ mergefrom (wx.grid.GridCellAttr)
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
@@ -2770,78 +2763,78 @@ changing their attributes from the defaults.
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetBackgroundColour(self, colBack: Union[int, str, 'Colour']) -> None:
+    def SetBackgroundColour(self, colBack) -> None:
         """ Sets the background colour.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetDefAttr(self, defAttr: 'grid.GridCellAttr') -> None:
-        """ defAttr (wx.grid.GridCellAttr) â
+    def SetDefAttr(self, defAttr) -> None:
+        """ defAttr (wx.grid.GridCellAttr)
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetEditor(self, editor: 'grid.GridCellEditor') -> None:
+    def SetEditor(self, editor) -> None:
         """ Sets the editor to be used with the cells with this attribute.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetFitMode(self, fitMode: 'grid.GridFitMode') -> None:
+    def SetFitMode(self, fitMode) -> None:
         """ Specifies the behaviour of the cell contents if it doesnât fit into the available space.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the font.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetKind(self, kind: AttrKind) -> None:
-        """ kind (AttrKind) â
+    def SetKind(self, kind) -> None:
+        """ kind (AttrKind)
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetOverflow(self, allow: bool=True) -> None:
+    def SetOverflow(self, allow=True) -> None:
         """ Specifies if cells using this attribute should overflow or clip their contents.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetReadOnly(self, isReadOnly: bool=True) -> None:
+    def SetReadOnly(self, isReadOnly=True) -> None:
         """ Sets the cell as read-only.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetRenderer(self, renderer: 'grid.GridCellRenderer') -> None:
+    def SetRenderer(self, renderer) -> None:
         """ Sets the renderer to be used for cells with this attribute.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
     def SetSize(self, num_rows, num_cols) -> None:
-        """ num_rows (int) â
+        """ num_rows (int)
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    def SetTextColour(self, colText: Union[int, str, 'Colour']) -> None:
+    def SetTextColour(self, colText) -> None:
         """ Sets the text colour.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAttr.html
         """
 
-    BackgroundColour: 'Colour'  # See GetBackgroundColour and SetBackgroundColour
-    FitMode: 'GridFitMode'  # See GetFitMode and SetFitMode
-    Font: '_Font'  # See GetFont and SetFont
-    Kind: 'AttrKind'  # See GetKind and SetKind
-    Overflow: bool  # See GetOverflow and SetOverflow
-    TextColour: 'Colour'  # See GetTextColour and SetTextColour
+    BackgroundColour: None  # See GetBackgroundColour and SetBackgroundColour
+    FitMode: None  # See GetFitMode and SetFitMode
+    Font: None  # See GetFont and SetFont
+    Kind: None  # See GetKind and SetKind
+    Overflow: None  # See GetOverflow and SetOverflow
+    TextColour: None  # See GetTextColour and SetTextColour
 
 
 
@@ -2873,7 +2866,7 @@ edit controls for the grid.
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def Clone(self) -> 'GridCellEditor':
+    def Clone(self) -> None:
         """ Create a new object which is the copy of this one.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
@@ -2903,37 +2896,37 @@ edit controls for the grid.
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def GetControl(self) -> 'Control':
+    def GetControl(self) -> None:
         """ Get the   wx.Control  used by this editor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def GetValue(self) -> str:
+    def GetValue(self) -> None:
         """ Returns the value currently in the editor control.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def GetWindow(self) -> 'Window':
+    def GetWindow(self) -> None:
         """ Get the edit window used by this editor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def HandleReturn(self, event: 'KeyEvent') -> None:
+    def HandleReturn(self, event) -> None:
         """ Some types of controls on some platforms may need some help with the Return key.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def IsAcceptedKey(self, event: 'KeyEvent') -> bool:
+    def IsAcceptedKey(self, event) -> None:
         """ Return True to allow the given key to start editing: the base class version only checks that the event has no modifiers.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def IsCreated(self) -> bool:
+    def IsCreated(self) -> None:
         """ Returns True if the edit control has been created.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
@@ -2951,19 +2944,19 @@ edit controls for the grid.
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def SetControl(self, control: 'Control') -> None:
+    def SetControl(self, control) -> None:
         """ Set the   wx.Control  that will be used by this cell editor for editing the value.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def SetSize(self, rect: 'Rect') -> None:
+    def SetSize(self, rect) -> None:
         """ Size and position the edit control.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def SetWindow(self, window: 'Window') -> None:
+    def SetWindow(self, window) -> None:
         """ Set the   wx.Window  that will be used by this cell editor for editing the value.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
@@ -2981,21 +2974,21 @@ edit controls for the grid.
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def StartingKey(self, event: 'KeyEvent') -> None:
+    def StartingKey(self, event) -> None:
         """ If the editor is enabled by pressing keys on the grid, this will be called to let the editor do something about that first key if desired.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    def TryActivate(self, row, col, grid, actSource) -> 'GridActivationResult':
+    def TryActivate(self, row, col, grid, actSource) -> None:
         """ Function allowing to create an âactivatableâ editor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEditor.html
         """
 
-    Control: '_Control'  # See GetControl and SetControl
-    Value: str  # See GetValue
-    Window: '_Window'  # See GetWindow and SetWindow
+    Control: None  # See GetControl and SetControl
+    Value: None  # See GetValue
+    Window: None  # See GetWindow and SetWindow
 
 
 
@@ -3017,14 +3010,14 @@ class GridCellBoolEditor(GridCellEditor):
         """
 
     @staticmethod
-    def IsTrueValue(value: str) -> bool:
+    def IsTrueValue(value) -> None:
         """ Returns True if the given value  is equal to the string representation of the truth value we currently use (see UseStringValues ).
 
             Source: https://docs.wxpython.org/wx.grid.GridCellBoolEditor.html
         """
 
     @staticmethod
-    def UseStringValues(valueTrue="1", valueFalse="") -> None:
+    def UseStringValues(valueTrue='1', valueFalse='') -> None:
         """ This method allows you to customize the values returned by GetValue   for the cell using this editor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellBoolEditor.html
@@ -3050,7 +3043,7 @@ list of strings.
             Source: https://docs.wxpython.org/wx.grid.GridCellChoiceEditor.html
         """
 
-    def SetParameters(self, params: str) -> None:
+    def SetParameters(self, params) -> None:
         """ Parameters string format is âitem1[,item2[â¦,itemN]]â.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellChoiceEditor.html
@@ -3075,7 +3068,7 @@ class GridCellFloatEditor(GridCellTextEditor):
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatEditor.html
         """
 
-    def SetParameters(self, params: str) -> None:
+    def SetParameters(self, params) -> None:
         """ The parameters string format is âwidth[,precision[,format]]â where  format   should be chosen between f|e|g|E|G (f is used by default)
 
             Source: https://docs.wxpython.org/wx.grid.GridCellFloatEditor.html
@@ -3100,7 +3093,7 @@ class GridCellNumberEditor(GridCellTextEditor):
             Source: https://docs.wxpython.org/wx.grid.GridCellNumberEditor.html
         """
 
-    def SetParameters(self, params: str) -> None:
+    def SetParameters(self, params) -> None:
         """ Parameters string format is âmin,maxâ.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellNumberEditor.html
@@ -3113,7 +3106,7 @@ class GridCellTextEditor(GridCellEditor):
 
         Source: https://docs.wxpython.org/wx.grid.GridCellTextEditor.html
     """
-    def __init__(self, maxChars: int=0) -> None:
+    def __init__(self, maxChars=0) -> None:
         """ Text cell editor constructor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellTextEditor.html
@@ -3125,13 +3118,13 @@ class GridCellTextEditor(GridCellEditor):
             Source: https://docs.wxpython.org/wx.grid.GridCellTextEditor.html
         """
 
-    def SetParameters(self, params: str) -> None:
+    def SetParameters(self, params) -> None:
         """ The parameters string format is ânâ where n is a number representing the maximum width.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellTextEditor.html
         """
 
-    def SetValidator(self, validator: 'Validator') -> None:
+    def SetValidator(self, validator) -> None:
         """ Set validator to validate user input.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellTextEditor.html
@@ -3144,7 +3137,7 @@ class GridCellDateEditor(GridCellEditor):
 
         Source: https://docs.wxpython.org/wx.grid.GridCellDateEditor.html
     """
-    def __init__(self, format: str="") -> None:
+    def __init__(self, format='') -> None:
         """ Date editor constructor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellDateEditor.html
@@ -3169,57 +3162,57 @@ class GridEvent(NotifyEvent):
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def AltDown(self) -> bool:
+    def AltDown(self) -> None:
         """ Returns True if the Alt key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def ControlDown(self) -> bool:
+    def ControlDown(self) -> None:
         """ Returns True if the Control key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def GetCol(self) -> int:
+    def GetCol(self) -> None:
         """ Column at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def GetPosition(self) -> 'Point':
+    def GetPosition(self) -> None:
         """ Position in pixels at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def GetRow(self) -> int:
+    def GetRow(self) -> None:
         """ Row at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def MetaDown(self) -> bool:
+    def MetaDown(self) -> None:
         """ Returns True if the Meta key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def Selecting(self) -> bool:
+    def Selecting(self) -> None:
         """ Returns True if the user is selecting grid cells, or False if deselecting.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    def ShiftDown(self) -> bool:
+    def ShiftDown(self) -> None:
         """ Returns True if the Shift key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridEvent.html
         """
 
-    Col: int  # See GetCol
-    Position: 'Point'  # See GetPosition
-    Row: int  # See GetRow
+    Col: None  # See GetCol
+    Position: None  # See GetPosition
+    Row: None  # See GetRow
 
 
 
@@ -3255,7 +3248,7 @@ EVT_GRID_COL_MOVE: int  # The user tries to change the order of the columns in t
 
 EVT_GRID_COL_SORT: int  # This event is generated when a column is clicked by the user and its name is explained by the fact that the custom reaction to a click on a column is to sort the grid contents by this column. However the grid itself has no special support for sorting and itâs up to the handler of this event to update the associated table. But if the event is handled (and not vetoed) the grid supposes that the table was indeed resorted and updates the column to indicate the new sort order and refreshes itself. This event macro corresponds to  wxEVT_GRID_COL_SORT   event type.
 
-EVT_GRID_TABBING: int  # This event is generated when the user presses TAB or Shift-TAB in the grid. It can be used to customize the simple default TAB handling logic, e.g. to go to the next non-empty cell instead of just the next cell. See also wx.grid.Grid.SetTabBehaviour . This event is new since wxWidgets 2.9.5. ^^
+EVT_GRID_TABBING: int  # This event is generated when the user presses TAB or Shift-TAB in the grid. It can be used to customize the simple default TAB handling logic, e.g. to go to the next non-empty cell instead of just the next cell. See also wx.grid.Grid.SetTabBehaviour . This event is new since wxWidgets 2.9.5.
 
 class GridSizeEvent(NotifyEvent):
     """ This event class contains information about a row/column resize event.
@@ -3268,44 +3261,44 @@ class GridSizeEvent(NotifyEvent):
             Source: https://docs.wxpython.org/wx.grid.GridSizeEvent.html
         """
 
-    def AltDown(self) -> bool:
+    def AltDown(self) -> None:
         """ Returns True if the Alt key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridSizeEvent.html
         """
 
-    def ControlDown(self) -> bool:
+    def ControlDown(self) -> None:
         """ Returns True if the Control key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridSizeEvent.html
         """
 
-    def GetPosition(self) -> 'Point':
+    def GetPosition(self) -> None:
         """ Position in pixels at which the event occurred.
 
             Source: https://docs.wxpython.org/wx.grid.GridSizeEvent.html
         """
 
-    def GetRowOrCol(self) -> int:
+    def GetRowOrCol(self) -> None:
         """ Row or column at that was resized.
 
             Source: https://docs.wxpython.org/wx.grid.GridSizeEvent.html
         """
 
-    def MetaDown(self) -> bool:
+    def MetaDown(self) -> None:
         """ Returns True if the Meta key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridSizeEvent.html
         """
 
-    def ShiftDown(self) -> bool:
+    def ShiftDown(self) -> None:
         """ Returns True if the Shift key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridSizeEvent.html
         """
 
-    Position: 'Point'  # See GetPosition
-    RowOrCol: int  # See GetRowOrCol
+    Position: None  # See GetPosition
+    RowOrCol: None  # See GetRowOrCol
 
 
 
@@ -3319,7 +3312,7 @@ EVT_GRID_COL_SIZE: int  # Same as EVT_GRID_CMD_COL_SIZE() but uses  ID_ANY   id.
 
 EVT_GRID_COL_AUTO_SIZE: int  # This event is sent when a column must be resized to its best size, e.g. when the user double clicks the column divider. The default implementation simply resizes the column to fit the column label (but not its contents as this could be too slow for big grids). This macro corresponds to  wxEVT_GRID_COL_AUTO_SIZE   event type and is new since wxWidgets 2.9.5.
 
-EVT_GRID_ROW_SIZE: int  # Same as EVT_GRID_CMD_ROW_SIZE() but uses  ID_ANY   id. ^^
+EVT_GRID_ROW_SIZE: int  # Same as EVT_GRID_CMD_ROW_SIZE() but uses  ID_ANY   id.
 
 class GridRangeSelectEvent(NotifyEvent):
     """ Events of this class notify about a range of cells being selected.
@@ -3332,78 +3325,78 @@ class GridRangeSelectEvent(NotifyEvent):
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def AltDown(self) -> bool:
+    def AltDown(self) -> None:
         """ Returns True if the Alt key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def ControlDown(self) -> bool:
+    def ControlDown(self) -> None:
         """ Returns True if the Control key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def GetBottomRightCoords(self) -> 'GridCellCoords':
+    def GetBottomRightCoords(self) -> None:
         """ Top left corner of the rectangular area that was (de)selected.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def GetBottomRow(self) -> int:
+    def GetBottomRow(self) -> None:
         """ Bottom row of the rectangular area that was (de)selected.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def GetLeftCol(self) -> int:
+    def GetLeftCol(self) -> None:
         """ Left column of the rectangular area that was (de)selected.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def GetRightCol(self) -> int:
+    def GetRightCol(self) -> None:
         """ Right column of the rectangular area that was (de)selected.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def GetTopLeftCoords(self) -> 'GridCellCoords':
+    def GetTopLeftCoords(self) -> None:
         """ Top left corner of the rectangular area that was (de)selected.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def GetTopRow(self) -> int:
+    def GetTopRow(self) -> None:
         """ Top row of the rectangular area that was (de)selected.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def MetaDown(self) -> bool:
+    def MetaDown(self) -> None:
         """ Returns True if the Meta key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def Selecting(self) -> bool:
+    def Selecting(self) -> None:
         """ Returns True if the area was selected, False otherwise.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    def ShiftDown(self) -> bool:
+    def ShiftDown(self) -> None:
         """ Returns True if the Shift key was down at the time of the event.
 
             Source: https://docs.wxpython.org/wx.grid.GridRangeSelectEvent.html
         """
 
-    BottomRightCoords: 'GridCellCoords'  # See GetBottomRightCoords
-    BottomRow: int  # See GetBottomRow
-    LeftCol: int  # See GetLeftCol
-    RightCol: int  # See GetRightCol
-    TopLeftCoords: 'GridCellCoords'  # See GetTopLeftCoords
-    TopRow: int  # See GetTopRow
+    BottomRightCoords: None  # See GetBottomRightCoords
+    BottomRow: None  # See GetBottomRow
+    LeftCol: None  # See GetLeftCol
+    RightCol: None  # See GetRightCol
+    TopLeftCoords: None  # See GetTopLeftCoords
+    TopRow: None  # See GetTopRow
 
 
 
@@ -3413,7 +3406,7 @@ EVT_GRID_CMD_RANGE_SELECTING: int  # The user is selecting a group of contiguous
 
 EVT_GRID_RANGE_SELECTED: int  # The user selected a group of contiguous cells. Processes a  wxEVT_GRID_RANGE_SELECTED   event type. This event is available in wxWidgets 3.1.5 and later only and was called   wxEVT_GRID_RANGE_SELECT   in the previous versions.
 
-EVT_GRID_CMD_RANGE_SELECTED: int  # The user selected a group of contiguous cells; variant taking a window identifier. Processes a  wxEVT_GRID_RANGE_SELECTED   event type. This event is available in wxWidgets 3.1.5 and later only and was called   wxEVT_GRID_CMD_RANGE_SELECT   in the previous versions. ^^
+EVT_GRID_CMD_RANGE_SELECTED: int  # The user selected a group of contiguous cells; variant taking a window identifier. Processes a  wxEVT_GRID_RANGE_SELECTED   event type. This event is available in wxWidgets 3.1.5 and later only and was called   wxEVT_GRID_CMD_RANGE_SELECT   in the previous versions.
 
 class GridUpdateLocker:
     """ This small class can be used to prevent Grid from redrawing during
@@ -3422,13 +3415,13 @@ Grid.EndBatch() in its destructor.
 
         Source: https://docs.wxpython.org/wx.grid.GridUpdateLocker.html
     """
-    def __init__(self, grid: Optional['grid.Grid']=None) -> None:
+    def __init__(self, grid=None) -> None:
         """ Creates an object preventing the updates of the specified grid.
 
             Source: https://docs.wxpython.org/wx.grid.GridUpdateLocker.html
         """
 
-    def Create(self, grid: 'grid.Grid') -> None:
+    def Create(self, grid) -> None:
         """ This method can be called if the object had been constructed using the default constructor.
 
             Source: https://docs.wxpython.org/wx.grid.GridUpdateLocker.html
@@ -3459,13 +3452,13 @@ class GridCellCoords:
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
         """
 
-    def Get(self) -> tuple:
+    def Get(self) -> None:
         """ Return the row and col properties as a tuple.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
         """
 
-    def GetCol(self) -> int:
+    def GetCol(self) -> None:
         """ Return the column of the coordinate.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
@@ -3477,7 +3470,7 @@ class GridCellCoords:
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
         """
 
-    def GetRow(self) -> int:
+    def GetRow(self) -> None:
         """ Return the row of the coordinate.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
@@ -3489,13 +3482,13 @@ class GridCellCoords:
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
         """
 
-    def SetCol(self, n: int) -> None:
+    def SetCol(self, n) -> None:
         """ Set the column of the coordinate.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
         """
 
-    def SetRow(self, n: int) -> None:
+    def SetRow(self, n) -> None:
         """ Set the row of the coordinate.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
@@ -3561,8 +3554,8 @@ class GridCellCoords:
             Source: https://docs.wxpython.org/wx.grid.GridCellCoords.html
         """
 
-    Col: int  # See GetCol and SetCol
-    Row: int  # See GetRow and SetRow
+    Col: None  # See GetCol and SetCol
+    Row: None  # See GetRow and SetRow
 
 
 
@@ -3579,51 +3572,51 @@ into its allotted space.
         """
 
     @staticmethod
-    def Clip() -> 'GridFitMode':
+    def Clip() -> None:
         """ Pseudo-constructor for object specifying clipping behaviour.
 
             Source: https://docs.wxpython.org/wx.grid.GridFitMode.html
         """
 
     @staticmethod
-    def Ellipsize(ellipsize: EllipsizeMode=ELLIPSIZE_END) -> 'GridFitMode':
+    def Ellipsize(ellipsize=ELLIPSIZE_END) -> None:
         """ Pseudo-constructor for object specifying ellipsize behaviour.
 
             Source: https://docs.wxpython.org/wx.grid.GridFitMode.html
         """
 
-    def GetEllipsizeMode(self) -> 'EllipsizeMode':
+    def GetEllipsizeMode(self) -> None:
         """ Return ellipsize mode, possibly  ELLIPSIZE_NONE .
 
             Source: https://docs.wxpython.org/wx.grid.GridFitMode.html
         """
 
-    def IsClip(self) -> bool:
+    def IsClip(self) -> None:
         """ Return True if the object specifies clipping behaviour.
 
             Source: https://docs.wxpython.org/wx.grid.GridFitMode.html
         """
 
-    def IsOverflow(self) -> bool:
+    def IsOverflow(self) -> None:
         """ Return True if the object specifies overflow behaviour.
 
             Source: https://docs.wxpython.org/wx.grid.GridFitMode.html
         """
 
-    def IsSpecified(self) -> bool:
+    def IsSpecified(self) -> None:
         """ Return True if the object specifies some particular behaviour.
 
             Source: https://docs.wxpython.org/wx.grid.GridFitMode.html
         """
 
     @staticmethod
-    def Overflow() -> 'GridFitMode':
+    def Overflow() -> None:
         """ Pseudo-constructor for object specifying overflow behaviour.
 
             Source: https://docs.wxpython.org/wx.grid.GridFitMode.html
         """
 
-    EllipsizeMode: '_EllipsizeMode'  # See GetEllipsizeMode
+    EllipsizeMode: None  # See GetEllipsizeMode
 
 
 
@@ -3639,7 +3632,7 @@ columns.
             Source: https://docs.wxpython.org/wx.grid.GridSizesInfo.html
         """
 
-    def GetSize(self, pos: Any) -> int:
+    def GetSize(self, pos) -> None:
         """ Get the element size.
 
             Source: https://docs.wxpython.org/wx.grid.GridSizesInfo.html
@@ -3660,13 +3653,13 @@ class GridBlocks:
             Source: https://docs.wxpython.org/wx.grid.GridBlocks.html
         """
 
-    def begin(self) -> 'iterator':
+    def begin(self) -> None:
         """ Return iterator corresponding to the beginning of the range.
 
             Source: https://docs.wxpython.org/wx.grid.GridBlocks.html
         """
 
-    def end(self) -> 'iterator':
+    def end(self) -> None:
         """ Return iterator corresponding to the end of the range.
 
             Source: https://docs.wxpython.org/wx.grid.GridBlocks.html
@@ -3686,58 +3679,58 @@ notifications to the grid view.
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def GetCommandInt(self) -> int:
+    def GetCommandInt(self) -> None:
         """ Get the position after which the insertion/deletion occur.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def GetCommandInt2(self) -> int:
+    def GetCommandInt2(self) -> None:
         """ Get the number of rows to be inserted/deleted.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def GetId(self) -> int:
+    def GetId(self) -> None:
         """ Gets an id.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def GetTableObject(self) -> 'GridTableBase':
+    def GetTableObject(self) -> None:
         """ Gets the table object.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def SetCommandInt(self, comInt1: int) -> None:
+    def SetCommandInt(self, comInt1) -> None:
         """ Set the position after which the insertion/deletion occur.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def SetCommandInt2(self, comInt2: int) -> None:
+    def SetCommandInt2(self, comInt2) -> None:
         """ Set the number of rows to be inserted/deleted.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def SetId(self, id: int) -> None:
+    def SetId(self, id) -> None:
         """ Sets an id.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    def SetTableObject(self, table: 'grid.GridTableBase') -> None:
+    def SetTableObject(self, table) -> None:
         """ Sets the table object.
 
             Source: https://docs.wxpython.org/wx.grid.GridTableMessage.html
         """
 
-    CommandInt: int  # See GetCommandInt and SetCommandInt
-    CommandInt2: int  # See GetCommandInt2 and SetCommandInt2
-    Id: int  # See GetId and SetId
-    TableObject: 'GridTableBase'  # See GetTableObject and SetTableObject
+    CommandInt: None  # See GetCommandInt and SetCommandInt
+    CommandInt2: None  # See GetCommandInt2 and SetCommandInt2
+    Id: None  # See GetId and SetId
+    TableObject: None  # See GetTableObject and SetTableObject
 
 
 
@@ -3820,13 +3813,13 @@ equivalent.
 
         Source: https://docs.wxpython.org/wx.grid.GridCellEnumRenderer.html
     """
-    def __init__(self, choices: str="") -> None:
+    def __init__(self, choices='') -> None:
         """ Enum renderer constructor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEnumRenderer.html
         """
 
-    def SetParameters(self, params: str) -> None:
+    def SetParameters(self, params) -> None:
         """ Sets the comma separated string content of the enum.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEnumRenderer.html
@@ -3857,7 +3850,7 @@ class GridCellActivatableEditor(GridCellEditor):
             Source: https://docs.wxpython.org/wx.grid.GridCellActivatableEditor.html
         """
 
-    def TryActivate(self, row, col, grid, actSource) -> 'GridActivationResult':
+    def TryActivate(self, row, col, grid, actSource) -> None:
         """ Same method as in   wx.grid.GridCellEditor, but pure virtual.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellActivatableEditor.html
@@ -3871,7 +3864,7 @@ class GridCellAutoWrapStringEditor(GridCellTextEditor):
         Source: https://docs.wxpython.org/wx.grid.GridCellAutoWrapStringEditor.html
     """
     def __init__(self) -> None:
-        """ 
+        """ None
 
             Source: https://docs.wxpython.org/wx.grid.GridCellAutoWrapStringEditor.html
         """
@@ -3890,7 +3883,7 @@ class GridCellEnumEditor(GridCellChoiceEditor):
 
         Source: https://docs.wxpython.org/wx.grid.GridCellEnumEditor.html
     """
-    def __init__(self, choices: str="") -> None:
+    def __init__(self, choices='') -> None:
         """ Enum cell editor constructor.
 
             Source: https://docs.wxpython.org/wx.grid.GridCellEnumEditor.html
@@ -3910,26 +3903,26 @@ event (mouse or keyboard) or the program itself.
 
         Source: https://docs.wxpython.org/wx.grid.GridActivationSource.html
     """
-    def GetKeyEvent(self) -> 'KeyEvent':
+    def GetKeyEvent(self) -> None:
         """ Get the key event corresponding to the key press activating the cell.
 
             Source: https://docs.wxpython.org/wx.grid.GridActivationSource.html
         """
 
-    def GetMouseEvent(self) -> 'MouseEvent':
+    def GetMouseEvent(self) -> None:
         """ Get the mouse event corresponding to the click activating the cell.
 
             Source: https://docs.wxpython.org/wx.grid.GridActivationSource.html
         """
 
-    def GetOrigin(self) -> 'Origin':
+    def GetOrigin(self) -> None:
         """ Get the origin of the activation.
 
             Source: https://docs.wxpython.org/wx.grid.GridActivationSource.html
         """
 
-    KeyEvent: '_KeyEvent'  # See GetKeyEvent
-    MouseEvent: '_MouseEvent'  # See GetMouseEvent
+    KeyEvent: None  # See GetKeyEvent
+    MouseEvent: None  # See GetMouseEvent
 
 
 
@@ -3939,21 +3932,21 @@ class GridActivationResult:
         Source: https://docs.wxpython.org/wx.grid.GridActivationResult.html
     """
     @staticmethod
-    def DoChange(newval: str) -> 'GridActivationResult':
+    def DoChange(newval) -> None:
         """ Indicate that activating the cell is possible and would change its value to the given one.
 
             Source: https://docs.wxpython.org/wx.grid.GridActivationResult.html
         """
 
     @staticmethod
-    def DoEdit() -> 'GridActivationResult':
+    def DoEdit() -> None:
         """ Indicate that the editor control should be shown and the cell should be edited normally.
 
             Source: https://docs.wxpython.org/wx.grid.GridActivationResult.html
         """
 
     @staticmethod
-    def DoNothing() -> 'GridActivationResult':
+    def DoNothing() -> None:
         """ Indicate that nothing should be done and the cell shouldnât be edited at all.
 
             Source: https://docs.wxpython.org/wx.grid.GridActivationResult.html

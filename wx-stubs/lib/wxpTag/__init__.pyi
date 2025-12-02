@@ -2,7 +2,7 @@
 from typing import Any, ContextManager, Optional, TypeAlias, Union
 
 class wxpTagHandler(Object):
-    """ HtmlWinTagHandler()
+    """ HtmlWinTagHandler() -> None
 
         Source: https://docs.wxpython.org/wx.lib.wxpTag.wxpTagHandler.html
     """
@@ -13,7 +13,7 @@ class wxpTagHandler(Object):
         """
 
     def GetSupportedTags(self) -> None:
-        """ GetSupportedTags() -> String
+        """ GetSupportedTags() -> str
 
             Source: https://docs.wxpython.org/wx.lib.wxpTag.wxpTagHandler.html
         """

@@ -8,7 +8,7 @@ expect the function to behave in the same way.
 
         Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, name="FlatNotebook") -> None:
+    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, name='FlatNotebook') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -20,13 +20,13 @@ expect the function to behave in the same way.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def AdvanceSelection(self, forward: bool=True) -> None:
+    def AdvanceSelection(self, forward=True) -> None:
         """ Cycles through the tabs.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def AssignImageList(self, imageList: 'ImageList') -> None:
+    def AssignImageList(self, imageList) -> None:
         """ Assigns the image list for the page control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -38,7 +38,7 @@ expect the function to behave in the same way.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def DeletePage(self, page: Any) -> None:
+    def DeletePage(self, page) -> None:
         """ Deletes the specified page, and the associated window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -58,7 +58,7 @@ size as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def EnsureVisible(self, page: Any) -> None:
+    def EnsureVisible(self, page) -> None:
         """ Ensures that a tab is visible.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -100,7 +100,7 @@ size as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def GetEnabled(self, page: Any) -> None:
+    def GetEnabled(self, page) -> None:
         """ Returns whether a tab is enabled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -160,31 +160,31 @@ size as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def GetPageImage(self, page: Any) -> None:
+    def GetPageImage(self, page) -> None:
         """ Returns the image index for the given page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def GetPageIndex(self, win: 'Window') -> None:
+    def GetPageIndex(self, win) -> None:
         """ Returns the index at which the window is found.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def GetPageShapeAngle(self, page_index: Any) -> None:
+    def GetPageShapeAngle(self, page_index) -> None:
         """ Returns the angle associated to a tab.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def GetPageText(self, page: Any) -> None:
+    def GetPageText(self, page) -> None:
         """ Returns the string for the given page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def GetPageTextColour(self, page: Any) -> None:
+    def GetPageTextColour(self, page) -> None:
         """ Returns the tab text colour if it has been set previously, or None otherwise.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -223,7 +223,7 @@ stacking and FlatNotebook behaves like a normal notebook.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def HasAGWFlag(self, flag: FlatNotebook) -> None:
+    def HasAGWFlag(self, flag) -> None:
         """ Returns whether a flag is present in the FlatNotebook style.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -253,25 +253,25 @@ stacking and FlatNotebook behaves like a normal notebook.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def OnNavigationKey(self, event: NavigationKeyEvent) -> None:
+    def OnNavigationKey(self, event) -> None:
         """ Handles the wx.EVT_NAVIGATION_KEY event for FlatNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def RemovePage(self, page: Any) -> None:
+    def RemovePage(self, page) -> None:
         """ Deletes the specified page, without deleting the associated window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetActiveTabColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetActiveTabColour(self, colour) -> None:
         """ Sets the active tab colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetActiveTabTextColour(self, textColour: Union[int, str, 'Colour']) -> None:
+    def SetActiveTabTextColour(self, textColour) -> None:
         """ Sets the text colour for the active tab.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -283,25 +283,25 @@ stacking and FlatNotebook behaves like a normal notebook.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetAllPagesShapeAngle(self, angle: Any) -> None:
+    def SetAllPagesShapeAngle(self, angle) -> None:
         """ Sets the angle associated to all the tab.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetCustomPage(self, panel: 'Window') -> None:
+    def SetCustomPage(self, panel) -> None:
         """ Sets a custom panel to show when there are no pages left in FlatNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetGradientColourBorder(self, border: Union[int, str, 'Colour']) -> None:
+    def SetGradientColourBorder(self, border) -> None:
         """ Sets the tab border colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetGradientColourFrom(self, fr: Union[int, str, 'Colour']) -> None:
+    def SetGradientColourFrom(self, fr) -> None:
         """ Sets the starting colour for the gradient.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -313,31 +313,31 @@ stacking and FlatNotebook behaves like a normal notebook.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetGradientColourTo(self, to: Union[int, str, 'Colour']) -> None:
+    def SetGradientColourTo(self, to) -> None:
         """ Sets the ending colour for the gradient.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetImageList(self, imageList: 'ImageList') -> None:
+    def SetImageList(self, imageList) -> None:
         """ Sets the image list for the page control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetNavigatorIcon(self, bmp: 'Bitmap') -> None:
+    def SetNavigatorIcon(self, bmp) -> None:
         """ Set the icon used by the TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetNonActiveTabTextColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetNonActiveTabTextColour(self, colour) -> None:
         """ Sets the non active tabs text colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetPadding(self, padding: Any) -> None:
+    def SetPadding(self, padding) -> None:
         """ Sets the amount of space around each pageâs icon and label, in pixels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -367,19 +367,19 @@ stacking and FlatNotebook behaves like a normal notebook.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetRightClickMenu(self, menu: 'Menu') -> None:
+    def SetRightClickMenu(self, menu) -> None:
         """ Sets the popup menu associated to a right click on a tab.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetSelection(self, page: Any) -> None:
+    def SetSelection(self, page) -> None:
         """ Sets the selection for the given page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def SetTabAreaColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetTabAreaColour(self, colour) -> None:
         """ Sets the area behind the tabs colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -397,7 +397,7 @@ stacking and FlatNotebook behaves like a normal notebook.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
         """
 
-    def Tile(self, orient: Optional['VERTICAL']=None) -> None:
+    def Tile(self, orient=None) -> None:
         """ Shows pages in column/row mode (one panel after the other in columns/rows).
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebook.html
@@ -418,19 +418,19 @@ changing events, or FlatNotebookCompatible.ChangeSelection() otherwise.
 
         Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebookCompatible.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, name="FlatNotebook") -> None:
+    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, name='FlatNotebook') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebookCompatible.html
         """
 
-    def ChangeSelection(self, page: Any) -> None:
+    def ChangeSelection(self, page) -> None:
         """ Sets the selection for the given page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebookCompatible.html
         """
 
-    def SetSelection(self, page: Any) -> None:
+    def SetSelection(self, page) -> None:
         """ Sets the selection for the given page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.FlatNotebookCompatible.html
@@ -458,37 +458,37 @@ FlatNotebook.
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.TabNavigatorWindow.html
         """
 
-    def OnItemSelected(self, event: ListEvent) -> None:
+    def OnItemSelected(self, event) -> None:
         """ Handles the wx.EVT_LISTBOX_DCLICK for the TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.TabNavigatorWindow.html
         """
 
-    def OnKeyUp(self, event: KeyEvent) -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP for the TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.TabNavigatorWindow.html
         """
 
-    def OnNavigationKey(self, event: NavigationKeyEvent) -> None:
+    def OnNavigationKey(self, event) -> None:
         """ Handles the wx.EVT_NAVIGATION_KEY for the TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.TabNavigatorWindow.html
         """
 
-    def OnPanelEraseBg(self, event: EraseEvent) -> None:
+    def OnPanelEraseBg(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND for the TabNavigatorWindow top panel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.TabNavigatorWindow.html
         """
 
-    def OnPanelPaint(self, event: PaintEvent) -> None:
+    def OnPanelPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT for the TabNavigatorWindow top panel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.TabNavigatorWindow.html
         """
 
-    def PopulateListControl(self, book: FlatNotebook) -> None:
+    def PopulateListControl(self, book) -> None:
         """ Populates the TabNavigatorWindow listbox with a list of tabs.
 
             Source: https://docs.wxpython.org/wx.lib.agw.flatnotebook.TabNavigatorWindow.html

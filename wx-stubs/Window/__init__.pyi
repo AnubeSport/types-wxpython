@@ -6,7 +6,7 @@ class ChildrenRepositioningGuard:
 
         Source: https://docs.wxpython.org/wx.Window.ChildrenRepositioningGuard.html
     """
-    def __init__(self, win: 'Window') -> None:
+    def __init__(self, win) -> None:
         """ Constructor calls wx.Window.BeginRepositioningChildren .
 
             Source: https://docs.wxpython.org/wx.Window.ChildrenRepositioningGuard.html

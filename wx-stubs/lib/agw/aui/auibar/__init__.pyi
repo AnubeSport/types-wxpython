@@ -14,25 +14,25 @@ This allows drag and drop of toolbars, docking/floating behaviour and the possib
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddCheckTool(self, tool_id, label, bitmap, disabled_bitmap, short_help_string="", long_help_string="", client_data=None) -> None:
+    def AddCheckTool(self, tool_id, label, bitmap, disabled_bitmap, short_help_string='', long_help_string='', client_data=None) -> None:
         """ Adds a new check (or toggle) tool to the AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddControl(self, control, label="") -> None:
+    def AddControl(self, control, label='') -> None:
         """ Adds any control to the toolbar, typically e.g. a ComboBox.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddLabel(self, tool_id, label="", width=0) -> None:
+    def AddLabel(self, tool_id, label='', width=0) -> None:
         """ Adds a label tool to the AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddRadioTool(self, tool_id, label, bitmap, disabled_bitmap, short_help_string="", long_help_string="", client_data=None) -> None:
+    def AddRadioTool(self, tool_id, label, bitmap, disabled_bitmap, short_help_string='', long_help_string='', client_data=None) -> None:
         """ Adds a new radio tool to the toolbar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -44,26 +44,26 @@ This allows drag and drop of toolbars, docking/floating behaviour and the possib
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddSimpleTool(self, tool_id, label, bitmap, short_help_string="", kind=ITEM_NORMAL, target=None) -> None:
+    def AddSimpleTool(self, tool_id, label, bitmap, short_help_string='', kind=ITEM_NORMAL, target=None) -> None:
         """ Adds a tool to the toolbar. This is the simplest method you can use to
 add an item to the AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddSpacer(self, pixels: int) -> None:
+    def AddSpacer(self, pixels) -> None:
         """ Adds a spacer for spacing groups of tools.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddStretchSpacer(self, proportion: int=1) -> None:
+    def AddStretchSpacer(self, proportion=1) -> None:
         """ Adds a stretchable spacer for spacing groups of tools.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def AddToggleTool(self, tool_id, bitmap, disabled_bitmap, toggle=False, client_data=None, short_help_string="", long_help_string="") -> None:
+    def AddToggleTool(self, tool_id, bitmap, disabled_bitmap, toggle=False, client_data=None, short_help_string='', long_help_string='') -> None:
         """ Adds a toggle tool to the toolbar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -87,13 +87,13 @@ add an item to the AuiToolBar.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def DeleteTool(self, tool_id: int) -> None:
+    def DeleteTool(self, tool) -> None:
         """ Removes the specified tool from the toolbar and deletes it.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def DeleteToolByPos(self, pos: int) -> None:
+    def DeleteToolByPos(self, pos) -> None:
         """ This function behaves like DeleteTool but it deletes the tool at the specified position and not the one with the given id.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -127,26 +127,32 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def FindControl(self, id: int) -> None:
+    def FindControl(self, id) -> None:
         """ Returns a pointer to the control identified by id or None if no corresponding control is found.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def FindTool(self, tool_id: int) -> None:
+    def FindTool(self, tool_id) -> None:
         """ Finds a tool for the given tool id.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def FindToolByIndex(self, pos: int) -> None:
+    def FindToolByIndex(self, pos) -> None:
         """ Finds a tool for the given tool position in the AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def FindToolByLabel(self, label: str) -> None:
+    def FindToolByLabel(self, label) -> None:
         """ Finds a tool for the given label.
+
+            Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
+        """
+
+    def FindToolByUserData(self, userData) -> None:
+        """ Finds a tool for the given client id.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
@@ -187,7 +193,7 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetLabelSize(self, label: str) -> None:
+    def GetLabelSize(self, label) -> None:
         """ Returns the standard size of a toolbar item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -217,7 +223,7 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolBitmap(self, tool_id: int) -> None:
+    def GetToolBitmap(self, tool_id) -> None:
         """ Returns the tool bitmap for the tool identified by tool_id.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -241,43 +247,43 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolDropDown(self, tool_id: int) -> None:
+    def GetToolDropDown(self, tool_id) -> None:
         """ Returns whether the toolbar item identified by tool_id has an associated drop down window menu or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolEnabled(self, tool_id: int) -> None:
+    def GetToolEnabled(self, tool_id) -> None:
         """ Returns whether the tool identified by tool_id is enabled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolFits(self, tool_id: int) -> None:
+    def GetToolFits(self, tool_id) -> None:
         """ Returns whether the tool identified by tool_id fits into the toolbar or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolFitsByIndex(self, tool_id: int) -> None:
+    def GetToolFitsByIndex(self, tool_id) -> None:
         """ Returns whether the tool identified by tool_id fits into the toolbar or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolIndex(self, tool_id: int) -> None:
+    def GetToolIndex(self, tool_id) -> None:
         """ Returns the position of the tool in the toolbar given its identifier.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolLabel(self, tool_id: int) -> None:
+    def GetToolLabel(self, tool_id) -> None:
         """ Returns the tool label for the tool identified by tool_id.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolLongHelp(self, tool_id: int) -> None:
+    def GetToolLongHelp(self, tool_id) -> None:
         """ Returns the long help for the given tool.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -295,19 +301,19 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolPos(self, tool_id: int) -> None:
+    def GetToolPos(self, tool_id) -> None:
         """ Returns the position of the tool in the toolbar given its identifier.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolProportion(self, tool_id: int) -> None:
+    def GetToolProportion(self, tool_id) -> None:
         """ Returns the tool proportion in the toolbar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolRect(self, tool_id: int) -> None:
+    def GetToolRect(self, tool_id) -> None:
         """ Returns the toolbar item rectangle
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -319,13 +325,13 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolShortHelp(self, tool_id: int) -> None:
+    def GetToolShortHelp(self, tool_id) -> None:
         """ Returns the short help for the given tool.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolSticky(self, tool_id: int) -> None:
+    def GetToolSticky(self, tool_id) -> None:
         """ Returns whether the toolbar item identified by tool_id has a sticky behaviour or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -337,7 +343,7 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def GetToolToggled(self, tool_id: int) -> None:
+    def GetToolToggled(self, tool_id) -> None:
         """ Returns whether a tool is toggled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -361,79 +367,79 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnEraseBackground(self, event: EraseEvent) -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnIdle(self, event: IdleEvent) -> None:
+    def OnIdle(self, event) -> None:
         """ Handles the wx.EVT_IDLE event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnLeaveWindow(self, event: MouseEvent) -> None:
+    def OnLeaveWindow(self, event) -> None:
         """ Handles the wx.EVT_LEAVE_WINDOW event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnLeftDown(self, event: MouseEvent) -> None:
+    def OnLeftDown(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DOWN event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnLeftUp(self, event: MouseEvent) -> None:
+    def OnLeftUp(self, event) -> None:
         """ Handles the wx.EVT_LEFT_UP event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnMiddleDown(self, event: MouseEvent) -> None:
+    def OnMiddleDown(self, event) -> None:
         """ Handles the wx.EVT_MIDDLE_DOWN event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnMiddleUp(self, event: MouseEvent) -> None:
+    def OnMiddleUp(self, event) -> None:
         """ Handles the wx.EVT_MIDDLE_UP event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnMotion(self, event: MouseEvent) -> None:
+    def OnMotion(self, event) -> None:
         """ Handles the wx.EVT_MOTION event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnRightDown(self, event: MouseEvent) -> None:
+    def OnRightDown(self, event) -> None:
         """ Handles the wx.EVT_RIGHT_DOWN event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnRightUp(self, event: MouseEvent) -> None:
+    def OnRightUp(self, event) -> None:
         """ Handles the wx.EVT_RIGHT_UP event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnSetCursor(self, event: SetCursorEvent) -> None:
+    def OnSetCursor(self, event) -> None:
         """ Handles the wx.EVT_SET_CURSOR event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -451,13 +457,13 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetAGWWindowStyleFlag(self, agwStyle: int) -> None:
+    def SetAGWWindowStyleFlag(self, agwStyle) -> None:
         """ Sets the AGW-specific style of the window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetArtProvider(self, art: Any) -> None:
+    def SetArtProvider(self, art) -> None:
         """ Instructs AuiToolBar to use art provider specified by parameter art
 for all drawing calls. This allows pluggable look-and-feel features.
 
@@ -476,19 +482,19 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the AuiToolBar font.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetGripperVisible(self, visible: bool) -> None:
+    def SetGripperVisible(self, visible) -> None:
         """ Sets whether the toolbar gripper is visible or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetHoverItem(self, pitem: AuiToolBarItem) -> None:
+    def SetHoverItem(self, pitem) -> None:
         """ Sets a toolbar item to be currently hovered by the mouse.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -500,7 +506,7 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetMarginsSize(self, size: Union[tuple[int, int], 'Size']) -> None:
+    def SetMarginsSize(self, size) -> None:
         """ Set the values to be used as margins for the toolbar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -512,25 +518,25 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetOrientation(self, orientation: int) -> None:
+    def SetOrientation(self, orientation) -> None:
         """ Sets the toolbar orientation.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetOverflowVisible(self, visible: bool) -> None:
+    def SetOverflowVisible(self, visible) -> None:
         """ Sets whether the overflow button is visible or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetPressedItem(self, pitem: AuiToolBarItem) -> None:
+    def SetPressedItem(self, pitem) -> None:
         """ Sets a toolbar item to be currently in a âpressedâ state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetToolAlignment(self, alignment: int=wx.EXPAND) -> None:
+    def SetToolAlignment(self, alignment=wx.EXPAND) -> None:
         """ This sets the alignment for all of the tools within the toolbar
 (only has an effect when the toolbar is expanded).
 
@@ -543,13 +549,13 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetToolBitmapSize(self, size: Union[tuple[int, int], 'Size']) -> None:
+    def SetToolBitmapSize(self, size) -> None:
         """ Sets the default size of each tool bitmap. The default bitmap size is 16 by 15 pixels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetToolBorderPadding(self, padding: int) -> None:
+    def SetToolBorderPadding(self, padding) -> None:
         """ Sets the padding between the tool border and the label.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -585,13 +591,13 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetToolOrientation(self, orientation: int) -> None:
+    def SetToolOrientation(self, orientation) -> None:
         """ Sets the tool orientation for the toolbar items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetToolPacking(self, packing: int) -> None:
+    def SetToolPacking(self, packing) -> None:
         """ Sets the value used for spacing tools. The default value is 1 pixel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -603,7 +609,7 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetToolSeparation(self, separation: int) -> None:
+    def SetToolSeparation(self, separation) -> None:
         """ Sets the separator size for the toolbar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -621,13 +627,13 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetToolTextOrientation(self, orientation: int) -> None:
+    def SetToolTextOrientation(self, orientation) -> None:
         """ Sets the label orientation for the toolbar items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
         """
 
-    def SetWindowStyleFlag(self, style: int) -> None:
+    def SetWindowStyleFlag(self, style) -> None:
         """ Sets the style of the window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBar.html
@@ -777,7 +783,7 @@ This allows the AuiToolBar to have a pluggable look-and-feel.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
         """
 
-    def GetElementSize(self, element_id: int) -> None:
+    def GetElementSize(self, element_id) -> None:
         """ Returns the size of a UI element in the AuiToolBar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
@@ -819,13 +825,13 @@ This allows the AuiToolBar to have a pluggable look-and-feel.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
         """
 
-    def SetAGWFlags(self, agwFlags: int) -> None:
+    def SetAGWFlags(self, agwFlags) -> None:
         """ Sets the toolbar art flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
         """
 
-    def SetDefaultColours(self, base_colour: Optional[Union[int, str, 'Colour']]=None) -> None:
+    def SetDefaultColours(self, base_colour=None) -> None:
         """ Sets the default colours, which are calculated from the given base colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
@@ -837,19 +843,19 @@ This allows the AuiToolBar to have a pluggable look-and-feel.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the AuiDefaultToolBarArt font.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
         """
 
-    def SetOrientation(self, orientation: int) -> None:
+    def SetOrientation(self, orientation) -> None:
         """ Sets the toolbar tool orientation.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
         """
 
-    def SetTextOrientation(self, orientation: int) -> None:
+    def SetTextOrientation(self, orientation) -> None:
         """ Sets the text orientation.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiDefaultToolBarArt.html
@@ -868,13 +874,13 @@ class AuiToolBarItem:
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
     """
-    def __init__(self, item: Optional[AuiToolBarItem]=None) -> None:
+    def __init__(self, item=None) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def Assign(self, c: AuiToolBarItem) -> None:
+    def Assign(self, c) -> None:
         """ Assigns the properties of the AuiToolBarItem c to self.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
@@ -946,7 +952,7 @@ class AuiToolBarItem:
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def GetRotatedBitmap(self, disabled: bool) -> None:
+    def GetRotatedBitmap(self, disabled) -> None:
         """ Returns the correct bitmap depending on the tool orientation.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
@@ -1006,61 +1012,61 @@ class AuiToolBarItem:
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetActive(self, b: bool) -> None:
+    def SetActive(self, b) -> None:
         """ Activates/deactivates the toolbar item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetAlignment(self, align: int) -> None:
+    def SetAlignment(self, align) -> None:
         """ Sets the toolbar item alignment.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetBitmap(self, bmp: 'Bitmap') -> None:
+    def SetBitmap(self, bmp) -> None:
         """ Sets the toolbar item bitmap.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetDisabledBitmap(self, bmp: 'Bitmap') -> None:
+    def SetDisabledBitmap(self, bmp) -> None:
         """ Sets the toolbar item disabled bitmap.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetHasDropDown(self, b: bool) -> None:
+    def SetHasDropDown(self, b) -> None:
         """ Sets whether the toolbar item has an associated dropdown menu.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetHoverBitmap(self, bmp: 'Bitmap') -> None:
+    def SetHoverBitmap(self, bmp) -> None:
         """ Sets the toolbar item hover bitmap.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetId(self, new_id: int) -> None:
+    def SetId(self, new_id) -> None:
         """ Sets the toolbar item identifier.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetKind(self, new_kind: int) -> None:
+    def SetKind(self, new_kind) -> None:
         """ Sets the AuiToolBarItem kind.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetLabel(self, s: str) -> None:
+    def SetLabel(self, s) -> None:
         """ Sets the toolbar item label.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetLongHelp(self, s: str) -> None:
+    def SetLongHelp(self, s) -> None:
         """ Sets the long help string for the toolbar item. This string is shown in the
 statusbar (if any) of the parent frame when the mouse pointer is inside the
 tool.
@@ -1068,63 +1074,63 @@ tool.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetMinSize(self, s: Union[tuple[int, int], 'Size']) -> None:
+    def SetMinSize(self, s) -> None:
         """ Sets the toolbar item minimum size.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetOrientation(self, a: int) -> None:
+    def SetOrientation(self, a) -> None:
         """ Sets the toolbar tool orientation.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetProportion(self, p: int) -> None:
+    def SetProportion(self, p) -> None:
         """ Sets the AuiToolBarItem proportion in the toolbar.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetShortHelp(self, s: str) -> None:
+    def SetShortHelp(self, s) -> None:
         """ Sets the short help string for the AuiToolBarItem, to be displayed in a
 ToolTip when the mouse hover over the toolbar item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetSizerItem(self, s: 'SizerItem') -> None:
+    def SetSizerItem(self, s) -> None:
         """ Associates a sizer item to this toolbar item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetSpacerPixels(self, s: int) -> None:
+    def SetSpacerPixels(self, s) -> None:
         """ Sets the number of pixels for a toolbar item with kind = ITEM_SEPARATOR.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetState(self, new_state: AUI_BUTTON_STATE_NORMAL) -> None:
+    def SetState(self, new_state) -> None:
         """ Sets the toolbar item state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetSticky(self, b: bool) -> None:
+    def SetSticky(self, b) -> None:
         """ Sets whether the toolbar item is sticky (permanent highlight after mouse enter)
 or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetUserData(self, data: Any) -> None:
+    def SetUserData(self, data) -> None:
         """ Associates some kind of user data to the toolbar item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html
         """
 
-    def SetWindow(self, w: 'Window') -> None:
+    def SetWindow(self, w) -> None:
         """ Assigns a window to the toolbar item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibar.AuiToolBarItem.html

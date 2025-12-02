@@ -6,7 +6,7 @@ class CalDraw:
 
         Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
     """
-    def __init__(self, parent: 'Window') -> None:
+    def __init__(self, parent) -> None:
         """ Default class constructor
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
@@ -48,25 +48,25 @@ class CalDraw:
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def DrawFocusIndicator(self, DC: 'DC') -> None:
+    def DrawFocusIndicator(self, DC) -> None:
         """ Draw the focus indicator
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def DrawGrid(self, DC: 'DC') -> None:
+    def DrawGrid(self, DC) -> None:
         """ Calculate and draw the grid lines.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def DrawMonth(self, DC: 'DC') -> None:
+    def DrawMonth(self, DC) -> None:
         """ Draw the month and year titles.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def DrawNum(self, DC: 'DC') -> None:
+    def DrawNum(self, DC) -> None:
         """ Draw the day numbers
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
@@ -78,13 +78,13 @@ class CalDraw:
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def DrawSel(self, DC: 'DC') -> None:
+    def DrawSel(self, DC) -> None:
         """ Highlight selected days.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def DrawWeek(self, DC: 'DC') -> None:
+    def DrawWeek(self, DC) -> None:
         """ Draw the week days.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
@@ -96,7 +96,7 @@ class CalDraw:
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def GetColor(self, name: Any) -> None:
+    def GetColor(self, name) -> None:
         """ Get a color.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
@@ -150,7 +150,7 @@ class CalDraw:
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
         """
 
-    def SetSize(self, size: Any) -> None:
+    def SetSize(self, size) -> None:
         """ Set the size.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.CalDraw.html
@@ -205,13 +205,13 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def DoDrawing(self, DC: 'DC') -> None:
+    def DoDrawing(self, DC) -> None:
         """ Do the drawing.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def DrawFocusIndicator(self, draw: bool) -> None:
+    def DrawFocusIndicator(self, draw) -> None:
         """ Draw the focus indicator or a border.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -289,7 +289,7 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def IsDayInWeekend(self, key: Any) -> None:
+    def IsDayInWeekend(self, key) -> None:
         """ Is the day in the weekend
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -373,7 +373,7 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def SelectDay(self, key: Any) -> None:
+    def SelectDay(self, key) -> None:
         """ Select the day.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -403,13 +403,13 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def SetDay(self, day: Any) -> None:
+    def SetDay(self, day) -> None:
         """ Set the day.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def SetDayValue(self, day: int) -> None:
+    def SetDayValue(self, day) -> None:
         """ Set the day.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -421,7 +421,7 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def SetMonth(self, month: int) -> None:
+    def SetMonth(self, month) -> None:
         """ Set the Month.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -433,13 +433,13 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def SetSelDay(self, sel: list) -> None:
+    def SetSelDay(self, sel) -> None:
         """ Set the days to highlight.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def SetSize(self, set_size: Union[tuple[int, int], 'Size']) -> None:
+    def SetSize(self, set_size) -> None:
         """ Set the size.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -457,7 +457,7 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def SetYear(self, year: int) -> None:
+    def SetYear(self, year) -> None:
         """ Set the year.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -469,7 +469,7 @@ class Calendar(Control):
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
         """
 
-    def TestDay(self, key: Any) -> None:
+    def TestDay(self, key) -> None:
         """ Test to see if the selection has a date and create event.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.Calendar.html
@@ -543,7 +543,7 @@ class PrtCalDraw(CalDraw):
             Source: https://docs.wxpython.org/wx.lib.calendar.PrtCalDraw.html
         """
 
-    def SetPreview(self, preview: Any) -> None:
+    def SetPreview(self, preview) -> None:
         """ Set the preview.
 
             Source: https://docs.wxpython.org/wx.lib.calendar.PrtCalDraw.html

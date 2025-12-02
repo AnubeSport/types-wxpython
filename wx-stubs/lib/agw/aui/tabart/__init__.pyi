@@ -85,13 +85,13 @@ This allows the AuiNotebook to have a pluggable look-and-feel.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
         """
 
-    def SetAGWFlags(self, agwFlags: int) -> None:
+    def SetAGWFlags(self, agwFlags) -> None:
         """ Sets the tab art flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
         """
 
-    def SetBaseColour(self, base_colour: Union[int, str, 'Colour']) -> None:
+    def SetBaseColour(self, base_colour) -> None:
         """ Sets a new base colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
@@ -103,25 +103,25 @@ This allows the AuiNotebook to have a pluggable look-and-feel.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
         """
 
-    def SetDefaultColours(self, base_colour: Optional[Union[int, str, 'Colour']]=None) -> None:
+    def SetDefaultColours(self, base_colour=None) -> None:
         """ Sets the default colours, which are calculated from the given base colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
         """
 
-    def SetMeasuringFont(self, font: 'Font') -> None:
+    def SetMeasuringFont(self, font) -> None:
         """ Sets the font for calculating text measurements.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
         """
 
-    def SetNormalFont(self, font: 'Font') -> None:
+    def SetNormalFont(self, font) -> None:
         """ Sets the normal font for drawing tab labels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
         """
 
-    def SetSelectedFont(self, font: 'Font') -> None:
+    def SetSelectedFont(self, font) -> None:
         """ Sets the selected tab font for drawing tab labels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.AuiDefaultTabArt.html
@@ -172,13 +172,13 @@ as possible to the Chrome style.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.ChromeTabArt.html
         """
 
-    def SetAGWFlags(self, agwFlags: int) -> None:
+    def SetAGWFlags(self, agwFlags) -> None:
         """ Sets the tab art flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.ChromeTabArt.html
         """
 
-    def SetBitmaps(self, mirror: bool) -> None:
+    def SetBitmaps(self, mirror) -> None:
         """ Assigns the tab custom bitmaps
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.tabart.ChromeTabArt.html

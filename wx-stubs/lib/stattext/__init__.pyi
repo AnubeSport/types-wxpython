@@ -6,7 +6,7 @@ class GenStaticText(Control):
 
         Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
     """
-    def __init__(self, parent, ID=-1, label="", pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, name="genstattext") -> None:
+    def __init__(self, parent, ID=-1, label='', pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, name='genstattext') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
@@ -31,7 +31,7 @@ the control based on the label size and the current font.
             Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
         """
 
-    def Enable(self, enable: bool=True) -> None:
+    def Enable(self, enable=True) -> None:
         """ Enable or disable the widget for user input.
 
             Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
@@ -44,26 +44,26 @@ the same font/colour attributes as the native wx.StaticText.
             Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
         """
 
-    def OnEraseBackground(self, event: 'EraseEvent') -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for GenStaticText.
 
             Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
         """
 
-    def OnPaint(self, event: 'PaintEvent') -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT for GenStaticText.
 
             Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the static text font and updates the controlâs size to exactly
 fit the label unless the control has wx.ST_NO_AUTORESIZE flag.
 
             Source: https://docs.wxpython.org/wx.lib.stattext.GenStaticText.html
         """
 
-    def SetLabel(self, label: str) -> None:
+    def SetLabel(self, label) -> None:
         """ Sets the static text label and updates the controlâs size to exactly
 fit the label unless the control has wx.ST_NO_AUTORESIZE flag.
 

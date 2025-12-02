@@ -31,19 +31,19 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabTextCtrl.html
         """
 
-    def OnChar(self, event: KeyEvent) -> None:
+    def OnChar(self, event) -> None:
         """ Handles the wx.EVT_CHAR event for TabTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabTextCtrl.html
         """
 
-    def OnKeyUp(self, event: KeyEvent) -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP event for TabTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabTextCtrl.html
         """
 
-    def OnKillFocus(self, event: FocusEvent) -> None:
+    def OnKillFocus(self, event) -> None:
         """ Handles the wx.EVT_KILL_FOCUS event for TabTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabTextCtrl.html
@@ -71,7 +71,7 @@ through different themes to customize the controlâs look and feel.
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=AUI_NB_DEFAULT_STYLE, name="AuiNotebook") -> None:
+    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=AUI_NB_DEFAULT_STYLE, name='AuiNotebook') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -83,14 +83,14 @@ through different themes to customize the controlâs look and feel.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def AddPage(self, page, caption, select=False, bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, control=None, tooltip="") -> None:
+    def AddPage(self, page, caption, select=False, bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, control=None, tooltip='') -> None:
         """ Adds a page. If the select parameter is True, calling this will generate a
 page change event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def AddTabAreaButton(self, id, location, normal_bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, name="") -> None:
+    def AddTabAreaButton(self, id, location, normal_bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, name='') -> None:
         """ Adds a button in the tab area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -102,7 +102,7 @@ page change event.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def AssignImageList(self, imageList: 'ImageList') -> None:
+    def AssignImageList(self, imageList) -> None:
         """ Sets the image list for the AuiNotebook control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -126,7 +126,7 @@ page change event.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def DeletePage(self, page_idx: int) -> None:
+    def DeletePage(self, page_idx) -> None:
         """ Deletes a page at the given index. Calling this method will generate a page
 change event.
 
@@ -145,7 +145,7 @@ change event.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def EditTab(self, page_index: int) -> None:
+    def EditTab(self, page_index) -> None:
         """ Starts the editing of an item label, sending a EVT_AUINOTEBOOK_BEGIN_LABEL_EDIT event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -157,20 +157,20 @@ change event.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def EnsureVisible(self, indx: int) -> None:
+    def EnsureVisible(self, indx) -> None:
         """ Ensures the input page index indx is visible.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def FindNextActiveTab(self, idx: int) -> None:
+    def FindNextActiveTab(self, idx) -> None:
         """ Finds the next active tab (used mainly when AuiNotebook has inactive/disabled
 tabs in it).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def FindTab(self, page: AuiNotebookPage) -> None:
+    def FindTab(self, page) -> None:
         """ Finds the tab control that currently contains the window as well
 as the index of the window in the tab control. It returns True if the
 window was found, otherwise False.
@@ -178,7 +178,7 @@ window was found, otherwise False.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def FloatPage(self, page_index: int) -> None:
+    def FloatPage(self, page_index) -> None:
         """ Float the page in page_index by reparenting it to a floating frame.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -221,19 +221,19 @@ gets new windows being added.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetEnabled(self, page_idx: int) -> None:
+    def GetEnabled(self, page_idx) -> None:
         """ Returns whether the page specified by the index page_idx is enabled.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetHeightForPageHeight(self, pageHeight: int) -> None:
+    def GetHeightForPageHeight(self, pageHeight) -> None:
         """ Gets the height of the notebook for a given page height.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetHidden(self, page_idx: int) -> None:
+    def GetHidden(self, page_idx) -> None:
         """ Returns whether the page specified by the index page_idx is hidden.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -252,13 +252,13 @@ AUI_NB_TAB_FIXED_WIDTH style is defined.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPage(self, page_idx: int) -> None:
+    def GetPage(self, page_idx) -> None:
         """ Returns the page specified by the given index.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPageBitmap(self, page_idx: int) -> None:
+    def GetPageBitmap(self, page_idx) -> None:
         """ Returns the tab bitmap for the page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -270,38 +270,38 @@ AUI_NB_TAB_FIXED_WIDTH style is defined.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPageImage(self, page: int) -> None:
+    def GetPageImage(self, page) -> None:
         """ Returns the image index for the given page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPageIndex(self, page_wnd: 'Window') -> None:
+    def GetPageIndex(self, page_wnd) -> None:
         """ Returns the page index for the specified window. If the window is not
 found in the notebook, wx.NOT_FOUND is returned.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPageInfo(self, page_idx: int) -> None:
+    def GetPageInfo(self, page_idx) -> None:
         """ Returns the AuiNotebookPage info structure specified by the given index.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPageText(self, page_idx: int) -> None:
+    def GetPageText(self, page_idx) -> None:
         """ Returns the tab label for the page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPageTextColour(self, page_idx: int) -> None:
+    def GetPageTextColour(self, page_idx) -> None:
         """ Returns the tab text colour for the page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetPageTooltip(self, page_idx: int) -> None:
+    def GetPageTooltip(self, page_idx) -> None:
         """ Returns the tab tooltip for the page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -332,7 +332,7 @@ on the splitter sash.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetTabCtrlFromPoint(self, pt: Union[tuple[int, int], 'Point']) -> None:
+    def GetTabCtrlFromPoint(self, pt) -> None:
         """ Returns the tab control at the specified point.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -344,19 +344,19 @@ on the splitter sash.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetTabFrameFromTabCtrl(self, tab_ctrl: AuiTabCtrl) -> None:
+    def GetTabFrameFromTabCtrl(self, tab_ctrl) -> None:
         """ Returns the tab frame associated with a tab control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def GetTabFrameFromWindow(self, wnd: 'Window') -> None:
+    def GetTabFrameFromWindow(self, wnd) -> None:
         """ Returns the tab frame associated with a window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def HasCloseButton(self, page_idx: int) -> None:
+    def HasCloseButton(self, page_idx) -> None:
         """ Returns whether a tab displays a close button or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -371,7 +371,7 @@ should do it as well to allow the library to handle such windows appropriately.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def HideAllTabs(self, hidden: bool=True) -> None:
+    def HideAllTabs(self, hidden=True) -> None:
         """ Hides all tabs on the AuiNotebook control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -383,13 +383,13 @@ should do it as well to allow the library to handle such windows appropriately.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def InitNotebook(self, agwStyle: int) -> None:
+    def InitNotebook(self, agwStyle) -> None:
         """ Contains common initialization code called by all constructors.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def InsertPage(self, page_idx, page, caption, select=False, bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, control=None, tooltip="") -> None:
+    def InsertPage(self, page_idx, page, caption, select=False, bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, control=None, tooltip='') -> None:
         """ This is similar to AddPage, but allows the ability to specify the insert location.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -401,37 +401,37 @@ should do it as well to allow the library to handle such windows appropriately.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def IsRenamable(self, page_idx: int) -> None:
+    def IsRenamable(self, page_idx) -> None:
         """ Returns whether a tab can be renamed or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def LoadPerspective(self, layout: str) -> None:
+    def LoadPerspective(self, layout) -> None:
         """ Loads a layout which was saved with SavePerspective.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def NotebookPreview(self, thumbnail_size: int=200) -> None:
+    def NotebookPreview(self, thumbnail_size=200) -> None:
         """ Generates a preview of all the pages in the notebook (MSW and GTK only).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnChildFocusNotebook(self, event: ChildFocusEvent) -> None:
+    def OnChildFocusNotebook(self, event) -> None:
         """ Handles the wx.EVT_CHILD_FOCUS event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnCloseFloatingPage(self, event: CloseEvent) -> None:
+    def OnCloseFloatingPage(self, event) -> None:
         """ Handles the wx.EVT_CLOSE event for a floating page in AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnNavigationKeyNotebook(self, event: NavigationKeyEvent) -> None:
+    def OnNavigationKeyNotebook(self, event) -> None:
         """ Handles the wx.EVT_NAVIGATION_KEY event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -444,86 +444,86 @@ EVT_AUINOTEBOOK_END_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnRenameCancelled(self, page_index: int) -> None:
+    def OnRenameCancelled(self, page_index) -> None:
         """ Called by TabTextCtrl, to cancel the changes and to send the
 EVT_AUINOTEBOOK_END_LABEL_EDIT event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabBeginDrag(self, event: AuiNotebookEvent) -> None:
+    def OnTabBeginDrag(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_BEGIN_DRAG event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabBgDClick(self, event: AuiNotebookEvent) -> None:
+    def OnTabBgDClick(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_BG_DCLICK event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabButton(self, event: AuiNotebookEvent) -> None:
+    def OnTabButton(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_BUTTON event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabCancelDrag(self, event: AuiNotebookEvent) -> None:
+    def OnTabCancelDrag(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_CANCEL_DRAG event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabClicked(self, event: AuiNotebookEvent) -> None:
+    def OnTabClicked(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_PAGE_CHANGING event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabDClick(self, event: AuiNotebookEvent) -> None:
+    def OnTabDClick(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_TAB_DCLICK event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabDragMotion(self, event: AuiNotebookEvent) -> None:
+    def OnTabDragMotion(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_DRAG_MOTION event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabEndDrag(self, event: AuiNotebookEvent) -> None:
+    def OnTabEndDrag(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_END_DRAG event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabMiddleDown(self, event: AuiNotebookEvent) -> None:
+    def OnTabMiddleDown(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_TAB_MIDDLE_DOWN event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabMiddleUp(self, event: AuiNotebookEvent) -> None:
+    def OnTabMiddleUp(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_TAB_MIDDLE_UP event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabRightDown(self, event: AuiNotebookEvent) -> None:
+    def OnTabRightDown(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_TAB_RIGHT_DOWN event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def OnTabRightUp(self, event: AuiNotebookEvent) -> None:
+    def OnTabRightUp(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_TAB_RIGHT_UP event for AuiNotebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -535,7 +535,7 @@ EVT_AUINOTEBOOK_END_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def RemoveControlFromPage(self, page_idx: int) -> None:
+    def RemoveControlFromPage(self, page_idx) -> None:
         """ Removes a control from a tab (not from the tab area).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -547,13 +547,13 @@ EVT_AUINOTEBOOK_END_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def RemovePage(self, page_idx: int) -> None:
+    def RemovePage(self, page_idx) -> None:
         """ Removes a page, without deleting the window pointer.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def RemoveTabAreaButton(self, id: int) -> None:
+    def RemoveTabAreaButton(self, id) -> None:
         """ Removes a button from the tab area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -580,13 +580,13 @@ to the state it was when the perspective was saved.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetAGWWindowStyleFlag(self, agwStyle: int) -> None:
+    def SetAGWWindowStyleFlag(self, agwStyle) -> None:
         """ Sets the AGW-specific style of the window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetArtProvider(self, art: Any) -> None:
+    def SetArtProvider(self, art) -> None:
         """ Sets the art provider to be used by the notebook.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -598,19 +598,19 @@ to the state it was when the perspective was saved.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the tab font.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetImageList(self, imageList: 'ImageList') -> None:
+    def SetImageList(self, imageList) -> None:
         """ Sets the image list for the AuiNotebook control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetMeasuringFont(self, font: 'Font') -> None:
+    def SetMeasuringFont(self, font) -> None:
         """ Sets the font for calculating text measurements.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -623,13 +623,13 @@ AUI_NB_TAB_FIXED_WIDTH style is defined.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetNavigatorIcon(self, bmp: 'Bitmap') -> None:
+    def SetNavigatorIcon(self, bmp) -> None:
         """ Sets the icon used by the TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetNormalFont(self, font: 'Font') -> None:
+    def SetNormalFont(self, font) -> None:
         """ Sets the normal font for drawing tab labels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -671,13 +671,13 @@ AUI_NB_TAB_FIXED_WIDTH style is defined.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetSashDClickUnsplit(self, unsplit: bool=True) -> None:
+    def SetSashDClickUnsplit(self, unsplit=True) -> None:
         """ Sets whether to unsplit a splitted AuiNotebook when double-clicking on a sash.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetSelectedFont(self, font: 'Font') -> None:
+    def SetSelectedFont(self, font) -> None:
         """ Sets the selected tab font for drawing tab labels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
@@ -689,25 +689,25 @@ AUI_NB_TAB_FIXED_WIDTH style is defined.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetSelectionToPage(self, page: AuiNotebookPage) -> None:
+    def SetSelectionToPage(self, page) -> None:
         """ Sets the selection based on the input page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetSelectionToWindow(self, win: 'Window') -> None:
+    def SetSelectionToWindow(self, win) -> None:
         """ Sets the selection based on the input window win.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetTabCtrlHeight(self, height: int) -> None:
+    def SetTabCtrlHeight(self, height) -> None:
         """ Sets the tab height.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def SetUniformBitmapSize(self, size: Union[tuple[int, int], 'Size']) -> None:
+    def SetUniformBitmapSize(self, size) -> None:
         """ Ensures that all tabs will have the same height, even if some tabs donât have bitmaps.
 Passing wx.DefaultSize to this method will instruct the control to use dynamic tab
 height, which is the default behaviour. Under the default behaviour, when a tab with a
@@ -748,7 +748,7 @@ notebook, and returns True if a selection was made.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiNotebook.html
         """
 
-    def UpdateTabCtrlHeight(self, force: bool=False) -> None:
+    def UpdateTabCtrlHeight(self, force=False) -> None:
         """ UpdateTabCtrlHeight does the actual tab resizing. Itâs meant
 to be used internally.
 
@@ -782,7 +782,7 @@ class AuiTabCtrl(Control,AuiTabContainer):
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.NO_BORDER|wx.WANTS_CHARS|wx.TAB_TRAVERSAL) -> None:
+    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.NO_BORDER | wx.WANTS_CHARS | wx.TAB_TRAVERSAL) -> None:
         """ Default class constructor.
 Used internally, do not call it in your code!
 
@@ -815,121 +815,121 @@ size as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnButton(self, event: AuiNotebookEvent) -> None:
+    def OnButton(self, event) -> None:
         """ Handles the EVT_AUINOTEBOOK_BUTTON event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnCaptureLost(self, event: MouseCaptureLostEvent) -> None:
+    def OnCaptureLost(self, event) -> None:
         """ Handles the wx.EVT_MOUSE_CAPTURE_LOST event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnEnterWindow(self, event: MouseEvent) -> None:
+    def OnEnterWindow(self, event) -> None:
         """ Handles the wx.EVT_ENTER_WINDOW event fof AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnEraseBackground(self, event: EraseEvent) -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnKeyDown(self, event: KeyEvent) -> None:
+    def OnKeyDown(self, event) -> None:
         """ Handles the wx.EVT_KEY_DOWN event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnKeyDown2(self, event: KeyEvent) -> None:
+    def OnKeyDown2(self, event) -> None:
         """ Handles the wx.EVT_KEY_DOWN event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnKillFocus(self, event: FocusEvent) -> None:
+    def OnKillFocus(self, event) -> None:
         """ Handles the wx.EVT_KILL_FOCUS event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnLeaveWindow(self, event: MouseEvent) -> None:
+    def OnLeaveWindow(self, event) -> None:
         """ Handles the wx.EVT_LEAVE_WINDOW event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnLeftDClick(self, event: MouseEvent) -> None:
+    def OnLeftDClick(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DCLICK event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnLeftDown(self, event: MouseEvent) -> None:
+    def OnLeftDown(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DOWN event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnLeftUp(self, event: MouseEvent) -> None:
+    def OnLeftUp(self, event) -> None:
         """ Handles the wx.EVT_LEFT_UP event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnMiddleDown(self, event: MouseEvent) -> None:
+    def OnMiddleDown(self, event) -> None:
         """ Handles the wx.EVT_MIDDLE_DOWN event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnMiddleUp(self, event: MouseEvent) -> None:
+    def OnMiddleUp(self, event) -> None:
         """ Handles the wx.EVT_MIDDLE_UP event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnMotion(self, event: MouseEvent) -> None:
+    def OnMotion(self, event) -> None:
         """ Handles the wx.EVT_MOTION event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnRightDown(self, event: MouseEvent) -> None:
+    def OnRightDown(self, event) -> None:
         """ Handles the wx.EVT_RIGHT_DOWN event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnRightUp(self, event: MouseEvent) -> None:
+    def OnRightUp(self, event) -> None:
         """ Handles the wx.EVT_RIGHT_UP event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnSetFocus(self, event: FocusEvent) -> None:
+    def OnSetFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for AuiTabCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabCtrl.html
         """
 
-    def RestartTooltipTimer(self, wnd: 'Window') -> None:
+    def RestartTooltipTimer(self, wnd) -> None:
         """ Starts a timer: when it fires, a tooltip will be shown on the notebook tab
 the mouse is pointing at.
 
@@ -989,14 +989,14 @@ windows for each tab control in the case of âdocked tabsâ.
 
         Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
     """
-    def __init__(self, auiNotebook: AuiNotebook) -> None:
+    def __init__(self, auiNotebook) -> None:
         """ Default class constructor.
 Used internally, do not call it in your code!
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def AddButton(self, id, location, normal_bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, name="") -> None:
+    def AddButton(self, id, location, normal_bitmap=wx.NullBitmap, disabled_bitmap=wx.NullBitmap, name='') -> None:
         """ Adds a button in the tab area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1008,7 +1008,7 @@ Used internally, do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def ButtonHitTest(self, x, y, state_flags=AUI_BUTTON_STATE_HIDDEN|AUI_BUTTON_STATE_DISABLED) -> None:
+    def ButtonHitTest(self, x, y, state_flags=AUI_BUTTON_STATE_HIDDEN | AUI_BUTTON_STATE_DISABLED) -> None:
         """ Tests if a button was hit.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1033,7 +1033,7 @@ Used internally, do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def FindNextActiveTab(self, idx: int) -> None:
+    def FindNextActiveTab(self, idx) -> None:
         """ Finds the next active tab in the AuiTabContainer.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1057,25 +1057,25 @@ Used internally, do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def GetEnabled(self, idx: int) -> None:
+    def GetEnabled(self, idx) -> None:
         """ Returns whether a tab is enabled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def GetHidden(self, idx: int) -> None:
+    def GetHidden(self, idx) -> None:
         """ Returns whether a tab is hidden or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def GetIdxFromWindow(self, wnd: 'Window') -> None:
+    def GetIdxFromWindow(self, wnd) -> None:
         """ Returns the tab index based on the window wnd associated with it.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def GetPage(self, idx: int) -> None:
+    def GetPage(self, idx) -> None:
         """ Returns the page specified by the given index.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1105,7 +1105,7 @@ Used internally, do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def GetWindowFromIdx(self, idx: int) -> None:
+    def GetWindowFromIdx(self, idx) -> None:
         """ Returns the window associated with the tab with index idx.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1141,13 +1141,13 @@ Used internally, do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def RemoveButton(self, id: int) -> None:
+    def RemoveButton(self, id) -> None:
         """ Removes a button from the tab area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def RemovePage(self, wnd: 'Window') -> None:
+    def RemovePage(self, wnd) -> None:
         """ Removes a page from the tab control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1159,26 +1159,26 @@ Used internally, do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetActivePage(self, wndOrInt: 'Window') -> None:
+    def SetActivePage(self, wndOrInt) -> None:
         """ Sets the AuiNotebook active page.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetAGWFlags(self, agwFlags: int) -> None:
+    def SetAGWFlags(self, agwFlags) -> None:
         """ Sets the tab art flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetArtProvider(self, art: Any) -> None:
+    def SetArtProvider(self, art) -> None:
         """ Instructs AuiTabContainer to use art provider specified by parameter art
 for all drawing calls. This allows pluggable look-and-feel features.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetMeasuringFont(self, font: 'Font') -> None:
+    def SetMeasuringFont(self, font) -> None:
         """ Sets the font for calculating text measurements.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1190,25 +1190,25 @@ for all drawing calls. This allows pluggable look-and-feel features.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetNormalFont(self, font: 'Font') -> None:
+    def SetNormalFont(self, font) -> None:
         """ Sets the normal font for drawing tab labels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetSelectedFont(self, font: 'Font') -> None:
+    def SetSelectedFont(self, font) -> None:
         """ Sets the selected tab font for drawing tab labels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetTabOffset(self, offset: int) -> None:
+    def SetTabOffset(self, offset) -> None:
         """ Sets the tab offset.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
         """
 
-    def SetTabRect(self, rect: 'Rect') -> None:
+    def SetTabRect(self, rect) -> None:
         """ Sets the tab area rectangle.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.AuiTabContainer.html
@@ -1268,55 +1268,55 @@ similar to what you would get by hitting Alt + Tab on Windows.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnItemSelected(self, event: ListEvent) -> None:
+    def OnItemSelected(self, event) -> None:
         """ Handles the wx.EVT_LISTBOX_DCLICK event for the ListBox inside TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnKeyUp(self, event: KeyEvent) -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP for the TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnLeftDown(self, event: MouseEvent) -> None:
+    def OnLeftDown(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DOWN event for self._panel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnLeftUp(self, event: MouseEvent) -> None:
+    def OnLeftUp(self, event) -> None:
         """ Handles the wx.EVT_LEFT_UP event for self._panel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnMotion(self, event: MouseEvent) -> None:
+    def OnMotion(self, event) -> None:
         """ Handles the wx.EVT_MOTION event for self._panel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnNavigationKey(self, event: NavigationKeyEvent) -> None:
+    def OnNavigationKey(self, event) -> None:
         """ Handles the wx.EVT_NAVIGATION_KEY for the TabNavigatorWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnPanelEraseBg(self, event: EraseEvent) -> None:
+    def OnPanelEraseBg(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for TabNavigatorWindow top panel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def OnPanelPaint(self, event: PaintEvent) -> None:
+    def OnPanelPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for TabNavigatorWindow top panel.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
         """
 
-    def PopulateListControl(self, book: AuiNotebook) -> None:
+    def PopulateListControl(self, book) -> None:
         """ Populates the TabNavigatorWindow listbox with a list of tabs.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabNavigatorWindow.html
@@ -1367,13 +1367,13 @@ equal to -1.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabFrame.html
         """
 
-    def SetTabCtrlHeight(self, h: int) -> None:
+    def SetTabCtrlHeight(self, h) -> None:
         """ Sets the tab control height.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabFrame.html
         """
 
-    def Show(self, show: bool=True) -> None:
+    def Show(self, show=True) -> None:
         """ Shows/hides the window.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.TabFrame.html
@@ -1520,41 +1520,43 @@ selected.
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.CommandNotebookEvent.html
         """
 
-    def SetDispatched(self, b: Any) -> None:
+    def SetDispatched(self, b) -> None:
         """ Sets the event as dispatched (used for automatic AuiNotebook ).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.CommandNotebookEvent.html
         """
 
-    def SetDragSource(self, s: Any) -> None:
+    def SetDragSource(self, s) -> None:
         """ Sets the drag and drop source.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.CommandNotebookEvent.html
         """
 
-    def SetEditCanceled(self, editCancelled: bool) -> None:
+    def SetEditCanceled(self, editCancelled) -> None:
         """ Sets the edit cancel flag (for EVT_AUINOTEBOOK_BEGIN | END_LABEL_EDIT only).
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.CommandNotebookEvent.html
         """
 
-    def SetLabel(self, label: str) -> None:
+    def SetLabel(self, label) -> None:
         """ Sets the label. Useful only for EVT_AUINOTEBOOK_END_LABEL_EDIT.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.CommandNotebookEvent.html
         """
 
-    def SetOldSelection(self, s: int) -> None:
+    def SetOldSelection(self, s) -> None:
         """ Sets the id of the page selected before the change.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.CommandNotebookEvent.html
         """
 
-    def SetSelection(self, s: int) -> None:
+    def SetSelection(self, s) -> None:
         """ Sets the selection member variable.
 
             Source: https://docs.wxpython.org/wx.lib.agw.aui.auibook.CommandNotebookEvent.html
         """
+
+    Selection: None  # GetSelection() -> int
 
 
 

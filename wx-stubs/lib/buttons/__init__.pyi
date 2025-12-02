@@ -18,7 +18,7 @@ class __ThemedMixin:
             Source: https://docs.wxpython.org/wx.lib.buttons.__ThemedMixin.html
         """
 
-    def OnMouse(self, event: 'MouseEvent') -> None:
+    def OnMouse(self, event) -> None:
         """ Handles the wx.EVT_ENTER_WINDOW and wx.EVT_LEAVE_WINDOW events for
 GenButton when used as a themed button.
 
@@ -43,37 +43,37 @@ toggle button.
             Source: https://docs.wxpython.org/wx.lib.buttons.__ToggleMixin.html
         """
 
-    def OnKeyDown(self, event: 'KeyEvent') -> None:
+    def OnKeyDown(self, event) -> None:
         """ Handles the wx.EVT_KEY_DOWN event for GenButton when used as toggle button.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.__ToggleMixin.html
         """
 
-    def OnKeyUp(self, event: 'KeyEvent') -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP event for GenButton when used as toggle button.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.__ToggleMixin.html
         """
 
-    def OnLeftDown(self, event: 'MouseEvent') -> None:
+    def OnLeftDown(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DOWN event for GenButton when used as toggle button.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.__ToggleMixin.html
         """
 
-    def OnLeftUp(self, event: 'MouseEvent') -> None:
+    def OnLeftUp(self, event) -> None:
         """ Handles the wx.EVT_LEFT_UP event for GenButton when used as toggle button.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.__ToggleMixin.html
         """
 
-    def OnMotion(self, event: 'MouseEvent') -> None:
+    def OnMotion(self, event) -> None:
         """ Handles the wx.EVT_MOTION event for GenButton when used as toggle button.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.__ToggleMixin.html
         """
 
-    def SetToggle(self, flag: bool) -> None:
+    def SetToggle(self, flag) -> None:
         """ Sets the button as toggled/not toggled.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.__ToggleMixin.html
@@ -96,7 +96,7 @@ class GenButton(Control):
 
         Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
     """
-    def __init__(self, parent, id=-1, label='', pos = wx.DefaultPosition, size = wx.DefaultSize, style = 0, validator = wx.DefaultValidator, name = "genbutton") -> None:
+    def __init__(self, parent, id=-1, label='', pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name='genbutton') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
@@ -133,13 +133,13 @@ button based on the label and bezel size.
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def Enable(self, enable: bool=True) -> None:
+    def Enable(self, enable=True) -> None:
         """ Enables/disables the button.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def GetBackgroundBrush(self, dc: 'DC') -> None:
+    def GetBackgroundBrush(self, dc) -> None:
         """ Returns the current wx.Brush to be used to draw the button background.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
@@ -158,7 +158,7 @@ the same font/colour attributes as the native wx.Button.
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def GetUseFocusIndicator(self) -> bool:
+    def GetUseFocusIndicator(self) -> None:
         """ Returns the focus indicator flag, specifying if a focus indicator
 (dotted line) is being used.
 
@@ -186,67 +186,67 @@ overridden, which is complicated with multiple inheritance.
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnGainFocus(self, event: 'FocusEvent') -> None:
+    def OnGainFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnKeyDown(self, event: 'KeyEvent') -> None:
+    def OnKeyDown(self, event) -> None:
         """ Handles the wx.EVT_KEY_DOWN event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnKeyUp(self, event: 'KeyEvent') -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnLeftDown(self, event: 'MouseEvent') -> None:
+    def OnLeftDown(self, event) -> None:
         """ Handles the wx.EVT_LEFT_DOWN event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnLeftUp(self, event: 'MouseEvent') -> None:
+    def OnLeftUp(self, event) -> None:
         """ Handles the wx.EVT_LEFT_UP event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnLoseCapture(self, event: 'MouseCaptureLostEvent') -> None:
+    def OnLoseCapture(self, event) -> None:
         """ Handles the wx.EVT_MOUSE_CAPTURE_LOST event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnLoseFocus(self, event: 'FocusEvent') -> None:
+    def OnLoseFocus(self, event) -> None:
         """ Handles the wx.EVT_KILL_FOCUS event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnMotion(self, event: 'MouseEvent') -> None:
+    def OnMotion(self, event) -> None:
         """ Handles the wx.EVT_MOTION event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnPaint(self, event: 'PaintEvent') -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for GenButton.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def SetBackgroundColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetBackgroundColour(self, colour) -> None:
         """ Sets the GenButton background colour.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
@@ -265,20 +265,20 @@ the panel or dialog box.
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def SetForegroundColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetForegroundColour(self, colour) -> None:
         """ Sets the wx.GenButton foreground colour.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def SetInitialSize(self, size: Optional[Union[tuple[int, int], 'Size']]=None) -> None:
+    def SetInitialSize(self, size=None) -> None:
         """ Given the current font and bezel width settings, calculate
 and set a good size.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
         """
 
-    def SetUseFocusIndicator(self, flag: bool) -> None:
+    def SetUseFocusIndicator(self, flag) -> None:
         """ Specifies if a focus indicator (dotted line) should be used.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButton.html
@@ -312,7 +312,7 @@ class GenBitmapButton(GenButton):
 
         Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
     """
-    def __init__(self, parent, id=-1, bitmap=wx.NullBitmap, pos = wx.DefaultPosition, size = wx.DefaultSize, style = 0, validator = wx.DefaultValidator, name = "genbutton") -> None:
+    def __init__(self, parent, id=-1, bitmap=wx.NullBitmap, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name='genbutton') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
@@ -324,50 +324,50 @@ class GenBitmapButton(GenButton):
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def GetBitmapDisabled(self) -> 'Bitmap':
+    def GetBitmapDisabled(self) -> None:
         """ Returns the bitmap for the buttonâs disabled state, which may be invalid.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def GetBitmapFocus(self) -> 'Bitmap':
+    def GetBitmapFocus(self) -> None:
         """ Returns the bitmap for the buttonâs focused state, which may be invalid.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def GetBitmapLabel(self) -> 'Bitmap':
+    def GetBitmapLabel(self) -> None:
         """ Returns the bitmap for the buttonâs normal state.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def GetBitmapSelected(self) -> 'Bitmap':
+    def GetBitmapSelected(self) -> None:
         """ Returns the bitmap for the buttonâs pressed state, which may be invalid.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def SetBitmapDisabled(self, bitmap: 'Bitmap') -> None:
+    def SetBitmapDisabled(self, bitmap) -> None:
         """ Sets the bitmap for the disabled button appearance.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def SetBitmapFocus(self, bitmap: 'Bitmap') -> None:
+    def SetBitmapFocus(self, bitmap) -> None:
         """ Sets the bitmap for the focused button appearance.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def SetBitmapLabel(self, bitmap: 'Bitmap', createOthers=True) -> None:
+    def SetBitmapLabel(self, bitmap, createOthers=True) -> None:
         """ Set the bitmap to display normally.
 This is the only one that is required.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
         """
 
-    def SetBitmapSelected(self, bitmap: 'Bitmap') -> None:
+    def SetBitmapSelected(self, bitmap) -> None:
         """ Sets the bitmap for the selected (depressed) button appearance.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapButton.html
@@ -380,7 +380,7 @@ class GenBitmapTextButton(GenBitmapButton):
 
         Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapTextButton.html
     """
-    def __init__(self, parent, id=-1, bitmap=wx.NullBitmap, label='', pos = wx.DefaultPosition, size = wx.DefaultSize, style = 0, validator = wx.DefaultValidator, name = "genbutton") -> None:
+    def __init__(self, parent, id=-1, bitmap=wx.NullBitmap, label='', pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name='genbutton') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenBitmapTextButton.html
@@ -425,20 +425,20 @@ class GenButtonEvent(CommandEvent):
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButtonEvent.html
         """
 
-    def GetIsDown(self) -> bool:
+    def GetIsDown(self) -> None:
         """ Returns the button toggle status as True if the button is down, False
 otherwise.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButtonEvent.html
         """
 
-    def SetButtonObj(self, btn: GenButton) -> None:
+    def SetButtonObj(self, btn) -> None:
         """ Sets the event object for the event.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButtonEvent.html
         """
 
-    def SetIsDown(self, isDown: bool) -> None:
+    def SetIsDown(self, isDown) -> None:
         """ Set the button toggle status as âdownâ or âupâ.
 
             Source: https://docs.wxpython.org/wx.lib.buttons.GenButtonEvent.html

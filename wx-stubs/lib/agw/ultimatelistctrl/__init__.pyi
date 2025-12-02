@@ -25,19 +25,19 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListTextCtrl.html
         """
 
-    def OnChar(self, event: KeyEvent) -> None:
+    def OnChar(self, event) -> None:
         """ Handles the wx.EVT_CHAR event for UltimateListTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListTextCtrl.html
         """
 
-    def OnKeyUp(self, event: KeyEvent) -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP event for UltimateListTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListTextCtrl.html
         """
 
-    def OnKillFocus(self, event: FocusEvent) -> None:
+    def OnKillFocus(self, event) -> None:
         """ Handles the wx.EVT_KILL_FOCUS event for UltimateListTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListTextCtrl.html
@@ -64,19 +64,19 @@ not rely on the native control, as it is a full owner-drawn list control.
 
         Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, validator=wx.DefaultValidator, name="UltimateListCtrl") -> None:
+    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, validator=wx.DefaultValidator, name='UltimateListCtrl') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def Append(self, entry: Any) -> None:
+    def Append(self, entry) -> None:
         """ Append an item to the UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def Arrange(self, flag: ULC_ALIGN_DEFAULT) -> None:
+    def Arrange(self, flag) -> None:
         """ Arranges the items in icon or small icon view.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -94,7 +94,7 @@ not rely on the native control, as it is a full owner-drawn list control.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def ClearColumnImage(self, col: Any) -> None:
+    def ClearColumnImage(self, col) -> None:
         """ Clears all the images in the specified column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -136,13 +136,13 @@ not rely on the native control, as it is a full owner-drawn list control.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def DeleteColumn(self, col: Any) -> None:
+    def DeleteColumn(self, col) -> None:
         """ Deletes the specified column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def DeleteItem(self, item: Any) -> None:
+    def DeleteItem(self, item) -> None:
         """ Deletes the specified item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -169,7 +169,7 @@ duplication.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def EditLabel(self, item: Any) -> None:
+    def EditLabel(self, item) -> None:
         """ Starts editing an item label.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -181,13 +181,13 @@ duplication.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def EnableSelectionGradient(self, enable: bool=True) -> None:
+    def EnableSelectionGradient(self, enable=True) -> None:
         """ Globally enables/disables drawing of gradient selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def EnableSelectionVista(self, enable: bool=True) -> None:
+    def EnableSelectionVista(self, enable=True) -> None:
         """ Globally enables/disables drawing of Windows Vista selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -205,7 +205,7 @@ duplication.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def FindItemAtPos(self, start, pt: Union[tuple[int, int], 'Point']) -> None:
+    def FindItemAtPos(self, start, pt) -> None:
         """ Find an item nearest this position.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -217,7 +217,7 @@ duplication.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def Focus(self, idx: Any) -> None:
+    def Focus(self, idx) -> None:
         """ Focus and show the given item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -241,7 +241,7 @@ duplication.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetCheckedItemCount(self, col=0) -> int:
+    def GetCheckedItemCount(self, col=0) -> None:
         """ Returns the number of checked items in the given column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -257,7 +257,7 @@ especially if it uses themes.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetColumn(self, col: Any) -> None:
+    def GetColumn(self, col) -> None:
         """ Returns information about this column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -269,7 +269,7 @@ especially if it uses themes.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetColumnWidth(self, col: Any) -> None:
+    def GetColumnWidth(self, col) -> None:
         """ Returns the column width for the input column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -369,7 +369,7 @@ simultaneously).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetImageList(self, which: 'IMAGE_LIST_NORMAL') -> None:
+    def GetImageList(self, which) -> None:
         """ Returns the image list associated with the control.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -381,7 +381,7 @@ simultaneously).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemBackgroundColour(self, item: Any) -> None:
+    def GetItemBackgroundColour(self, item) -> None:
         """ Returns the item background colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -399,13 +399,13 @@ simultaneously).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemData(self, item: Any) -> None:
+    def GetItemData(self, item) -> None:
         """ Gets the application-defined data associated with this item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemFont(self, item: Any) -> None:
+    def GetItemFont(self, item) -> None:
         """ Returns the item font.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -423,13 +423,13 @@ simultaneously).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemPosition(self, item: Any) -> None:
+    def GetItemPosition(self, item) -> None:
         """ Returns the position of the item, in icon or small icon view.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemPyData(self, item: Any) -> None:
+    def GetItemPyData(self, item) -> None:
         """ Returns the data for the item, which can be any Python object.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -442,7 +442,7 @@ coordinates.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemSpacing(self, isSmall: bool=False) -> None:
+    def GetItemSpacing(self, isSmall=False) -> None:
         """ Returns the spacing between item texts and icons, in pixels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -454,13 +454,13 @@ coordinates.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemText(self, item: UltimateListItem) -> None:
+    def GetItemText(self, item) -> None:
         """ Returns the item text.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetItemTextColour(self, item: Any) -> None:
+    def GetItemTextColour(self, item) -> None:
         """ Returns the item text colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -491,7 +491,7 @@ but excluding the item itself.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetNextSelected(self, item: Any) -> None:
+    def GetNextSelected(self, item) -> None:
         """ Returns subsequent selected items, or -1 when no more are selected.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -503,7 +503,7 @@ but excluding the item itself.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def GetScrollPos(self, orientation: Any) -> None:
+    def GetScrollPos(self, orientation) -> None:
         """ Returns the scrollbar position.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -574,7 +574,7 @@ bottom right part of the window.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def HasAGWFlag(self, flag: Any) -> None:
+    def HasAGWFlag(self, flag) -> None:
         """ Returns True if the window has the given flag bit set.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -622,7 +622,7 @@ bottom right part of the window.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def InsertItem(self, info: UltimateListItem) -> None:
+    def InsertItem(self, info) -> None:
         """ Inserts an item into UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -634,7 +634,7 @@ bottom right part of the window.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def IsColumnShown(self, column: Any) -> None:
+    def IsColumnShown(self, column) -> None:
         """ Returns True if the input column is shown, False if it is hidden.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -658,7 +658,7 @@ bottom right part of the window.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def IsSelected(self, idx: Any) -> None:
+    def IsSelected(self, idx) -> None:
         """ Returns True if the item is selected.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -670,7 +670,7 @@ bottom right part of the window.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnGetItemAttr(self, item: Any) -> None:
+    def OnGetItemAttr(self, item) -> None:
         """ This function may be overloaded in the derived class for a control with
 ULC_VIRTUAL style. It should return the attribute for the specified
 item or None to use the default appearance parameters.
@@ -678,7 +678,7 @@ item or None to use the default appearance parameters.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnGetItemCheck(self, item: Any) -> None:
+    def OnGetItemCheck(self, item) -> None:
         """ This function may be overloaded in the derived class for a control with
 ULC_VIRTUAL style. It should return whether a checkbox-like item or
 a radiobutton-like item is checked or unchecked.
@@ -686,7 +686,7 @@ a radiobutton-like item is checked or unchecked.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnGetItemColumnCheck(self, item: Any, column=0) -> None:
+    def OnGetItemColumnCheck(self, item, column=0) -> None:
         """ This function must be overloaded in the derived class for a control with
 ULC_VIRTUAL and ULC_REPORT style. It should return whether a
 checkbox-like item or a radiobutton-like item in the column header is checked
@@ -695,7 +695,7 @@ or unchecked.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnGetItemColumnImage(self, item: Any, column=0) -> None:
+    def OnGetItemColumnImage(self, item, column=0) -> None:
         """ This function must be overloaded in the derived class for a control with
 ULC_VIRTUAL and ULC_REPORT style. It should return a Python list of
 indexes representing the images associated to the input item or an empty list
@@ -712,7 +712,7 @@ the header window.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnGetItemImage(self, item: Any) -> None:
+    def OnGetItemImage(self, item) -> None:
         """ This function must be overloaded in the derived class for a control with
 ULC_VIRTUAL style having an image list (if the control doesnât have an
 image list, it is not necessary to overload it). It should return a Python
@@ -722,7 +722,7 @@ empty list for no images.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnGetItemKind(self, item: Any) -> None:
+    def OnGetItemKind(self, item) -> None:
         """ This function must be overloaded in the derived class for a control with
 ULC_VIRTUAL style. It should return the item kind for the input item.
 
@@ -761,13 +761,13 @@ application defining an OnIdle handler in a derived class.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnSetFocus(self, event: FocusEvent) -> None:
+    def OnSetFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -790,7 +790,7 @@ where this is not implemented), to be repainted.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def RefreshItem(self, item: Any) -> None:
+    def RefreshItem(self, item) -> None:
         """ Redraws the given item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -833,13 +833,13 @@ The starting item must be less than or equal to the ending one.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetBackgroundColour(self, colour: NullColour) -> None:
+    def SetBackgroundColour(self, colour) -> None:
         """ Changes the background colour of UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetBackgroundImage(self, image: Optional[None]=None) -> None:
+    def SetBackgroundImage(self, image=None) -> None:
         """ Sets the UltimateListCtrl background image.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -875,7 +875,7 @@ The starting item must be less than or equal to the ending one.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetColumnWidth(self, col, width: 'LIST_AUTOSIZE') -> None:
+    def SetColumnWidth(self, col, width) -> None:
         """ Sets the column width.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -887,20 +887,20 @@ The starting item must be less than or equal to the ending one.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetDisabledTextColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetDisabledTextColour(self, colour) -> None:
         """ Sets the items disabled colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetDropTarget(self, dropTarget: DropTarget) -> None:
+    def SetDropTarget(self, dropTarget) -> None:
         """ Associates a drop target with this window.
 If the window already has a drop target, it is deleted.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetFirstGradientColour(self, colour: Optional[None]=None) -> None:
+    def SetFirstGradientColour(self, colour=None) -> None:
         """ Sets the first gradient colour for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -912,19 +912,19 @@ If the window already has a drop target, it is deleted.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the UltimateListCtrl font.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetFooterCustomRenderer(self, renderer: Optional[Any]=None) -> None:
+    def SetFooterCustomRenderer(self, renderer=None) -> None:
         """ Associate a custom renderer with the footer - all columns will use it.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetFooterHeight(self, height: None) -> None:
+    def SetFooterHeight(self, height) -> None:
         """ Sets the UltimateListHeaderWindow height, in pixels. This overrides the default
 footer window size derived from RendererNative. If height is None, the
 default behaviour is restored.
@@ -932,25 +932,25 @@ default behaviour is restored.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetForegroundColour(self, colour: NullColour) -> None:
+    def SetForegroundColour(self, colour) -> None:
         """ Changes the foreground colour of UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetGradientStyle(self, vertical: Any=0) -> None:
+    def SetGradientStyle(self, vertical=0) -> None:
         """ Sets the gradient style for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetHeaderCustomRenderer(self, renderer: Optional[Any]=None) -> None:
+    def SetHeaderCustomRenderer(self, renderer=None) -> None:
         """ Associate a custom renderer with the header - all columns will use it.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetHeaderHeight(self, height: None) -> None:
+    def SetHeaderHeight(self, height) -> None:
         """ Sets the UltimateListHeaderWindow height, in pixels. This overrides the default
 header window size derived from RendererNative. If height is None, the
 default behaviour is restored.
@@ -958,19 +958,19 @@ default behaviour is restored.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetHyperTextFont(self, font: 'Font') -> None:
+    def SetHyperTextFont(self, font) -> None:
         """ Sets the font used to render hypertext items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetHyperTextNewColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHyperTextNewColour(self, colour) -> None:
         """ Sets the colour used to render a non-visited hypertext item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetHyperTextVisitedColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHyperTextVisitedColour(self, colour) -> None:
         """ Sets the colour used to render a visited hypertext item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -982,7 +982,7 @@ default behaviour is restored.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetItem(self, info: UltimateListItem) -> None:
+    def SetItem(self, info) -> None:
         """ Sets the information about the input item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -1001,7 +1001,7 @@ column.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetItemCount(self, count: Any) -> None:
+    def SetItemCount(self, count) -> None:
         """ Sets the total number of items we handle.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -1109,7 +1109,7 @@ column.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetSecondGradientColour(self, colour: Optional[None]=None) -> None:
+    def SetSecondGradientColour(self, colour=None) -> None:
         """ Sets the second gradient colour for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
@@ -1127,19 +1127,19 @@ column.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetTextColour(self, col: Union[int, str, 'Colour']) -> None:
+    def SetTextColour(self, col) -> None:
         """ Sets the UltimateListCtrl foreground colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetUserLineHeight(self, height: Any) -> None:
+    def SetUserLineHeight(self, height) -> None:
         """ Sets a custom value for the UltimateListCtrl item height.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListCtrl.html
         """
 
-    def SetWaterMark(self, watermark: Optional[None]=None) -> None:
+    def SetWaterMark(self, watermark=None) -> None:
         """ Sets the UltimateListCtrl watermark image to be displayed in the bottom
 right part of the window.
 
@@ -1189,7 +1189,7 @@ class UltimateListItem(Object):
 
         Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
     """
-    def __init__(self, item: Optional[None]=None) -> None:
+    def __init__(self, item=None) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
@@ -1202,13 +1202,13 @@ structure and associate it with this item.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def Check(self, checked: bool=True) -> None:
+    def Check(self, checked=True) -> None:
         """ Checks/unchecks an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def CheckFooter(self, checked: bool=True) -> None:
+    def CheckFooter(self, checked=True) -> None:
         """ Checks/unchecks a footer item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
@@ -1232,7 +1232,7 @@ structure and associate it with this item.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def Enable(self, enable: bool=True) -> None:
+    def Enable(self, enable=True) -> None:
         """ Enables or disables the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
@@ -1468,43 +1468,43 @@ with the item into the image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def OnSetFocus(self, event: FocusEvent) -> None:
+    def OnSetFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for the window associated to an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetAlign(self, align: ULC_FORMAT_LEFT) -> None:
+    def SetAlign(self, align) -> None:
         """ Sets the alignment for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetBackgroundColour(self, colBack: Union[int, str, 'Colour']) -> None:
+    def SetBackgroundColour(self, colBack) -> None:
         """ Sets the background colour for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetColumn(self, col: Any) -> None:
+    def SetColumn(self, col) -> None:
         """ Sets the zero-based column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetCustomRenderer(self, renderer: Any) -> None:
+    def SetCustomRenderer(self, renderer) -> None:
         """ Associate a custom renderer to this item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetData(self, data: Any) -> None:
+    def SetData(self, data) -> None:
         """ Sets client data for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the font for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
@@ -1516,25 +1516,25 @@ with the item into the image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetFooterBackgroundColour(self, colBack: Union[int, str, 'Colour']) -> None:
+    def SetFooterBackgroundColour(self, colBack) -> None:
         """ Sets the background colour for the footer item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetFooterFont(self, font: 'Font') -> None:
+    def SetFooterFont(self, font) -> None:
         """ Sets the font for the footer item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetFooterFormat(self, format: Any) -> None:
+    def SetFooterFormat(self, format) -> None:
         """ Sets the footer item format.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetFooterImage(self, image: Any) -> None:
+    def SetFooterImage(self, image) -> None:
         """ Sets the zero-based index of the image associated with the footer item into the
 image list.
 
@@ -1547,50 +1547,50 @@ image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetFooterText(self, text: Any) -> None:
+    def SetFooterText(self, text) -> None:
         """ Sets the text label for the footer item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetFooterTextColour(self, colText: Union[int, str, 'Colour']) -> None:
+    def SetFooterTextColour(self, colText) -> None:
         """ Sets the text colour for the footer item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetHyperText(self, hyper: bool=True) -> None:
+    def SetHyperText(self, hyper=True) -> None:
         """ Sets whether the item is hypertext or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetId(self, id: Any) -> None:
+    def SetId(self, id) -> None:
         """ Sets the zero-based item position.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetImage(self, image: Any) -> None:
+    def SetImage(self, image) -> None:
         """ Sets the zero-based indexes of the images associated with the item into the
 image list.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetKind(self, kind: Any) -> None:
+    def SetKind(self, kind) -> None:
         """ Sets the item kind.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetMask(self, mask: ULC_MASK_STATE) -> None:
+    def SetMask(self, mask) -> None:
         """ Sets the mask of valid fields.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetOverFlow(self, over: bool=True) -> None:
+    def SetOverFlow(self, over=True) -> None:
         """ Sets the item in the overflow/non overflow state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
@@ -1602,50 +1602,50 @@ image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetShown(self, shown: bool=True) -> None:
+    def SetShown(self, shown=True) -> None:
         """ Sets an item as shown/hidden.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetState(self, state: ULC_STATE_DONTCARE) -> None:
+    def SetState(self, state) -> None:
         """ Sets the item state flags.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetStateMask(self, stateMask: Any) -> None:
+    def SetStateMask(self, stateMask) -> None:
         """ Sets the bitmask that is used to determine which of the state flags are
 to be set.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetText(self, text: Any) -> None:
+    def SetText(self, text) -> None:
         """ Sets the text label for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetTextColour(self, colText: Union[int, str, 'Colour']) -> None:
+    def SetTextColour(self, colText) -> None:
         """ Sets the text colour for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetToolTip(self, text: Any) -> None:
+    def SetToolTip(self, text) -> None:
         """ Sets the tooltip text for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetVisited(self, visited: bool=True) -> None:
+    def SetVisited(self, visited=True) -> None:
         """ Sets whether an hypertext item was visited or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetWidth(self, width: Any) -> None:
+    def SetWidth(self, width) -> None:
         """ Sets the column width.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
@@ -1657,7 +1657,7 @@ to be set.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
         """
 
-    def SetWindowEnabled(self, enable: bool=True) -> None:
+    def SetWindowEnabled(self, enable=True) -> None:
         """ Sets whether the associated window is enabled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItem.html
@@ -1670,13 +1670,13 @@ class UltimateListHeaderWindow(Control):
 
         Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
     """
-    def __init__(self, win, id, owner, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name="UltimateListCtrlcolumntitles", isFooter=False) -> None:
+    def __init__(self, win, id, owner, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, validator=wx.DefaultValidator, name='UltimateListCtrlcolumntitles', isFooter=False) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def AdjustDC(self, dc: 'DC') -> None:
+    def AdjustDC(self, dc) -> None:
         """ Shifts the wx.DC origin to match the position of the main window horizontal
 scrollbar: this allows us to always use logical coordinates.
 
@@ -1733,13 +1733,13 @@ as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def IsColumnShown(self, column: Any) -> None:
+    def IsColumnShown(self, column) -> None:
         """ Returns True if the input column is shown, False if it is hidden.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def OnEnterWindow(self, event: MouseEvent) -> None:
+    def OnEnterWindow(self, event) -> None:
         """ Handles the wx.EVT_ENTER_WINDOW event for UltimateListHeaderWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
@@ -1753,25 +1753,25 @@ application defining an OnIdle handler in a derived class.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def OnLeaveWindow(self, event: MouseEvent) -> None:
+    def OnLeaveWindow(self, event) -> None:
         """ Handles the wx.EVT_LEAVE_WINDOW event for UltimateListHeaderWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def OnMouse(self, event: MouseEvent) -> None:
+    def OnMouse(self, event) -> None:
         """ Handles the wx.EVT_MOUSE_EVENTS event for UltimateListHeaderWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for UltimateListHeaderWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def OnSetFocus(self, event: FocusEvent) -> None:
+    def OnSetFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for UltimateListHeaderWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
@@ -1783,7 +1783,7 @@ application defining an OnIdle handler in a derived class.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
         """
 
-    def SetCustomRenderer(self, renderer: Optional[Any]=None) -> None:
+    def SetCustomRenderer(self, renderer=None) -> None:
         """ Associate a custom renderer with the header - all columns will use it
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListHeaderWindow.html
@@ -1814,13 +1814,13 @@ bitmaps and icons.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
         """
 
-    def Add(self, bitmap: 'Bitmap') -> None:
+    def Add(self, bitmap) -> None:
         """ Adds a new image or images using a bitmap.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
         """
 
-    def AddIcon(self, icon: Icon) -> None:
+    def AddIcon(self, icon) -> None:
         """ Adds a new image using an icon.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
@@ -1838,14 +1838,14 @@ bitmaps and icons.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
         """
 
-    def GetBitmap(self, index: Any) -> None:
+    def GetBitmap(self, index) -> None:
         """ Returns the bitmap corresponding to the given index, or NullBitmap
 if the index is invalid.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
         """
 
-    def GetIcon(self, index: Any) -> None:
+    def GetIcon(self, index) -> None:
         """ Returns the icon corresponding to the given index, or NullIcon
 if the index is invalid.
 
@@ -1858,13 +1858,13 @@ if the index is invalid.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
         """
 
-    def GetSize(self, index: Any) -> None:
+    def GetSize(self, index) -> None:
         """ Retrieves the size of an image in the list.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
         """
 
-    def Remove(self, index: Any) -> None:
+    def Remove(self, index) -> None:
         """ Removes the image at the given position.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.PyImageList.html
@@ -1903,7 +1903,7 @@ class UltimateListMainWindow(ScrolledWindow):
 
         Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
     """
-    def __init__(self, parent, id, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, name="listctrlmainwindow") -> None:
+    def __init__(self, parent, id, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=0, name='listctrlmainwindow') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -1915,19 +1915,19 @@ class UltimateListMainWindow(ScrolledWindow):
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def AutoToggleChild(self, column: Any) -> None:
+    def AutoToggleChild(self, column) -> None:
         """ Toggles all the items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def CacheLineData(self, line: UltimateListLineData) -> None:
+    def CacheLineData(self, line) -> None:
         """ Saves the current line attributes.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def ChangeCurrent(self, current: Any) -> None:
+    def ChangeCurrent(self, current) -> None:
         """ Changes the current line to the specified one.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -1946,7 +1946,7 @@ events EVT_LIST_ITEM_CHECKING / EVT_LIST_ITEM_CHECKED.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def DeleteColumn(self, col: Any) -> None:
+    def DeleteColumn(self, col) -> None:
         """ Deletes the specified column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -1958,13 +1958,13 @@ events EVT_LIST_ITEM_CHECKING / EVT_LIST_ITEM_CHECKED.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def DeleteItem(self, lindex: Any) -> None:
+    def DeleteItem(self, lindex) -> None:
         """ Deletes the specified item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def DeleteItemWindow(self, item: UltimateListItem) -> None:
+    def DeleteItemWindow(self, item) -> None:
         """ Deletes the window associated to an item (if any).
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -1984,7 +1984,7 @@ as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def DragFinish(self, event: MouseEvent) -> None:
+    def DragFinish(self, event) -> None:
         """ A drag and drop operation has just finished.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2008,7 +2008,7 @@ as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def EditLabel(self, item: UltimateListItem) -> None:
+    def EditLabel(self, item) -> None:
         """ Starts editing an item label.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2020,19 +2020,19 @@ as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def EnableSelectionGradient(self, enable: bool=True) -> None:
+    def EnableSelectionGradient(self, enable=True) -> None:
         """ Globally enables/disables drawing of gradient selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def EnableSelectionVista(self, enable: bool=True) -> None:
+    def EnableSelectionVista(self, enable=True) -> None:
         """ Globally enables/disables drawing of Windows Vista selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def EnsureVisible(self, index: Any) -> None:
+    def EnsureVisible(self, index) -> None:
         """ Ensures this item is visible.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2044,7 +2044,7 @@ as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def FindItemAtPos(self, pt: Union[tuple[int, int], 'Point']) -> None:
+    def FindItemAtPos(self, pt) -> None:
         """ Find an item nearest this position.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2068,13 +2068,13 @@ as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetCheckedItemCount(self, col: Any=0) -> int:
+    def GetCheckedItemCount(self, col=0) -> None:
         """ Returns the number of checked items in the given column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetColumn(self, col: Any) -> None:
+    def GetColumn(self, col) -> None:
         """ Returns information about this column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2086,13 +2086,13 @@ as it would have after a call to Fit().
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetColumnCustomRenderer(self, col: Any) -> None:
+    def GetColumnCustomRenderer(self, col) -> None:
         """ Returns the custom renderer used to draw the column header
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetColumnWidth(self, col: Any) -> None:
+    def GetColumnWidth(self, col) -> None:
         """ Returns the column width for the input column.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2166,7 +2166,7 @@ items in the list control (icon or small icon view).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetImageSize(self, index: Any) -> None:
+    def GetImageSize(self, index) -> None:
         """ Returns the image size for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2184,38 +2184,38 @@ items in the list control (icon or small icon view).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemCustomRenderer(self, item: UltimateListItem) -> None:
+    def GetItemCustomRenderer(self, item) -> None:
         """ Returns the custom renderer used to draw the input item (if any).
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemKind(self, item: UltimateListItem) -> None:
+    def GetItemKind(self, item) -> None:
         """ Returns the item kind.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemOverFlow(self, item: UltimateListItem) -> None:
+    def GetItemOverFlow(self, item) -> None:
         """ Returns if the item is in the overflow state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemPosition(self, item: Any) -> None:
+    def GetItemPosition(self, item) -> None:
         """ Returns the position of the item, in icon or small icon view.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemRect(self, item: Any) -> None:
+    def GetItemRect(self, item) -> None:
         """ Returns the rectangle representing the itemâs size and position, in physical
 coordinates.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemSpacing(self, isSmall: bool=False) -> None:
+    def GetItemSpacing(self, isSmall=False) -> None:
         """ Returns the spacing between item texts and icons, in pixels.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2227,73 +2227,73 @@ coordinates.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemText(self, item: UltimateListItem) -> None:
+    def GetItemText(self, item) -> None:
         """ Returns the item text.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemTextSize(self, item: UltimateListItem) -> None:
+    def GetItemTextSize(self, item) -> None:
         """ Returns the item width, in pixels, considering only the item text.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemVisited(self, item: UltimateListItem) -> None:
+    def GetItemVisited(self, item) -> None:
         """ Returns whether an hypertext item was visited.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemWidthWithImage(self, item: UltimateListItem) -> None:
+    def GetItemWidthWithImage(self, item) -> None:
         """ Returns the item width, in pixels, considering the item text and its images.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemWindow(self, item: UltimateListItem) -> None:
+    def GetItemWindow(self, item) -> None:
         """ Returns the window associated to the item (if any).
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetItemWindowEnabled(self, item: UltimateListItem) -> None:
+    def GetItemWindowEnabled(self, item) -> None:
         """ Returns whether the window associated to the item is enabled.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLine(self, n: Any) -> None:
+    def GetLine(self, n) -> None:
         """ Returns the line data for the given index.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineCheckboxRect(self, line: UltimateListLineData) -> None:
+    def GetLineCheckboxRect(self, line) -> None:
         """ Returns the line client rectangle for the item checkbox image only.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineHeight(self, item: Optional[None]=None) -> None:
+    def GetLineHeight(self, item=None) -> None:
         """ Returns the line height for a specific item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineHighlightRect(self, line: UltimateListLineData) -> None:
+    def GetLineHighlightRect(self, line) -> None:
         """ Returns the line client rectangle when the line is highlighted.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineIconRect(self, line: UltimateListLineData) -> None:
+    def GetLineIconRect(self, line) -> None:
         """ Returns the line client rectangle for the item image only.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineLabelRect(self, line: UltimateListLineData, col=0) -> None:
+    def GetLineLabelRect(self, line, col=0) -> None:
         """ Returns the line client rectangle for the item text only.
 Note this is the full column width unless an image or
 checkbox exists. It is not the width of the text itself
@@ -2301,19 +2301,19 @@ checkbox exists. It is not the width of the text itself
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineRect(self, line: UltimateListLineData) -> None:
+    def GetLineRect(self, line) -> None:
         """ Returns the line client rectangle.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineSize(self, line: UltimateListLineData) -> None:
+    def GetLineSize(self, line) -> None:
         """ Returns the size of the total line client rectangle.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetLineY(self, line: UltimateListLineData) -> None:
+    def GetLineY(self, line) -> None:
         """ Returns the line y position.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2369,7 +2369,7 @@ of the given subitem, i.e. the part of the row item in the column subItem.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def GetTextLength(self, s: Any) -> None:
+    def GetTextLength(self, s) -> None:
         """ Returns the text width for the input string.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2409,13 +2409,13 @@ bottom right part of the window.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def HandleHyperLink(self, item: UltimateListItem) -> None:
+    def HandleHyperLink(self, item) -> None:
         """ Handles the hyperlink items, sending the EVT_LIST_ITEM_HYPERLINK event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def HasAGWFlag(self, flag: Any) -> None:
+    def HasAGWFlag(self, flag) -> None:
         """ Returns True if the window has the given flag bit set.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2452,7 +2452,7 @@ or by user intervention.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def HighlightAll(self, on: bool=True) -> None:
+    def HighlightAll(self, on=True) -> None:
         """ Highlights/unhighlights all the lines in UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2500,7 +2500,7 @@ or by user intervention.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def InsertItem(self, item: UltimateListItem) -> None:
+    def InsertItem(self, item) -> None:
         """ Inserts an item into UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2512,7 +2512,7 @@ or by user intervention.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def IsColumnShown(self, column: Any) -> None:
+    def IsColumnShown(self, column) -> None:
         """ Returns True if the input column is shown, False if it is hidden.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2524,25 +2524,25 @@ or by user intervention.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def IsHighlighted(self, line: UltimateListLineData) -> None:
+    def IsHighlighted(self, line) -> None:
         """ Returns True if the input line is highlighted.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def IsItemChecked(self, item: UltimateListItem) -> None:
+    def IsItemChecked(self, item) -> None:
         """ Returns whether an item is checked or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def IsItemEnabled(self, item: UltimateListItem) -> None:
+    def IsItemEnabled(self, item) -> None:
         """ Returns whether an item is enabled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def IsItemHyperText(self, item: UltimateListItem) -> None:
+    def IsItemHyperText(self, item) -> None:
         """ Returns whether an item is hypertext or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2566,7 +2566,7 @@ or by user intervention.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def MoveToItem(self, item: UltimateListItem) -> None:
+    def MoveToItem(self, item) -> None:
         """ Scrolls the input item into view.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2578,13 +2578,13 @@ or by user intervention.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnChar(self, event: KeyEvent) -> None:
+    def OnChar(self, event) -> None:
         """ Handles the wx.EVT_CHAR event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnChildFocus(self, event: ChildFocusEvent) -> None:
+    def OnChildFocus(self, event) -> None:
         """ Handles the wx.EVT_CHILD_FOCUS event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2596,43 +2596,43 @@ or by user intervention.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnEraseBackground(self, event: EraseEvent) -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnHoverTimer(self, event: TimerEvent) -> None:
+    def OnHoverTimer(self, event) -> None:
         """ Handles the wx.EVT_TIMER event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnKeyDown(self, event: KeyEvent) -> None:
+    def OnKeyDown(self, event) -> None:
         """ Handles the wx.EVT_KEY_DOWN event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnKeyUp(self, event: KeyEvent) -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnKillFocus(self, event: FocusEvent) -> None:
+    def OnKillFocus(self, event) -> None:
         """ Handles the wx.EVT_KILL_FOCUS event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnMouse(self, event: MouseEvent) -> None:
+    def OnMouse(self, event) -> None:
         """ Handles the wx.EVT_MOUSE_EVENTS event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2658,32 +2658,32 @@ EVT_LIST_END_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnScroll(self, event: ScrollEvent) -> None:
+    def OnScroll(self, event) -> None:
         """ Handles the wx.EVT_SCROLLWIN event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def OnSetFocus(self, event: FocusEvent) -> None:
+    def OnSetFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for UltimateListMainWindow.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def PaintWaterMark(self, dc: 'DC') -> None:
+    def PaintWaterMark(self, dc) -> None:
         """ Draws a watermark at the bottom right of UltimateListCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def RecalculatePositions(self, noRefresh: bool=False) -> None:
+    def RecalculatePositions(self, noRefresh=False) -> None:
         """ Recalculates all the items positions, and sets the scrollbars positions
 too.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def RefreshAfter(self, lineFrom: Any) -> None:
+    def RefreshAfter(self, lineFrom) -> None:
         """ Redraws all the lines after the input one.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2695,7 +2695,7 @@ too.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def RefreshLine(self, line: UltimateListLineData) -> None:
+    def RefreshLine(self, line) -> None:
         """ Redraws the input line.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2719,7 +2719,7 @@ too.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def ResetLineDimensions(self, force: bool=False) -> None:
+    def ResetLineDimensions(self, force=False) -> None:
         """ Resets the line dimensions, so that client rectangles and positions are
 recalculated.
 
@@ -2732,7 +2732,7 @@ recalculated.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def ResetVisibleLinesRange(self, reset: bool=False) -> None:
+    def ResetVisibleLinesRange(self, reset=False) -> None:
         """ Forces us to recalculate the range of visible lines.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2745,7 +2745,7 @@ that columnâs width will be expanded to fill the window on a resize event.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def ReverseHighlight(self, line: UltimateListLineData) -> None:
+    def ReverseHighlight(self, line) -> None:
         """ Toggles the line state and refreshes it.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2763,7 +2763,7 @@ that columnâs width will be expanded to fill the window on a resize event.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetBackgroundImage(self, image: None) -> None:
+    def SetBackgroundImage(self, image) -> None:
         """ Sets the UltimateListCtrl background image.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2781,49 +2781,49 @@ that columnâs width will be expanded to fill the window on a resize event.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetColumnWidth(self, col, width: 'LIST_AUTOSIZE') -> None:
+    def SetColumnWidth(self, col, width) -> None:
         """ Sets the column width.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetDisabledTextColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetDisabledTextColour(self, colour) -> None:
         """ Sets the items disabled colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetFirstGradientColour(self, colour: Optional[None]=None) -> None:
+    def SetFirstGradientColour(self, colour=None) -> None:
         """ Sets the first gradient colour for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Overridden base class virtual to reset the line height when the font changes.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetGradientStyle(self, vertical: Any=0) -> None:
+    def SetGradientStyle(self, vertical=0) -> None:
         """ Sets the gradient style for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetHyperTextFont(self, font: 'Font') -> None:
+    def SetHyperTextFont(self, font) -> None:
         """ Sets the font used to render hypertext items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetHyperTextNewColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHyperTextNewColour(self, colour) -> None:
         """ Sets the colour used to render a non-visited hypertext item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetHyperTextVisitedColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHyperTextVisitedColour(self, colour) -> None:
         """ Sets the colour used to render a visited hypertext item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2841,13 +2841,13 @@ that columnâs width will be expanded to fill the window on a resize event.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetItem(self, item: UltimateListItemData) -> None:
+    def SetItem(self, item) -> None:
         """ Sets information about the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetItemCount(self, count: UltimateListCtrl) -> None:
+    def SetItemCount(self, count) -> None:
         """ This method can only be used with virtual UltimateListCtrl. It is used to
 indicate to the control the number of items it contains. After calling it,
 the main program should be ready to handle calls to various item callbacks
@@ -2922,25 +2922,25 @@ the main program should be ready to handle calls to various item callbacks
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetReportView(self, inReportView: bool) -> None:
+    def SetReportView(self, inReportView) -> None:
         """ Sets whether UltimateListCtrl is in report view or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetSecondGradientColour(self, colour: Optional[None]=None) -> None:
+    def SetSecondGradientColour(self, colour=None) -> None:
         """ Sets the second gradient colour for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetUserLineHeight(self, height: Any) -> None:
+    def SetUserLineHeight(self, height) -> None:
         """ Sets a custom value for the UltimateListMainWindow item height.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def SetWaterMark(self, watermark: None) -> None:
+    def SetWaterMark(self, watermark) -> None:
         """ Sets the UltimateListCtrl watermark image to be displayed in the bottom
 right part of the window.
 
@@ -2955,7 +2955,7 @@ following prototype:
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
         """
 
-    def TileBackground(self, dc: 'DC') -> None:
+    def TileBackground(self, dc) -> None:
         """ Tiles the background image to fill all the available area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListMainWindow.html
@@ -2991,7 +2991,7 @@ UltimateListItem.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
         """
 
-    def Enable(self, enable: bool=True) -> None:
+    def Enable(self, enable=True) -> None:
         """ Enables or disables the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
@@ -3078,37 +3078,37 @@ is valid.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
         """
 
-    def SetBackgroundColour(self, colBack: Union[int, str, 'Colour']) -> None:
+    def SetBackgroundColour(self, colBack) -> None:
         """ Sets a new background colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets a new font for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
         """
 
-    def SetFooterBackgroundColour(self, colBack: Union[int, str, 'Colour']) -> None:
+    def SetFooterBackgroundColour(self, colBack) -> None:
         """ Sets a new footer item background colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
         """
 
-    def SetFooterFont(self, font: 'Font') -> None:
+    def SetFooterFont(self, font) -> None:
         """ Sets a new font for the footer item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
         """
 
-    def SetFooterTextColour(self, colText: Union[int, str, 'Colour']) -> None:
+    def SetFooterTextColour(self, colText) -> None:
         """ Sets a new footer item text colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
         """
 
-    def SetTextColour(self, colText: Union[int, str, 'Colour']) -> None:
+    def SetTextColour(self, colText) -> None:
         """ Sets a new text colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemAttr.html
@@ -3164,7 +3164,7 @@ class UltimateListLineData:
 
         Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
     """
-    def __init__(self, owner: UltimateListCtrl) -> None:
+    def __init__(self, owner) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3232,7 +3232,7 @@ in the line.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def GetImage(self, index: Any=0) -> None:
+    def GetImage(self, index=0) -> None:
         """ Returns a Python list with the zero-based indexes of the images associated
 with the item into the image list.
 
@@ -3245,7 +3245,7 @@ with the item into the image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def GetKind(self, index: Any=0) -> None:
+    def GetKind(self, index=0) -> None:
         """ Returns the item kind.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3257,13 +3257,13 @@ with the item into the image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def GetText(self, index: Any) -> None:
+    def GetText(self, index) -> None:
         """ Returns the item text at the position index.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def GetToolTip(self, index: Any) -> None:
+    def GetToolTip(self, index) -> None:
         """ Returns the item tooltip at the position index.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3294,7 +3294,7 @@ associated with it.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def HasMode(self, mode: Any) -> None:
+    def HasMode(self, mode) -> None:
         """ Returns True if the parent UltimateListCtrl has the window
 style specified by mode.
 
@@ -3308,19 +3308,19 @@ string.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def HideItemWindow(self, item: UltimateListItem) -> None:
+    def HideItemWindow(self, item) -> None:
         """ If the input item has a window associated with it, hide it.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def Highlight(self, on: bool) -> None:
+    def Highlight(self, on) -> None:
         """ Sets the current line as highlighted or not highlighted.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def InitItems(self, num: Any) -> None:
+    def InitItems(self, num) -> None:
         """ Initializes the list of items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3332,7 +3332,7 @@ string.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def IsChecked(self, index: Any) -> None:
+    def IsChecked(self, index) -> None:
         """ Returns whether the item is checked or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3362,7 +3362,7 @@ string.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def SetAttr(self, attr: UltimateListItemAttr) -> None:
+    def SetAttr(self, attr) -> None:
         """ Sets an instance of UltimateListItemAttr to the first item in the line.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3380,7 +3380,7 @@ string.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def SetHeight(self, height: Any) -> None:
+    def SetHeight(self, height) -> None:
         """ Sets the line height.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3411,7 +3411,7 @@ image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def SetReportView(self, inReportView: bool) -> None:
+    def SetReportView(self, inReportView) -> None:
         """ Sets whether UltimateListLineData is in report view or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3429,7 +3429,7 @@ image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
         """
 
-    def SetWidth(self, width: Any) -> None:
+    def SetWidth(self, width) -> None:
         """ Sets the line width.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListLineData.html
@@ -3455,13 +3455,13 @@ attributes (client rectangles, positions, etcâ¦).
 
         Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
     """
-    def __init__(self, owner: UltimateListCtrl) -> None:
+    def __init__(self, owner) -> None:
         """ Default class constructor
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def Check(self, checked: bool=True) -> None:
+    def Check(self, checked=True) -> None:
         """ Checks/unchecks an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
@@ -3473,7 +3473,7 @@ attributes (client rectangles, positions, etcâ¦).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def Enable(self, enable: bool=True) -> None:
+    def Enable(self, enable=True) -> None:
         """ Enables or disables the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
@@ -3522,7 +3522,7 @@ with the item into the image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def GetItem(self, info: UltimateListItemData) -> None:
+    def GetItem(self, info) -> None:
         """ Returns information about the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
@@ -3661,68 +3661,68 @@ empty string.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetAttr(self, attr: UltimateListItemAttr) -> None:
+    def SetAttr(self, attr) -> None:
         """ Sets the item attributes.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetBackgroundColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetBackgroundColour(self, colour) -> None:
         """ Sets the background colour for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetColour(self, colour) -> None:
         """ Sets the text colour for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetCustomRenderer(self, renderer: Any) -> None:
+    def SetCustomRenderer(self, renderer) -> None:
         """ Associate a custom renderer to this item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetData(self, data: Any) -> None:
+    def SetData(self, data) -> None:
         """ Sets client data for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the text font for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetHyperText(self, hyper: bool=True) -> None:
+    def SetHyperText(self, hyper=True) -> None:
         """ Sets whether the item is hypertext or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetImage(self, image: Any) -> None:
+    def SetImage(self, image) -> None:
         """ Sets the zero-based indexes of the images associated with the item into the
 image list.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetItem(self, info: UltimateListItemData) -> None:
+    def SetItem(self, info) -> None:
         """ Sets information about the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetKind(self, kind: Any) -> None:
+    def SetKind(self, kind) -> None:
         """ Sets the item kind.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetOverFlow(self, over: bool=True) -> None:
+    def SetOverFlow(self, over=True) -> None:
         """ Sets the item in the overflow/non overflow state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
@@ -3740,19 +3740,19 @@ image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetText(self, text: Any) -> None:
+    def SetText(self, text) -> None:
         """ Sets the text label for the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetToolTip(self, tooltip: Any) -> None:
+    def SetToolTip(self, tooltip) -> None:
         """ Sets the tooltip for the item
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetVisited(self, visited: bool=True) -> None:
+    def SetVisited(self, visited=True) -> None:
         """ Sets whether an hypertext item was visited or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
@@ -3764,7 +3764,7 @@ image list.
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
         """
 
-    def SetWindowEnabled(self, enable: bool=True) -> None:
+    def SetWindowEnabled(self, enable=True) -> None:
         """ Sets whether the associated window is enabled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.UltimateListItemData.html
@@ -3867,7 +3867,7 @@ string).
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.CommandListEvent.html
         """
 
-    def SetEditCanceled(self, editCancelled: bool) -> None:
+    def SetEditCanceled(self, editCancelled) -> None:
         """ Sets the item editing as cancelled/not cancelled.
 
             Source: https://docs.wxpython.org/wx.lib.agw.ultimatelistctrl.CommandListEvent.html

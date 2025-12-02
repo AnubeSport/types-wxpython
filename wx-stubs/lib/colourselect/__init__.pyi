@@ -7,32 +7,32 @@ when clicked, will display a colour selection dialog.
 
         Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, label="", colour=wx.BLACK, pos=wx.DefaultPosition, size=wx.DefaultSize, callback=None, style=0) -> None:
+    def __init__(self, parent, id=wx.ID_ANY, label='', colour=wx.BLACK, pos=wx.DefaultPosition, size=wx.DefaultSize, callback=None, style=0) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def GetColour(self) -> 'Colour':
+    def GetColour(self) -> None:
         """ Returns the current colour set for the ColourSelect.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def GetCustomColours(self) -> 'CustomColourData':
+    def GetCustomColours(self) -> None:
         """ Returns the current set of custom colour values to be shown in the
 colour dialog, if supported.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def GetLabel(self) -> str:
+    def GetLabel(self) -> None:
         """ Returns the current text label for the ColourSelect.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def GetValue(self) -> 'Colour':
+    def GetValue(self) -> None:
         """ Returns the current colour set for the ColourSelect.
 Same as GetColour.
 
@@ -51,38 +51,38 @@ Same as GetColour.
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def OnClick(self, event: 'CommandEvent') -> None:
+    def OnClick(self, event) -> None:
         """ Handles the wx.EVT_BUTTON event for ColourSelect.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def SetBitmap(self, bmp: 'Bitmap') -> None:
+    def SetBitmap(self, bmp) -> None:
         """ Sets the bitmap representation of the current selected colour to the button.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def SetColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetColour(self, colour) -> None:
         """ Sets the current colour for ColourSelect.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def SetCustomColours(self, colours: CustomColourData) -> None:
+    def SetCustomColours(self, colours) -> None:
         """ Sets the list of custom colour values to be shown in colour dialog, if
 supported.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def SetLabel(self, label: str) -> None:
+    def SetLabel(self, label) -> None:
         """ Sets the new text label for wx.ColourSelect.
 
             Source: https://docs.wxpython.org/wx.lib.colourselect.ColourSelect.html
         """
 
-    def SetValue(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetValue(self, colour) -> None:
         """ Sets the current colour for ColourSelect.  Same as
 SetColour.
 

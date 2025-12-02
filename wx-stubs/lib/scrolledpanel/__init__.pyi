@@ -8,20 +8,27 @@ behavior and the tab traversal management that ScrolledWindow lacks.
 
         Source: https://docs.wxpython.org/wx.lib.scrolledpanel.ScrolledPanel.html
     """
-    def __init__(self, parent, id=-1, pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.TAB_TRAVERSAL, name="scrolledpanel") -> None:
+    def __init__(self, parent, id=-1, pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.TAB_TRAVERSAL, name='scrolledpanel') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.scrolledpanel.ScrolledPanel.html
         """
 
-    def OnChildFocus(self, evt: ChildFocusEvent) -> None:
+    def GetChildRectRelativeToSelf(self, child: wx.Window) -> None:
+        """ Same as child.GetRect() except the position returned is relative
+to this ScrolledPanel rather than the childâs parent.
+
+            Source: https://docs.wxpython.org/wx.lib.scrolledpanel.ScrolledPanel.html
+        """
+
+    def OnChildFocus(self, evt) -> None:
         """ If the child window that gets the focus is not fully visible,
 this handler will try to scroll enough to see it.
 
             Source: https://docs.wxpython.org/wx.lib.scrolledpanel.ScrolledPanel.html
         """
 
-    def ScrollChildIntoView(self, child: 'Window') -> None:
+    def ScrollChildIntoView(self, child) -> None:
         """ Scroll the panel so that the specified child window is in view.
 
             Source: https://docs.wxpython.org/wx.lib.scrolledpanel.ScrolledPanel.html

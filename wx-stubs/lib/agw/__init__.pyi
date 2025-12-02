@@ -24,7 +24,7 @@ are dealing with.
     """
 
 
-def MakeDisabledBitmap(original: 'Bitmap') -> None:
+def MakeDisabledBitmap(original) -> None:
     """ Creates a disabled-looking bitmap starting from the input one.
 
         Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.html

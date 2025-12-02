@@ -6,7 +6,7 @@ class CommandTreeEvent(CommandEvent):
 
         Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CommandTreeEvent.html
     """
-    def __init__(self, evtType, evtId, item=None, evtKey=None, point=None, label=None, **kwargs) -> None:
+    def __init__(self, evtType, evtId, item=None, evtKey=None, point=None, label=None, \*\*kwargs) -> None:
         """ Default class constructor.
 For internal use: do not call it in your code!
 
@@ -68,41 +68,41 @@ EVT_TREE_END_LABEL_EDIT events only).
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CommandTreeEvent.html
         """
 
-    def SetEditCanceled(self, editCancelled: bool) -> None:
+    def SetEditCanceled(self, editCancelled) -> None:
         """ Sets the edit cancel flag (for EVT_TREE_BEGIN_LABEL_EDIT and
 EVT_TREE_END_LABEL_EDIT events only).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CommandTreeEvent.html
         """
 
-    def SetItem(self, item: GenericTreeItem) -> None:
+    def SetItem(self, item) -> None:
         """ Sets the item on which the operation was performed or the newly selected
 item for EVT_TREE_SEL_CHANGED and EVT_TREE_SEL_CHANGING events.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CommandTreeEvent.html
         """
 
-    def SetKeyEvent(self, event: CommandTreeEvent) -> None:
+    def SetKeyEvent(self, event) -> None:
         """ Sets the keyboard data (for EVT_TREE_KEY_DOWN event only).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CommandTreeEvent.html
         """
 
-    def SetLabel(self, label: str) -> None:
+    def SetLabel(self, label) -> None:
         """ Sets the item text (for EVT_TREE_BEGIN_LABEL_EDIT and
 EVT_TREE_END_LABEL_EDIT events only).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CommandTreeEvent.html
         """
 
-    def SetOldItem(self, item: GenericTreeItem) -> None:
+    def SetOldItem(self, item) -> None:
         """ Returns the previously selected item for EVT_TREE_SEL_CHANGED and
 EVT_TREE_SEL_CHANGING events.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CommandTreeEvent.html
         """
 
-    def SetPoint(self, pt: Union[tuple[int, int], 'Point']) -> None:
+    def SetPoint(self, pt) -> None:
         """ Sets the point where the mouse was when the drag operation started
 (for EVT_TREE_BEGIN_DRAG and EVT_TREE_BEGIN_RDRAG events only)
 or the click position.
@@ -127,7 +127,7 @@ the native control, as it is a full owner-drawn tree control.
 
         Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
     """
-    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=TR_DEFAULT_STYLE, validator=wx.DefaultValidator, name="CustomTreeCtrl") -> None:
+    def __init__(self, parent, id=wx.ID_ANY, pos=wx.DefaultPosition, size=wx.DefaultSize, style=0, agwStyle=TR_DEFAULT_STYLE, validator=wx.DefaultValidator, name='CustomTreeCtrl') -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -157,25 +157,25 @@ the native control, as it is a full owner-drawn tree control.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def AppendSeparator(self, parentId: GenericTreeItem) -> None:
+    def AppendSeparator(self, parentId) -> None:
         """ Appends an horizontal line separator as a last child of its parent.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def AssignButtonsImageList(self, imageList: 'ImageList') -> None:
+    def AssignButtonsImageList(self, imageList) -> None:
         """ Assigns the button image list.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def AssignImageList(self, imageList: 'ImageList') -> None:
+    def AssignImageList(self, imageList) -> None:
         """ Assigns the normal image list.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def AssignLeftImageList(self, imageList: 'ImageList') -> None:
+    def AssignLeftImageList(self, imageList) -> None:
         """ Assigns the image list for CustomTreeCtrl filled with images to be used on
 the leftmost part of the client area. Any item can have a leftmost image associated
 with it.
@@ -183,7 +183,7 @@ with it.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def AssignStateImageList(self, imageList: 'ImageList') -> None:
+    def AssignStateImageList(self, imageList) -> None:
         """ Assigns the state image list.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -201,7 +201,7 @@ with it.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def AutoToggleChild(self, item: GenericTreeItem) -> None:
+    def AutoToggleChild(self, item) -> None:
         """ Transverses the tree and toggles the items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -257,26 +257,26 @@ Used internally.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def ChildrenClosing(self, item: GenericTreeItem) -> None:
+    def ChildrenClosing(self, item) -> None:
         """ We are about to destroy the item children.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def Collapse(self, item: GenericTreeItem) -> None:
+    def Collapse(self, item) -> None:
         """ Collapse an item, sending a EVT_TREE_ITEM_COLLAPSING and
 EVT_TREE_ITEM_COLLAPSED events.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def CollapseAndReset(self, item: GenericTreeItem) -> None:
+    def CollapseAndReset(self, item) -> None:
         """ Collapse the given item and deletes its children.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def Delete(self, item: GenericTreeItem) -> None:
+    def Delete(self, item) -> None:
         """ Deletes an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -288,13 +288,13 @@ EVT_TREE_ITEM_COLLAPSED events.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def DeleteChildren(self, item: GenericTreeItem) -> None:
+    def DeleteChildren(self, item) -> None:
         """ Delete all the itemâs children.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def DeleteItemWindow(self, item: GenericTreeItem) -> None:
+    def DeleteItemWindow(self, item) -> None:
         """ Deletes the window associated to an item (if any).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -339,14 +339,14 @@ EVT_TREE_SEL_CHANGED events.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def Edit(self, item: GenericTreeItem) -> None:
+    def Edit(self, item) -> None:
         """ Internal function. Starts the editing of an item label, sending a
 EVT_TREE_BEGIN_LABEL_EDIT event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def EditLabel(self, item: GenericTreeItem) -> None:
+    def EditLabel(self, item) -> None:
         """ Starts editing an item label.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -364,25 +364,25 @@ EVT_TREE_BEGIN_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def EnableSelectionGradient(self, enable: bool=True) -> None:
+    def EnableSelectionGradient(self, enable=True) -> None:
         """ Globally enables/disables drawing of gradient selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def EnableSelectionVista(self, enable: bool=True) -> None:
+    def EnableSelectionVista(self, enable=True) -> None:
         """ Globally enables/disables drawing of Windows Vista selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def EnsureVisible(self, item: GenericTreeItem) -> None:
+    def EnsureVisible(self, item) -> None:
         """ Scrolls and/or expands items to ensure that the given item is visible.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def Expand(self, item: GenericTreeItem) -> None:
+    def Expand(self, item) -> None:
         """ Expands an item, sending a EVT_TREE_ITEM_EXPANDING and
 EVT_TREE_ITEM_EXPANDED events.
 
@@ -395,7 +395,7 @@ EVT_TREE_ITEM_EXPANDED events.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def ExpandAllChildren(self, item: GenericTreeItem) -> None:
+    def ExpandAllChildren(self, item) -> None:
         """ Expands all the items children of the input item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -457,6 +457,16 @@ which application-defined button images are taken).
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
+    def classmethod GetClassDefaultAttributes(self) -> None:
+        """ Returns the default font and colours which are used by the control. This is
+useful if you want to use the same font or colour in your own control as in
+a standard control â which is a much better idea than hard coding specific
+colours or fonts which might look completely out of place on the users system,
+especially if it uses themes.
+
+            Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
+        """
+
     def GetConnectionPen(self) -> None:
         """ Returns the pen used to draw the connecting lines between items.
 
@@ -495,7 +505,7 @@ simultaneously).
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetFirstChild(self, item: GenericTreeItem) -> None:
+    def GetFirstChild(self, item) -> None:
         """ Returns the itemâs first child and an integer value âcookieâ.
 Call GetNextChild for the next child using this very âcookieâ return
 value as an input.
@@ -569,19 +579,19 @@ value as an input.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItem3StateValue(self, item: GenericTreeItem) -> None:
+    def GetItem3StateValue(self, item) -> None:
         """ Gets the state of a 3-state checkbox item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemBackgroundColour(self, item: GenericTreeItem) -> None:
+    def GetItemBackgroundColour(self, item) -> None:
         """ Returns the item background colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemFont(self, item: GenericTreeItem) -> None:
+    def GetItemFont(self, item) -> None:
         """ Returns the item font.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -593,62 +603,62 @@ value as an input.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemLeftImage(self, item: GenericTreeItem) -> None:
+    def GetItemLeftImage(self, item) -> None:
         """ Returns the item leftmost image, i.e. the image associated to the item on the leftmost
 part of the CustomTreeCtrl client area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemParent(self, item: GenericTreeItem) -> Optional['GenericTreeItem']:
+    def GetItemParent(self, item) -> Optional['GenericTreeItem']:
         """ Returns the item parent (can be None for root items).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemSize(self, item: GenericTreeItem) -> None:
+    def GetItemSize(self, item) -> None:
         """ Returns the horizontal space available in CustomTreeCtrl, in pixels, to draw this item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemText(self, item: GenericTreeItem) -> str:
+    def GetItemText(self, item) -> str:
         """ Returns the item text.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemTextColour(self, item: GenericTreeItem) -> None:
+    def GetItemTextColour(self, item) -> None:
         """ Returns the item text colour or separator horizontal line colour.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemType(self, item: GenericTreeItem) -> None:
+    def GetItemType(self, item) -> None:
         """ Returns the item type.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemVisited(self, item: GenericTreeItem) -> None:
+    def GetItemVisited(self, item) -> None:
         """ Returns whether an hypertext item was visited.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemWindow(self, item: GenericTreeItem) -> None:
+    def GetItemWindow(self, item) -> None:
         """ Returns the window associated to the item (if any).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetItemWindowEnabled(self, item: GenericTreeItem) -> None:
+    def GetItemWindowEnabled(self, item) -> None:
         """ Returns whether the window associated to the item is enabled.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetLastChild(self, item: GenericTreeItem) -> None:
+    def GetLastChild(self, item) -> None:
         """ Returns the item last child.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -662,19 +672,19 @@ with it.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetLineHeight(self, item: GenericTreeItem) -> None:
+    def GetLineHeight(self, item) -> None:
         """ Returns the line height for the given item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetMaxWidth(self, respect_expansion_state: bool=True) -> None:
+    def GetMaxWidth(self, respect_expansion_state=True) -> None:
         """ Returns the maximum width of the CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetNext(self, item: GenericTreeItem) -> None:
+    def GetNext(self, item) -> None:
         """ Returns the next item. Only for internal use right now.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -698,7 +708,7 @@ with it.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetNextShown(self, item: GenericTreeItem) -> None:
+    def GetNextShown(self, item) -> None:
         """ Returns the next displayed item in the tree. This is either the first
 child of the item (if it is expanded and has children) or its next
 sibling. If there is no next sibling the tree is walked backwards
@@ -707,19 +717,19 @@ until a next sibling for one of its parents is found.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetNextSibling(self, item: GenericTreeItem) -> None:
+    def GetNextSibling(self, item) -> None:
         """ Returns the next sibling of an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetNextVisible(self, item: GenericTreeItem) -> None:
+    def GetNextVisible(self, item) -> None:
         """ Returns the next visible item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetPrev(self, item: GenericTreeItem) -> None:
+    def GetPrev(self, item) -> None:
         """ Returns the previous item. Only for internal use right now.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -731,26 +741,26 @@ until a next sibling for one of its parents is found.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetPrevShown(self, item: GenericTreeItem) -> None:
+    def GetPrevShown(self, item) -> None:
         """ Returns the previous displayed item in the tree. This is either the
 last displayed child of its previous sibling, or its parent item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetPrevSibling(self, item: GenericTreeItem) -> None:
+    def GetPrevSibling(self, item) -> None:
         """ Returns the previous sibling of an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetPrevVisible(self, item: GenericTreeItem) -> None:
+    def GetPrevVisible(self, item) -> None:
         """ Returns the previous visible item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def GetPyData(self, item: GenericTreeItem) -> None:
+    def GetPyData(self, item) -> None:
         """ Returns the data associated to an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -799,7 +809,7 @@ application-defined state images are taken).
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def HandleHyperLink(self, item: GenericTreeItem) -> None:
+    def HandleHyperLink(self, item) -> None:
         """ Handles the hyperlink items, sending the EVT_TREE_ITEM_HYPERLINK event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -817,7 +827,7 @@ application-defined state images are taken).
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def HasChildren(self, item: GenericTreeItem) -> None:
+    def HasChildren(self, item) -> None:
         """ Returns whether an item has children or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -872,7 +882,7 @@ at this point plus extra information flags.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsBold(self, item: GenericTreeItem) -> None:
+    def IsBold(self, item) -> None:
         """ Returns whether the item font is bold or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -884,62 +894,62 @@ at this point plus extra information flags.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsExpanded(self, item: GenericTreeItem) -> None:
+    def IsExpanded(self, item) -> None:
         """ Returns whether the item is expanded or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsItalic(self, item: GenericTreeItem) -> None:
+    def IsItalic(self, item) -> None:
         """ Returns whether the item font is italic or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsItem3State(self, item: GenericTreeItem) -> None:
+    def IsItem3State(self, item) -> None:
         """ Returns whether or not the checkbox item is a 3-state checkbox.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsItemChecked(self, item: GenericTreeItem) -> None:
+    def IsItemChecked(self, item) -> None:
         """ Returns whether an item is checked or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsItemEnabled(self, item: GenericTreeItem) -> None:
+    def IsItemEnabled(self, item) -> None:
         """ Returns whether an item is enabled or disabled.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsItemHyperText(self, item: GenericTreeItem) -> None:
+    def IsItemHyperText(self, item) -> None:
         """ Returns whether an item is hypertext or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsItemSeparator(self, item: GenericTreeItem) -> None:
+    def IsItemSeparator(self, item) -> None:
         """ Returns whether an item is of separator type or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsSelected(self, item: GenericTreeItem) -> None:
+    def IsSelected(self, item) -> None:
         """ Returns whether the item is selected or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def IsVisible(self, item: GenericTreeItem) -> None:
+    def IsVisible(self, item) -> None:
         """ Returns whether the item is visible or not (i.e., its hierarchy is expanded
 enough to show the item, and it has not been hidden).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def ItemHasChildren(self, item: GenericTreeItem) -> None:
+    def ItemHasChildren(self, item) -> None:
         """ Returns whether the item has children or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -952,7 +962,7 @@ EVT_TREE_END_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnCancelEdit(self, item: GenericTreeItem) -> None:
+    def OnCancelEdit(self, item) -> None:
         """ Called by TreeTextCtrl, to cancel the changes and to send the
 EVT_TREE_END_LABEL_EDIT event.
 
@@ -965,7 +975,7 @@ EVT_TREE_END_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnDestroy(self, event: 'WindowDestroyEvent') -> None:
+    def OnDestroy(self, event) -> None:
         """ Handles the wx.EVT_WINDOW_DESTROY event for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -977,13 +987,13 @@ EVT_TREE_END_LABEL_EDIT event.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnEraseBackground(self, event: EraseEvent) -> None:
+    def OnEraseBackground(self, event) -> None:
         """ Handles the wx.EVT_ERASE_BACKGROUND event for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnGetToolTip(self, event: CommandTreeEvent) -> None:
+    def OnGetToolTip(self, event) -> None:
         """ Process the tooltip event, to speed up event processing. Does not actually
 get a tooltip.
 
@@ -998,38 +1008,38 @@ application defining an OnIdle handler in a derived class.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnKeyDown(self, event: KeyEvent) -> None:
+    def OnKeyDown(self, event) -> None:
         """ Handles the wx.EVT_KEY_DOWN event for CustomTreeCtrl, sending a
 EVT_TREE_KEY_DOWN event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnKillFocus(self, event: FocusEvent) -> None:
+    def OnKillFocus(self, event) -> None:
         """ Handles the wx.EVT_KILL_FOCUS event for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnMouse(self, event: MouseEvent) -> None:
+    def OnMouse(self, event) -> None:
         """ Handles a bunch of wx.EVT_MOUSE_EVENTS events for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnPaint(self, event: PaintEvent) -> None:
+    def OnPaint(self, event) -> None:
         """ Handles the wx.EVT_PAINT event for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnSetFocus(self, event: FocusEvent) -> None:
+    def OnSetFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def OnSize(self, event: 'SizeEvent') -> None:
+    def OnSize(self, event) -> None:
         """ Handles the wx.EVT_SIZE event for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1053,7 +1063,7 @@ EVT_TREE_KEY_DOWN event.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def PrependSeparator(self, parent: GenericTreeItem) -> None:
+    def PrependSeparator(self, parent) -> None:
         """ Prepends a separator item as a first child of parent.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1072,7 +1082,7 @@ maximum width.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def RefreshLine(self, item: GenericTreeItem) -> None:
+    def RefreshLine(self, item) -> None:
         """ Refreshes a damaged item line.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1084,13 +1094,13 @@ maximum width.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def RefreshSelectedUnder(self, item: GenericTreeItem) -> None:
+    def RefreshSelectedUnder(self, item) -> None:
         """ Refreshes the selected items under the given item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def RefreshSubtree(self, item: GenericTreeItem) -> None:
+    def RefreshSubtree(self, item) -> None:
         """ Refreshes a damaged subtree of an item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1102,7 +1112,7 @@ maximum width.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def ScrollTo(self, item: GenericTreeItem) -> None:
+    def ScrollTo(self, item) -> None:
         """ Scrolls the specified item into view.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1114,7 +1124,7 @@ maximum width.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SelectAllChildren(self, item: GenericTreeItem) -> None:
+    def SelectAllChildren(self, item) -> None:
         """ Selects all the children of the given item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1132,116 +1142,116 @@ maximum width.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SendDeleteEvent(self, item: GenericTreeItem) -> None:
+    def SendDeleteEvent(self, item) -> None:
         """ Actually sends the EVT_TREE_DELETE_ITEM event.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetAGWWindowStyleFlag(self, agwStyle: int) -> None:
+    def SetAGWWindowStyleFlag(self, agwStyle) -> None:
         """ Sets the CustomTreeCtrl window style.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetBackgroundColour(self, colour: NullColour) -> None:
+    def SetBackgroundColour(self, colour) -> None:
         """ Changes the background colour of CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetBackgroundImage(self, image: None) -> None:
+    def SetBackgroundImage(self, image) -> None:
         """ Sets the CustomTreeCtrl background image.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetBorderPen(self, pen: 'Pen') -> None:
+    def SetBorderPen(self, pen) -> None:
         """ Sets the pen used to draw the selected item border.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetButtonsImageList(self, imageList: 'ImageList') -> None:
+    def SetButtonsImageList(self, imageList) -> None:
         """ Sets the buttons image list for CustomTreeCtrl (from which application-defined
 button images are taken).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetConnectionPen(self, pen: 'Pen') -> None:
+    def SetConnectionPen(self, pen) -> None:
         """ Sets the pen used to draw the connecting lines between items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetDisabledColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetDisabledColour(self, colour) -> None:
         """ Sets the colour for items in a disabled state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetDragFullScreen(self, fullScreen: bool=False) -> None:
+    def SetDragFullScreen(self, fullScreen=False) -> None:
         """ Sets whether a drag operation will be performed full screen or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetFirstGradientColour(self, colour: Optional[None]=None) -> None:
+    def SetFirstGradientColour(self, colour=None) -> None:
         """ Sets the first gradient colour for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the CustomTreeCtrl font.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetForegroundColour(self, colour: NullColour) -> None:
+    def SetForegroundColour(self, colour) -> None:
         """ Changes the foreground colour of CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetGradientStyle(self, vertical: int=0) -> None:
+    def SetGradientStyle(self, vertical=0) -> None:
         """ Sets the gradient style for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetHilightFocusColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHilightFocusColour(self, colour) -> None:
         """ Sets the colour used to highlight focused selected items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetHilightNonFocusColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHilightNonFocusColour(self, colour) -> None:
         """ Sets the colour used to highlight unfocused selected items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetHyperTextFont(self, font: 'Font') -> None:
+    def SetHyperTextFont(self, font) -> None:
         """ Sets the font used to render hypertext items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetHyperTextNewColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHyperTextNewColour(self, colour) -> None:
         """ Sets the colour used to render a non-visited hypertext item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetHyperTextVisitedColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetHyperTextVisitedColour(self, colour) -> None:
         """ Sets the colour used to render a visited hypertext item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetImageList(self, imageList: 'ImageList') -> None:
+    def SetImageList(self, imageList) -> None:
         """ Sets the normal image list for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1253,7 +1263,7 @@ button images are taken).
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetIndent(self, indent: int) -> None:
+    def SetIndent(self, indent) -> None:
         """ Sets the indentation for CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1363,7 +1373,7 @@ part of the CustomTreeCtrl client area.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetLeftImageList(self, imageList: 'ImageList') -> None:
+    def SetLeftImageList(self, imageList) -> None:
         """ Sets the image list for CustomTreeCtrl filled with images to be used on
 the leftmost part of the client area. Any item can have a leftmost image associated
 with it.
@@ -1377,25 +1387,25 @@ with it.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetSecondGradientColour(self, colour: Optional[None]=None) -> None:
+    def SetSecondGradientColour(self, colour=None) -> None:
         """ Sets the second gradient colour for gradient-style selections.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetSeparatorColour(self, colour: Union[int, str, 'Colour']) -> None:
+    def SetSeparatorColour(self, colour) -> None:
         """ Sets the pen colour for separator-type items.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetSpacing(self, spacing: int) -> None:
+    def SetSpacing(self, spacing) -> None:
         """ Sets the spacing between items in CustomTreeCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SetStateImageList(self, imageList: 'ImageList') -> None:
+    def SetStateImageList(self, imageList) -> None:
         """ Sets the state image list for CustomTreeCtrl (from which application-defined
 state images are taken).
 
@@ -1410,7 +1420,7 @@ from the parent window.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def SortChildren(self, item: GenericTreeItem) -> None:
+    def SortChildren(self, item) -> None:
         """ Sorts the children of the given item using the OnCompareItems method of
 CustomTreeCtrl.
 
@@ -1435,19 +1445,19 @@ CustomTreeCtrl.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def TileBackground(self, dc: 'DC') -> None:
+    def TileBackground(self, dc) -> None:
         """ Tiles the background image to fill all the available area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def Toggle(self, item: GenericTreeItem) -> None:
+    def Toggle(self, item) -> None:
         """ Toggles the item state (collapsed/expanded).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def ToggleItemSelection(self, item: GenericTreeItem) -> None:
+    def ToggleItemSelection(self, item) -> None:
         """ Toggles the item selection.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1471,7 +1481,7 @@ CustomTreeCtrl.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
         """
 
-    def UnselectAllChildren(self, item: GenericTreeItem) -> None:
+    def UnselectAllChildren(self, item) -> None:
         """ Unselects all the children of the given item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.CustomTreeCtrl.html
@@ -1530,14 +1540,14 @@ CustomTreeCtrl. This is a generic implementation of TreeItem.
 
         Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
     """
-    def __init__(self, parent, text="", ct_type=0, wnd=None, image=-1, selImage=-1, data=None, separator=False, on_the_right=True) -> None:
+    def __init__(self, parent, text='', ct_type=0, wnd=None, image=-1, selImage=-1, data=None, separator=False, on_the_right=True) -> None:
         """ Default class constructor.
 For internal use: do not call it in your code!
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def AssignAttributes(self, attr: TreeItemAttr) -> None:
+    def AssignAttributes(self, attr) -> None:
         """ Assigns the item attributes (font, colours, etcâ¦) for this item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1549,7 +1559,7 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def Check(self, checked: bool=True) -> None:
+    def Check(self, checked=True) -> None:
         """ Checks/unchecks an item. Internal use only.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1561,7 +1571,7 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def DeleteChildren(self, tree: CustomTreeCtrl) -> None:
+    def DeleteChildren(self, tree) -> None:
         """ Deletes the item children. Internal use only.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1573,7 +1583,7 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def Enable(self, enable: bool=True) -> None:
+    def Enable(self, enable=True) -> None:
         """ Enables/disables the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1597,7 +1607,7 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def GetCheckedImage(self, which: int=TreeItemIcon_Checked) -> None:
+    def GetCheckedImage(self, which=TreeItemIcon_Checked) -> None:
         """ Returns the item check image.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1609,7 +1619,7 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def GetChildrenCount(self, recursively: bool=True) -> None:
+    def GetChildrenCount(self, recursively=True) -> None:
         """ Gets the number of children of this item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1639,7 +1649,7 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def GetImage(self, which: int=TreeItemIcon_Normal) -> None:
+    def GetImage(self, which=TreeItemIcon_Normal) -> None:
         """ Returns the item image for a particular item state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1737,7 +1747,7 @@ root items.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def Hide(self, hide: bool) -> None:
+    def Hide(self, hide) -> None:
         """ Hides/shows the item. Internal use only.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1822,37 +1832,37 @@ Returns whether the item is checked or not.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def OnSetFocus(self, event: FocusEvent) -> None:
+    def OnSetFocus(self, event) -> None:
         """ Handles the wx.EVT_SET_FOCUS event for the window associated with the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def OnTreeItemCollapsing(self, event: GenericTreeItem) -> None:
+    def OnTreeItemCollapsing(self, event) -> None:
         """ Handles the wx.EVT_TREE_ITEM_COLLAPSING event for the window associated with the item.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def Set3State(self, allow: bool) -> None:
+    def Set3State(self, allow) -> None:
         """ Sets whether the item has a 3-state value checkbox assigned to it or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def Set3StateValue(self, state: int) -> None:
+    def Set3StateValue(self, state) -> None:
         """ Sets the checkbox item to the given state.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetAttributes(self, attr: TreeItemAttr) -> None:
+    def SetAttributes(self, attr) -> None:
         """ Sets the item attributes (font, colours, etcâ¦).
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetBold(self, bold: bool) -> None:
+    def SetBold(self, bold) -> None:
         """ Sets the item font bold.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1864,25 +1874,25 @@ Returns whether the item is checked or not.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetHasPlus(self, has: bool=True) -> None:
+    def SetHasPlus(self, has=True) -> None:
         """ Sets whether an item has the âplusâ button.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetHeight(self, h: int) -> None:
+    def SetHeight(self, h) -> None:
         """ Sets the itemâs height. Used internally.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetHilight(self, set: bool=True) -> None:
+    def SetHilight(self, set=True) -> None:
         """ Sets the item focus/unfocus.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetHyperText(self, hyper: bool=True) -> None:
+    def SetHyperText(self, hyper=True) -> None:
         """ Sets whether the item is hypertext or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1894,38 +1904,38 @@ Returns whether the item is checked or not.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetItalic(self, italic: bool) -> None:
+    def SetItalic(self, italic) -> None:
         """ Sets the item font italic.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetLeftImage(self, image: int) -> None:
+    def SetLeftImage(self, image) -> None:
         """ Sets the item leftmost image, i.e. the image associated to the item on the leftmost
 part of the CustomTreeCtrl client area.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetText(self, text: str) -> None:
+    def SetText(self, text) -> None:
         """ Sets the item text.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetType(self, ct_type: int) -> None:
+    def SetType(self, ct_type) -> None:
         """ Sets the item type.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetVisited(self, visited: bool=True) -> None:
+    def SetVisited(self, visited=True) -> None:
         """ Sets whether an hypertext item was visited or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetWidth(self, w: int) -> None:
+    def SetWidth(self, w) -> None:
         """ Sets the itemâs width. Used internally.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1937,19 +1947,19 @@ part of the CustomTreeCtrl client area.
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetWindowEnabled(self, enable: bool=True) -> None:
+    def SetWindowEnabled(self, enable=True) -> None:
         """ Sets whether the associated window is enabled or not.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetX(self, x: int) -> None:
+    def SetX(self, x) -> None:
         """ Sets the x position on an item, in logical coordinates.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
         """
 
-    def SetY(self, y: int) -> None:
+    def SetY(self, y) -> None:
         """ Sets the y position on an item, in logical coordinates.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.GenericTreeItem.html
@@ -1964,7 +1974,7 @@ class TreeEditTimer(Timer):
 
         Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeEditTimer.html
     """
-    def __init__(self, owner: Timer) -> None:
+    def __init__(self, owner) -> None:
         """ Default class constructor.
 For internal use: do not call it in your code!
 
@@ -1984,7 +1994,7 @@ class TreeEvent(CommandTreeEvent):
 
         Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeEvent.html
     """
-    def __init__(self, evtType, evtId, item=None, evtKey=None, point=None, label=None, **kwargs) -> None:
+    def __init__(self, evtType, evtId, item=None, evtKey=None, point=None, label=None, \*\*kwargs) -> None:
         """ Default class constructor.
 For internal use: do not call it in your code!
 
@@ -2027,7 +2037,7 @@ key was pressed for a sufficiently long time.
 
         Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeFindTimer.html
     """
-    def __init__(self, owner: Timer) -> None:
+    def __init__(self, owner) -> None:
         """ Default class constructor.
 For internal use: do not call it in your code!
 
@@ -2102,7 +2112,7 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeItemAttr.html
         """
 
-    def SetBackgroundColour(self, colBack: Union[int, str, 'Colour']) -> None:
+    def SetBackgroundColour(self, colBack) -> None:
         """ Sets the item background colour attribute.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeItemAttr.html
@@ -2114,13 +2124,13 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeItemAttr.html
         """
 
-    def SetFont(self, font: 'Font') -> None:
+    def SetFont(self, font) -> None:
         """ Sets the item font attribute.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeItemAttr.html
         """
 
-    def SetTextColour(self, colText: Union[int, str, 'Colour']) -> None:
+    def SetTextColour(self, colText) -> None:
         """ Sets the text colour attribute.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeItemAttr.html
@@ -2158,19 +2168,19 @@ For internal use: do not call it in your code!
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeTextCtrl.html
         """
 
-    def OnChar(self, event: KeyEvent) -> None:
+    def OnChar(self, event) -> None:
         """ Handles the wx.EVT_CHAR event for TreeTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeTextCtrl.html
         """
 
-    def OnKeyUp(self, event: KeyEvent) -> None:
+    def OnKeyUp(self, event) -> None:
         """ Handles the wx.EVT_KEY_UP event for TreeTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeTextCtrl.html
         """
 
-    def OnKillFocus(self, event: FocusEvent) -> None:
+    def OnKillFocus(self, event) -> None:
         """ Handles the wx.EVT_KILL_FOCUS event for TreeTextCtrl.
 
             Source: https://docs.wxpython.org/wx.lib.agw.customtreectrl.TreeTextCtrl.html

@@ -8,7 +8,7 @@ for any subsequent refinements.
 
         Source: https://docs.wxpython.org/wx.lib.masked.combobox.BaseMaskedComboBox.html
     """
-    def __init__(self, parent, id=-1, value = '', pos = wx.DefaultPosition, size = wx.DefaultSize, choices = [], style = wx.CB_DROPDOWN, validator = wx.DefaultValidator, name = "maskedComboBox", setupEventHandling = True, **kwargs) -> None:
+    def __init__(self, parent, id=-1, value = '', pos = wx.DefaultPosition, size = wx.DefaultSize, choices = [], style = wx.CB_DROPDOWN, validator = wx.DefaultValidator, name = "maskedComboBox", setupEventHandling = True, \*\*kwargs) -> None:
         """ Default class constructor.
 
             Source: https://docs.wxpython.org/wx.lib.masked.combobox.BaseMaskedComboBox.html
@@ -49,12 +49,12 @@ masked control.
         """
 
     def GetMark(self) -> None:
-        """ GetTextSelection() -> (from, to)
+        """ GetTextSelection() -> Tuple[int, int]
 
             Source: https://docs.wxpython.org/wx.lib.masked.combobox.BaseMaskedComboBox.html
         """
 
-    def IsEmpty(*args, **kw) -> None:
+    def IsEmpty(\*args, \*\*kw) -> None:
         """ IsEmpty() -> bool
 
             Source: https://docs.wxpython.org/wx.lib.masked.combobox.BaseMaskedComboBox.html
@@ -81,13 +81,13 @@ to validate the contents of the masked control as it refreshes.
             Source: https://docs.wxpython.org/wx.lib.masked.combobox.BaseMaskedComboBox.html
         """
 
-    def SetFont(self, *args, **kwargs) -> None:
+    def SetFont(self, \*args, \*\*kwargs) -> None:
         """ Set the font, then recalculate control size, if appropriate.
 
             Source: https://docs.wxpython.org/wx.lib.masked.combobox.BaseMaskedComboBox.html
         """
 
-    def SetSelection(self, index: int) -> None:
+    def SetSelection(self, index) -> None:
         """ Necessary override for bookkeeping on choice selection, to keep current
 value current.
 
